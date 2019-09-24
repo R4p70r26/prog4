@@ -1,0 +1,415 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D60FC37A-6FCA-4020-B15E-0D374662D807}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>PreguntadosPC.My.MyApplication</StartupObject>
+    <RootNamespace>PreguntadosPC</RootNamespace>
+    <AssemblyName>PreguntadosPC</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>PreguntadosPC.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>PreguntadosPC.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Pantallas\Arte\VentanaInicioArte.Designer.vb">
+      <DependentUpon>VentanaInicioArte.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas\Arte\VentanaInicioArte.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas\Ciencia\VentanaInicionCiencia.Designer.vb">
+      <DependentUpon>VentanaInicionCiencia.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas\Ciencia\VentanaInicionCiencia.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas\Deportes\VentanaInicioDeportes.Designer.vb">
+      <DependentUpon>VentanaInicioDeportes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas\Deportes\VentanaInicioDeportes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas\Entretenimieto\VentanaInicioEntretenimiento.Designer.vb">
+      <DependentUpon>VentanaInicioEntretenimiento.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas\Entretenimieto\VentanaInicioEntretenimiento.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas\Geografia\VentanaInicioGeografia.Designer.vb">
+      <DependentUpon>VentanaInicioGeografia.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas\Geografia\VentanaInicioGeografia.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas\Historia\VentanaInicioHistoria.Designer.vb">
+      <DependentUpon>VentanaInicioHistoria.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas\Historia\VentanaInicioHistoria.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas\Ruleta.Designer.vb">
+      <DependentUpon>Ruleta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas\Ruleta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas\VentanaInicio.Designer.vb">
+      <DependentUpon>VentanaInicio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas\VentanaInicio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas\MenuJuego.Designer.vb">
+      <DependentUpon>MenuJuego.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas\MenuJuego.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas\MuestraNombresJugadores.Designer.vb">
+      <DependentUpon>MuestraNombresJugadores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas\MuestraNombresJugadores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas\NombreUsuraio.Designer.vb">
+      <DependentUpon>NombreUsuraio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas\NombreUsuraio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas\SeleccionBD.Designer.vb">
+      <DependentUpon>SeleccionBD.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas\SeleccionBD.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas\VentanaPrincipal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas\VentanaPrincipal.Designer.vb">
+      <DependentUpon>VentanaPrincipal.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Pantallas\Arte\VentArte.Designer.vb">
+      <DependentUpon>VentArte.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas\Arte\VentArte.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas\Ciencia\VentCiencia.Designer.vb">
+      <DependentUpon>VentCiencia.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas\Ciencia\VentCiencia.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas\Corona\VentCorona.Designer.vb">
+      <DependentUpon>VentCorona.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas\Corona\VentCorona.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas\Deportes\VentDeporte.Designer.vb">
+      <DependentUpon>VentDeporte.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas\Deportes\VentDeporte.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas\Entretenimieto\VentEntretenimiento.Designer.vb">
+      <DependentUpon>VentEntretenimiento.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas\Entretenimieto\VentEntretenimiento.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas\Geografia\VentGeografia.Designer.vb">
+      <DependentUpon>VentGeografia.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas\Geografia\VentGeografia.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas\Historia\VentHistoria.Designer.vb">
+      <DependentUpon>VentHistoria.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas\Historia\VentHistoria.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas\VentPregunta.Designer.vb">
+      <DependentUpon>VentPregunta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas\VentPregunta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonajesJugador1.vb" />
+    <Compile Include="PersonajesJugador2.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pantallas\Arte\VentanaInicioArte.resx">
+      <DependentUpon>VentanaInicioArte.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas\Ciencia\VentanaInicionCiencia.resx">
+      <DependentUpon>VentanaInicionCiencia.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas\Deportes\VentanaInicioDeportes.resx">
+      <DependentUpon>VentanaInicioDeportes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas\Entretenimieto\VentanaInicioEntretenimiento.resx">
+      <DependentUpon>VentanaInicioEntretenimiento.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas\Geografia\VentanaInicioGeografia.resx">
+      <DependentUpon>VentanaInicioGeografia.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas\Historia\VentanaInicioHistoria.resx">
+      <DependentUpon>VentanaInicioHistoria.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas\Ruleta.resx">
+      <DependentUpon>Ruleta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas\VentanaInicio.resx">
+      <DependentUpon>VentanaInicio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas\MenuJuego.resx">
+      <DependentUpon>MenuJuego.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas\MuestraNombresJugadores.resx">
+      <DependentUpon>MuestraNombresJugadores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas\NombreUsuraio.resx">
+      <DependentUpon>NombreUsuraio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas\SeleccionBD.resx">
+      <DependentUpon>SeleccionBD.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas\VentanaPrincipal.resx">
+      <DependentUpon>VentanaPrincipal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas\Arte\VentArte.resx">
+      <DependentUpon>VentArte.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas\Ciencia\VentCiencia.resx">
+      <DependentUpon>VentCiencia.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas\Corona\VentCorona.resx">
+      <DependentUpon>VentCorona.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas\Deportes\VentDeporte.resx">
+      <DependentUpon>VentDeporte.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas\Entretenimieto\VentEntretenimiento.resx">
+      <DependentUpon>VentEntretenimiento.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas\Geografia\VentGeografia.resx">
+      <DependentUpon>VentGeografia.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas\Historia\VentHistoria.resx">
+      <DependentUpon>VentHistoria.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas\VentPregunta.resx">
+      <DependentUpon>VentPregunta.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inicio_preguntados.jpg" />
+    <None Include="Resources\Inicio.png" />
+    <None Include="Resources\Achievement Unlocked.wav" />
+    <None Include="Resources\Bomb Powerup.wav" />
+    <None Include="Resources\Button.wav" />
+    <None Include="Resources\Cart Flip.wav" />
+    <None Include="Resources\Categories Rules.wav" />
+    <None Include="Resources\Change Question Powerup.wav" />
+    <None Include="Resources\Chat.wav" />
+    <None Include="Resources\Click 2.wav" />
+    <None Include="Resources\Correct.wav" />
+    <None Include="Resources\Countdown.wav" />
+    <None Include="Resources\Crown.wav" />
+    <None Include="Resources\Deul Request.wav" />
+    <None Include="Resources\Done.wav" />
+    <None Include="Resources\Double Chance Powerup.wav" />
+    <None Include="Resources\Dpn.wav" />
+    <None Include="Resources\Duel Defeat.wav" />
+    <None Include="Resources\Duel Lost.wav" />
+    <None Include="Resources\Duel Victory.wav" />
+    <None Include="Resources\Gem Points Fill.wav" />
+    <None Include="Resources\Incorrect.wav" />
+    <None Include="Resources\Increase Tickets.wav" />
+    <None Include="Resources\Leaving.wav" />
+    <None Include="Resources\Letter Fall.wav" />
+    <None Include="Resources\Level Up.wav" />
+    <None Include="Resources\Lift.wav" />
+    <None Include="Resources\Load Point.wav" />
+    <None Include="Resources\New Message.wav" />
+    <None Include="Resources\No Coins.wav" />
+    <None Include="Resources\Notice.wav" />
+    <None Include="Resources\Play.wav" />
+    <None Include="Resources\Question Appears.wav" />
+    <None Include="Resources\Question Gone.wav" />
+    <None Include="Resources\Random Oponent.wav" />
+    <None Include="Resources\Ranking Weekly Winner.wav" />
+    <None Include="Resources\Redeem.wav" />
+    <None Include="Resources\Report.wav" />
+    <None Include="Resources\Reward Album.wav" />
+    <None Include="Resources\Reward.wav" />
+    <None Include="Resources\Send Message.wav" />
+    <None Include="Resources\Spiral.wav" />
+    <None Include="Resources\Start Game.wav" />
+    <None Include="Resources\Startup App.wav" />
+    <None Include="Resources\Thrash.wav" />
+    <None Include="Resources\Time Powerup.wav" />
+    <None Include="Resources\Time Up.wav" />
+    <None Include="Resources\Turn Lost.wav" />
+    <None Include="Resources\Turn Rule.wav" />
+    <None Include="Resources\UI Back.wav" />
+    <None Include="Resources\Use Extra.wav" />
+    <None Include="Resources\Wild Card Rule.wav" />
+    <None Include="Resources\Arte_icono.png" />
+    <None Include="Resources\Arte-y-literatura_Gif.gif" />
+    <None Include="Resources\Ciencia_Gif.gif" />
+    <None Include="Resources\Ciencia_Icono.png" />
+    <None Include="Resources\Corona-y-Duelo_Gif.gif" />
+    <None Include="Resources\Deportes_Gif.gif" />
+    <None Include="Resources\Deportes_Icono.png" />
+    <None Include="Resources\Entretenimiento_Gif.gif" />
+    <None Include="Resources\Entretenimiento_Icono.png" />
+    <None Include="Resources\Geografia_Gif.gif" />
+    <None Include="Resources\Geografia_Icono.png" />
+    <None Include="Resources\Historia_Gif.gif" />
+    <None Include="Resources\Historia_Icono.png" />
+    <None Include="Resources\Arte_icon.png" />
+    <None Include="Resources\Ciencia_Icon.png" />
+    <None Include="Resources\Deportes_Icon.png" />
+    <None Include="Resources\Entretenimiento_Icon.png" />
+    <None Include="Resources\Geografia_Icon.png" />
+    <None Include="Resources\Historia_Icon.png" />
+    <None Include="Resources\boton 1.png" />
+    <None Include="Resources\boton 2.png" />
+    <None Include="Resources\boton 3.png" />
+    <None Include="Resources\boton 4.png" />
+    <None Include="Resources\boton 5.png" />
+    <None Include="Resources\boton 6.png" />
+    <None Include="Resources\PreguntaGeografia.jpg" />
+    <None Include="Resources\Preguntas.jpg" />
+    <Content Include="Tareas.txt" />
+    <None Include="Resources\0A6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
