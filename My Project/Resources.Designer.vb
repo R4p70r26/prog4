@@ -383,6 +383,16 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property Fondo() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Fondo", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         '''</summary>
         Friend ReadOnly Property Gem_Points_Fill() As System.IO.UnmanagedMemoryStream
@@ -553,9 +563,9 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property Preguntas() As System.Drawing.Bitmap
+        Friend ReadOnly Property Pregunta() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("Preguntas", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("Pregunta", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

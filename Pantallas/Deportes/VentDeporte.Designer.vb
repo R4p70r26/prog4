@@ -22,32 +22,21 @@ Partial Class VentDeporte
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.DeportepersonajePictureBox1 = New System.Windows.Forms.PictureBox()
         Me.BtnOpcion4 = New System.Windows.Forms.Button()
         Me.BtnOpcion3 = New System.Windows.Forms.Button()
         Me.BtnOpcion2 = New System.Windows.Forms.Button()
         Me.BtnOpcion1 = New System.Windows.Forms.Button()
         Me.TextoPregunta = New System.Windows.Forms.RichTextBox()
+        Me.DeportepersonajePictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.DeportepersonajePictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'DeportepersonajePictureBox1
-        '
-        Me.DeportepersonajePictureBox1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DeportepersonajePictureBox1.Image = Global.PreguntadosPC.My.Resources.Resources.Preguntas
-        Me.DeportepersonajePictureBox1.Location = New System.Drawing.Point(0, 0)
-        Me.DeportepersonajePictureBox1.Name = "DeportepersonajePictureBox1"
-        Me.DeportepersonajePictureBox1.Size = New System.Drawing.Size(560, 501)
-        Me.DeportepersonajePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.DeportepersonajePictureBox1.TabIndex = 2
-        Me.DeportepersonajePictureBox1.TabStop = False
         '
         'BtnOpcion4
         '
         Me.BtnOpcion4.BackColor = System.Drawing.Color.White
         Me.BtnOpcion4.FlatAppearance.BorderColor = System.Drawing.Color.Gray
         Me.BtnOpcion4.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.BtnOpcion4.Location = New System.Drawing.Point(12, 407)
+        Me.BtnOpcion4.Location = New System.Drawing.Point(12, 538)
         Me.BtnOpcion4.Name = "BtnOpcion4"
         Me.BtnOpcion4.Size = New System.Drawing.Size(536, 42)
         Me.BtnOpcion4.TabIndex = 14
@@ -59,7 +48,7 @@ Partial Class VentDeporte
         Me.BtnOpcion3.BackColor = System.Drawing.Color.White
         Me.BtnOpcion3.FlatAppearance.BorderColor = System.Drawing.Color.Gray
         Me.BtnOpcion3.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.BtnOpcion3.Location = New System.Drawing.Point(12, 363)
+        Me.BtnOpcion3.Location = New System.Drawing.Point(12, 480)
         Me.BtnOpcion3.Name = "BtnOpcion3"
         Me.BtnOpcion3.Size = New System.Drawing.Size(536, 42)
         Me.BtnOpcion3.TabIndex = 13
@@ -71,7 +60,7 @@ Partial Class VentDeporte
         Me.BtnOpcion2.BackColor = System.Drawing.Color.White
         Me.BtnOpcion2.FlatAppearance.BorderColor = System.Drawing.Color.Gray
         Me.BtnOpcion2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.BtnOpcion2.Location = New System.Drawing.Point(12, 319)
+        Me.BtnOpcion2.Location = New System.Drawing.Point(12, 423)
         Me.BtnOpcion2.Name = "BtnOpcion2"
         Me.BtnOpcion2.Size = New System.Drawing.Size(536, 42)
         Me.BtnOpcion2.TabIndex = 12
@@ -83,7 +72,7 @@ Partial Class VentDeporte
         Me.BtnOpcion1.BackColor = System.Drawing.Color.White
         Me.BtnOpcion1.FlatAppearance.BorderColor = System.Drawing.Color.Gray
         Me.BtnOpcion1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.BtnOpcion1.Location = New System.Drawing.Point(12, 275)
+        Me.BtnOpcion1.Location = New System.Drawing.Point(12, 366)
         Me.BtnOpcion1.Name = "BtnOpcion1"
         Me.BtnOpcion1.Size = New System.Drawing.Size(536, 42)
         Me.BtnOpcion1.TabIndex = 11
@@ -94,18 +83,29 @@ Partial Class VentDeporte
         '
         Me.TextoPregunta.BackColor = System.Drawing.Color.White
         Me.TextoPregunta.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextoPregunta.Location = New System.Drawing.Point(28, 70)
+        Me.TextoPregunta.Location = New System.Drawing.Point(32, 100)
         Me.TextoPregunta.Name = "TextoPregunta"
         Me.TextoPregunta.ReadOnly = True
-        Me.TextoPregunta.Size = New System.Drawing.Size(494, 135)
+        Me.TextoPregunta.Size = New System.Drawing.Size(500, 200)
         Me.TextoPregunta.TabIndex = 10
         Me.TextoPregunta.Text = ""
+        '
+        'DeportepersonajePictureBox1
+        '
+        Me.DeportepersonajePictureBox1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DeportepersonajePictureBox1.Image = Global.PreguntadosPC.My.Resources.Resources.Pregunta
+        Me.DeportepersonajePictureBox1.Location = New System.Drawing.Point(0, 0)
+        Me.DeportepersonajePictureBox1.Name = "DeportepersonajePictureBox1"
+        Me.DeportepersonajePictureBox1.Size = New System.Drawing.Size(560, 806)
+        Me.DeportepersonajePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.DeportepersonajePictureBox1.TabIndex = 2
+        Me.DeportepersonajePictureBox1.TabStop = False
         '
         'VentDeporte
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(560, 501)
+        Me.ClientSize = New System.Drawing.Size(560, 806)
         Me.Controls.Add(Me.BtnOpcion4)
         Me.Controls.Add(Me.BtnOpcion3)
         Me.Controls.Add(Me.BtnOpcion2)

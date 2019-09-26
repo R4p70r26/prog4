@@ -32,7 +32,7 @@ Partial Class VentanaInicionCiencia
         Me.PictureBox1.Image = Global.PreguntadosPC.My.Resources.Resources.Ciencia_Gif
         Me.PictureBox1.Location = New System.Drawing.Point(12, 12)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(552, 516)
+        Me.PictureBox1.Size = New System.Drawing.Size(552, 821)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
@@ -44,7 +44,7 @@ Partial Class VentanaInicionCiencia
         Me.Button1.FlatAppearance.BorderSize = 0
         Me.Button1.Font = New System.Drawing.Font("Arial Black", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(449, 491)
+        Me.Button1.Location = New System.Drawing.Point(449, 796)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(115, 37)
         Me.Button1.TabIndex = 2
@@ -57,7 +57,7 @@ Partial Class VentanaInicionCiencia
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Black
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.ClientSize = New System.Drawing.Size(576, 540)
+        Me.ClientSize = New System.Drawing.Size(576, 845)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.PictureBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None

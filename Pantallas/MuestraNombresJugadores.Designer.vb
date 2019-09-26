@@ -28,6 +28,7 @@ Partial Class MuestraNombresJugadores
         Me.NombreJugador2 = New System.Windows.Forms.Label()
         Me.empezarButton1 = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.BtnEntretenimiento1 = New System.Windows.Forms.Button()
         Me.BtnGeografia2 = New System.Windows.Forms.Button()
         Me.BtnCiencia2 = New System.Windows.Forms.Button()
@@ -40,7 +41,6 @@ Partial Class MuestraNombresJugadores
         Me.BtnArte1 = New System.Windows.Forms.Button()
         Me.BtnEntretenimiento2 = New System.Windows.Forms.Button()
         Me.BtnDeportes1 = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -78,7 +78,7 @@ Partial Class MuestraNombresJugadores
         '
         'empezarButton1
         '
-        Me.empezarButton1.Location = New System.Drawing.Point(230, 345)
+        Me.empezarButton1.Location = New System.Drawing.Point(230, 403)
         Me.empezarButton1.Name = "empezarButton1"
         Me.empezarButton1.Size = New System.Drawing.Size(75, 23)
         Me.empezarButton1.TabIndex = 3
@@ -105,8 +105,18 @@ Partial Class MuestraNombresJugadores
         Me.Panel1.Controls.Add(Me.BtnDeportes1)
         Me.Panel1.Location = New System.Drawing.Point(12, 55)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(536, 122)
+        Me.Panel1.Size = New System.Drawing.Size(536, 145)
         Me.Panel1.TabIndex = 4
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(164, 363)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(203, 24)
+        Me.Label1.TabIndex = 5
+        Me.Label1.Text = "Aqui deberia ir la ruleta"
         '
         'BtnEntretenimiento1
         '
@@ -278,21 +288,13 @@ Partial Class MuestraNombresJugadores
         Me.BtnDeportes1.TabIndex = 7
         Me.BtnDeportes1.UseVisualStyleBackColor = True
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(164, 225)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(203, 24)
-        Me.Label1.TabIndex = 5
-        Me.Label1.Text = "Aqui deberia ir la ruleta"
-        '
         'MuestraNombresJugadores
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(560, 501)
+        Me.BackgroundImage = Global.PreguntadosPC.My.Resources.Resources.Fondo
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ClientSize = New System.Drawing.Size(560, 806)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.empezarButton1)

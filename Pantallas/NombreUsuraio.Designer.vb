@@ -67,7 +67,7 @@ Partial Class NombreUsuraio
         '
         Me.JugarAhoraButton1.BackgroundImage = Global.PreguntadosPC.My.Resources.Resources._0A6
         Me.JugarAhoraButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.JugarAhoraButton1.Location = New System.Drawing.Point(138, 392)
+        Me.JugarAhoraButton1.Location = New System.Drawing.Point(129, 635)
         Me.JugarAhoraButton1.Name = "JugarAhoraButton1"
         Me.JugarAhoraButton1.Size = New System.Drawing.Size(260, 60)
         Me.JugarAhoraButton1.TabIndex = 6
@@ -77,7 +77,7 @@ Partial Class NombreUsuraio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(560, 501)
+        Me.ClientSize = New System.Drawing.Size(560, 806)
         Me.Controls.Add(Me.JugarAhoraButton1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)

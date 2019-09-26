@@ -395,7 +395,8 @@
     <None Include="Resources\boton 5.png" />
     <None Include="Resources\boton 6.png" />
     <None Include="Resources\PreguntaGeografia.jpg" />
-    <None Include="Resources\Preguntas.jpg" />
+    <None Include="Resources\Pregunta.jpg" />
+    <None Include="Resources\Fondo.jpg" />
     <Content Include="Tareas.txt" />
     <None Include="Resources\0A6.png" />
   </ItemGroup>

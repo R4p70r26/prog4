@@ -29,7 +29,7 @@ Partial Class VentanaPrincipal
         '
         Me.JugarAhoraButton1.BackgroundImage = Global.PreguntadosPC.My.Resources.Resources._0A6
         Me.JugarAhoraButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.JugarAhoraButton1.Location = New System.Drawing.Point(138, 425)
+        Me.JugarAhoraButton1.Location = New System.Drawing.Point(131, 720)
         Me.JugarAhoraButton1.Name = "JugarAhoraButton1"
         Me.JugarAhoraButton1.Size = New System.Drawing.Size(260, 60)
         Me.JugarAhoraButton1.TabIndex = 0
@@ -41,7 +41,7 @@ Partial Class VentanaPrincipal
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.PreguntadosPC.My.Resources.Resources.img_como_cambiar_el_idioma_en_preguntados_o_trivia_crack_33140_600
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(556, 497)
+        Me.ClientSize = New System.Drawing.Size(556, 802)
         Me.Controls.Add(Me.JugarAhoraButton1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.MaximizeBox = False

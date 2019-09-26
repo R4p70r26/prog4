@@ -58,7 +58,7 @@ Partial Class SeleccionBD
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(560, 501)
+        Me.ClientSize = New System.Drawing.Size(560, 806)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.sqlButton2)
         Me.Controls.Add(Me.AccessButton1)

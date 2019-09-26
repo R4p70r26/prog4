@@ -30,7 +30,7 @@ Partial Class VentanaInicio
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.PreguntadosPC.My.Resources.Resources.Inicio
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(576, 540)
+        Me.ClientSize = New System.Drawing.Size(576, 845)
         Me.Enabled = False
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "VentanaInicio"
