@@ -22,13 +22,13 @@ Partial Class MuestraNombresJugadores
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MuestraNombresJugadores))
         Me.NombreJugador1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.NombreJugador2 = New System.Windows.Forms.Label()
         Me.empezarButton1 = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.BtnEntretenimiento1 = New System.Windows.Forms.Button()
         Me.BtnGeografia2 = New System.Windows.Forms.Button()
         Me.BtnCiencia2 = New System.Windows.Forms.Button()
@@ -41,7 +41,10 @@ Partial Class MuestraNombresJugadores
         Me.BtnArte1 = New System.Windows.Forms.Button()
         Me.BtnEntretenimiento2 = New System.Windows.Forms.Button()
         Me.BtnDeportes1 = New System.Windows.Forms.Button()
+        Me.picBoxRuleta = New System.Windows.Forms.PictureBox()
+        Me.TVueltas = New System.Windows.Forms.Timer(Me.components)
         Me.Panel1.SuspendLayout()
+        CType(Me.picBoxRuleta, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'NombreJugador1
@@ -78,7 +81,7 @@ Partial Class MuestraNombresJugadores
         '
         'empezarButton1
         '
-        Me.empezarButton1.Location = New System.Drawing.Point(230, 403)
+        Me.empezarButton1.Location = New System.Drawing.Point(230, 592)
         Me.empezarButton1.Name = "empezarButton1"
         Me.empezarButton1.Size = New System.Drawing.Size(75, 23)
         Me.empezarButton1.TabIndex = 3
@@ -107,16 +110,6 @@ Partial Class MuestraNombresJugadores
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(536, 145)
         Me.Panel1.TabIndex = 4
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(164, 363)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(203, 24)
-        Me.Label1.TabIndex = 5
-        Me.Label1.Text = "Aqui deberia ir la ruleta"
         '
         'BtnEntretenimiento1
         '
@@ -288,6 +281,18 @@ Partial Class MuestraNombresJugadores
         Me.BtnDeportes1.TabIndex = 7
         Me.BtnDeportes1.UseVisualStyleBackColor = True
         '
+        'picBoxRuleta
+        '
+        Me.picBoxRuleta.Location = New System.Drawing.Point(111, 215)
+        Me.picBoxRuleta.Name = "picBoxRuleta"
+        Me.picBoxRuleta.Size = New System.Drawing.Size(330, 330)
+        Me.picBoxRuleta.TabIndex = 6
+        Me.picBoxRuleta.TabStop = False
+        '
+        'TVueltas
+        '
+        Me.TVueltas.Interval = 1
+        '
         'MuestraNombresJugadores
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -295,7 +300,7 @@ Partial Class MuestraNombresJugadores
         Me.BackgroundImage = Global.PreguntadosPC.My.Resources.Resources.Fondo
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(560, 806)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.picBoxRuleta)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.empezarButton1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
@@ -306,8 +311,8 @@ Partial Class MuestraNombresJugadores
         Me.Text = "MuestraNombresJugadores"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.picBoxRuleta, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
@@ -328,5 +333,6 @@ Partial Class MuestraNombresJugadores
     Friend WithEvents BtnHistoria1 As Button
     Friend WithEvents BtnCiencia1 As Button
     Friend WithEvents BtnEntretenimiento1 As Button
-    Friend WithEvents Label1 As Label
+    Friend WithEvents picBoxRuleta As PictureBox
+    Friend WithEvents TVueltas As Timer
 End Class

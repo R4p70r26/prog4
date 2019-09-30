@@ -22,12 +22,16 @@ Partial Class Ruleta
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.roundLabel1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.jugador1Label1 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.jugador2Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.jugador1Label1 = New System.Windows.Forms.Label()
+        Me.RuletaPictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.VueltasTimer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Panel1.SuspendLayout()
+        CType(Me.RuletaPictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'roundLabel1
@@ -50,14 +54,14 @@ Partial Class Ruleta
         Me.Panel1.Size = New System.Drawing.Size(415, 103)
         Me.Panel1.TabIndex = 1
         '
-        'jugador1Label1
+        'jugador2Label2
         '
-        Me.jugador1Label1.AutoSize = True
-        Me.jugador1Label1.Location = New System.Drawing.Point(37, 53)
-        Me.jugador1Label1.Name = "jugador1Label1"
-        Me.jugador1Label1.Size = New System.Drawing.Size(65, 13)
-        Me.jugador1Label1.TabIndex = 1
-        Me.jugador1Label1.Text = "Muestrajug1"
+        Me.jugador2Label2.AutoSize = True
+        Me.jugador2Label2.Location = New System.Drawing.Point(307, 53)
+        Me.jugador2Label2.Name = "jugador2Label2"
+        Me.jugador2Label2.Size = New System.Drawing.Size(65, 13)
+        Me.jugador2Label2.TabIndex = 3
+        Me.jugador2Label2.Text = "Muestrajug2"
         '
         'Label1
         '
@@ -69,20 +73,33 @@ Partial Class Ruleta
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "VS"
         '
-        'jugador2Label2
+        'jugador1Label1
         '
-        Me.jugador2Label2.AutoSize = True
-        Me.jugador2Label2.Location = New System.Drawing.Point(307, 53)
-        Me.jugador2Label2.Name = "jugador2Label2"
-        Me.jugador2Label2.Size = New System.Drawing.Size(65, 13)
-        Me.jugador2Label2.TabIndex = 3
-        Me.jugador2Label2.Text = "Muestrajug2"
+        Me.jugador1Label1.AutoSize = True
+        Me.jugador1Label1.Location = New System.Drawing.Point(37, 53)
+        Me.jugador1Label1.Name = "jugador1Label1"
+        Me.jugador1Label1.Size = New System.Drawing.Size(65, 13)
+        Me.jugador1Label1.TabIndex = 1
+        Me.jugador1Label1.Text = "Muestrajug1"
+        '
+        'RuletaPictureBox1
+        '
+        Me.RuletaPictureBox1.Location = New System.Drawing.Point(53, 123)
+        Me.RuletaPictureBox1.Name = "RuletaPictureBox1"
+        Me.RuletaPictureBox1.Size = New System.Drawing.Size(332, 299)
+        Me.RuletaPictureBox1.TabIndex = 2
+        Me.RuletaPictureBox1.TabStop = False
+        '
+        'VueltasTimer1
+        '
+        Me.VueltasTimer1.Interval = 1
         '
         'Ruleta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(440, 454)
+        Me.Controls.Add(Me.RuletaPictureBox1)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
@@ -92,6 +109,7 @@ Partial Class Ruleta
         Me.Text = "Ruleta"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.RuletaPictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -101,4 +119,6 @@ Partial Class Ruleta
     Friend WithEvents jugador2Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents jugador1Label1 As Label
+    Friend WithEvents RuletaPictureBox1 As PictureBox
+    Friend WithEvents VueltasTimer1 As Timer
 End Class
