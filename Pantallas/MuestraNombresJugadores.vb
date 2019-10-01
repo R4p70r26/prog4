@@ -52,19 +52,19 @@
     Private Sub TVueltas_Tick(sender As Object, e As EventArgs) Handles TVueltas.Tick
         Select Case picnum'select case que cambia las imagenes como si rotara
             Case 1
-                'picBoxRuleta.Image = My.Resources.arte1
+                picBoxRuleta.Image = My.Resources.Ruletaarte
             Case 2
-                'picBoxRuleta.Image = My.Resources.entreten1
+                picBoxRuleta.Image = My.Resources.Ruletaentrete
             Case 3
-                'picBoxRuleta.Image = My.Resources.corona1
+                picBoxRuleta.Image = My.Resources.Ruletacorona
             Case 4
-                'picBoxRuleta.Image = My.Resources.geogra1
+                picBoxRuleta.Image = My.Resources.Ruletageografia
             Case 5
-                'picBoxRuleta.Image = My.Resources.ciencia1
+                picBoxRuleta.Image = My.Resources.Ruletaciencia
             Case 6
-                'picBoxRuleta.Image = My.Resources.historia1
+                picBoxRuleta.Image = My.Resources.Ruletahistoria
             Case 7
-                'picBoxRuleta.Image = My.Resources.deporte1
+                picBoxRuleta.Image = My.Resources.Ruletadeporte
                 TVueltas.Interval += 1 'aumenta el intervalo del tiempo
             Case Else
                 picnum = 0 'resetea el valor para que vuelva a la imagen original
@@ -80,49 +80,49 @@
             randomNum = randomObjeto.Next(1, 8) 'otra forma con random para que me de una numero entre 1 y 7
             Select Case randomNum 'cambia la imagen segun el numero dado 
                 Case 1
-                    'picBoxRuleta.Image = My.Resources.arte1
+                    picBoxRuleta.Image = My.Resources.Ruletaarte
 
                     VentanaInicioArte.Show() 'muestra ventana categoria
                     Me.Close() 'cierra esta ventana
 
 
                 Case 2
-                    'picBoxRuleta.Image = My.Resources.entreten1
+                    picBoxRuleta.Image = My.Resources.Ruletaentrete
 
                     VentanaInicioEntretenimiento.Show() 'muestra ventana categoria
                     Me.Close()'cierra esta ventana
 
 
                 Case 3
-                    'picBoxRuleta.Image = My.Resources.corona1
+                    picBoxRuleta.Image = My.Resources.Ruletacorona
 
                     VentCorona.Show() 'muestra ventana categoria
                     Me.Close()'cierra esta ventana
 
 
                 Case 4
-                    'picBoxRuleta.Image = My.Resources.geogra1
+                    picBoxRuleta.Image = My.Resources.Ruletageografia
 
                     VentanaInicioGeografia.Show() 'muestra ventana categoria
                     Me.Close()'cierra esta ventana
 
 
                 Case 5
-                    'picBoxRuleta.Image = My.Resources.ciencia1
+                    picBoxRuleta.Image = My.Resources.Ruletaciencia
 
                     VentanaInicionCiencia.Show() 'muestra ventana categoria
                     Me.Close()'cierra esta ventana
 
 
                 Case 6
-                    'picBoxRuleta.Image = My.Resources.historia1
+                    picBoxRuleta.Image = My.Resources.Ruletahistoria
 
                     VentanaInicioHistoria.Show() 'muestra ventana categoria
                     Me.Close()'cierra esta ventana
 
 
                 Case 7
-                    'picBoxRuleta.Image = My.Resources.deporte1
+                    picBoxRuleta.Image = My.Resources.Ruletadeporte
 
                     VentanaInicioDeportes.Show() 'muestra ventana categoria
                     Me.Close() 'cierra esta ventana

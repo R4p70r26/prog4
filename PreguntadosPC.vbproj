@@ -388,6 +388,13 @@
     <None Include="Resources\PreguntaGeografia.jpg" />
     <None Include="Resources\Pregunta.jpg" />
     <None Include="Resources\Fondo.jpg" />
+    <None Include="Resources\Ruletaarte.png" />
+    <None Include="Resources\Ruletaciencia.png" />
+    <None Include="Resources\Ruletacorona.png" />
+    <None Include="Resources\Ruletadeporte.png" />
+    <None Include="Resources\Ruletaentrete.png" />
+    <None Include="Resources\Ruletageografia.png" />
+    <None Include="Resources\Ruletahistoria.png" />
     <Content Include="Tareas.txt" />
     <None Include="Resources\0A6.png" />
   </ItemGroup>

@@ -22,8 +22,10 @@ Partial Class VentanaInicioArte
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.TVentanaActiva = New System.Windows.Forms.Timer(Me.components)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -51,6 +53,10 @@ Partial Class VentanaInicioArte
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
+        'TVentanaActiva
+        '
+        Me.TVentanaActiva.Interval = 3000
+        '
         'VentanaInicioArte
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -70,4 +76,5 @@ Partial Class VentanaInicioArte
 
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Button1 As Button
+    Friend WithEvents TVentanaActiva As Timer
 End Class

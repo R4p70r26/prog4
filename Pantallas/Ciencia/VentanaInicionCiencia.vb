@@ -3,6 +3,7 @@
         My.Computer.Audio.Play(My.Resources.Play, AudioPlayMode.Background)
         My.Computer.Audio.Play(My.Resources.Question_Appears, AudioPlayMode.Background)
         My.Forms.VentCiencia.Show()
+        Me.Close()
 
     End Sub
 

@@ -81,7 +81,7 @@ Partial Class MuestraNombresJugadores
         '
         'empezarButton1
         '
-        Me.empezarButton1.Location = New System.Drawing.Point(230, 592)
+        Me.empezarButton1.Location = New System.Drawing.Point(230, 674)
         Me.empezarButton1.Name = "empezarButton1"
         Me.empezarButton1.Size = New System.Drawing.Size(75, 23)
         Me.empezarButton1.TabIndex = 3
@@ -283,9 +283,13 @@ Partial Class MuestraNombresJugadores
         '
         'picBoxRuleta
         '
-        Me.picBoxRuleta.Location = New System.Drawing.Point(111, 215)
+        Me.picBoxRuleta.BackColor = System.Drawing.Color.Transparent
+        Me.picBoxRuleta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.picBoxRuleta.Image = Global.PreguntadosPC.My.Resources.Resources.Ruletaarte
+        Me.picBoxRuleta.Location = New System.Drawing.Point(53, 206)
         Me.picBoxRuleta.Name = "picBoxRuleta"
-        Me.picBoxRuleta.Size = New System.Drawing.Size(330, 330)
+        Me.picBoxRuleta.Size = New System.Drawing.Size(454, 442)
+        Me.picBoxRuleta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.picBoxRuleta.TabIndex = 6
         Me.picBoxRuleta.TabStop = False
         '

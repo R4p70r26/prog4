@@ -3,6 +3,8 @@
         My.Computer.Audio.Play(My.Resources.Play, AudioPlayMode.Background)
         My.Computer.Audio.Play(My.Resources.Question_Appears, AudioPlayMode.Background)
         My.Forms.VentArte.Show()
+        Me.Close()
+
     End Sub
 
     Private Sub VentanaInicioArte_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -11,4 +13,5 @@
         My.Computer.Audio.Play(My.Resources.Categories_Rules, AudioPlayMode.Background)
 
     End Sub
+
 End Class
