@@ -22,12 +22,15 @@ Partial Class VentArte
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.BtnOpcion4 = New System.Windows.Forms.Button()
         Me.BtnOpcion3 = New System.Windows.Forms.Button()
         Me.BtnOpcion2 = New System.Windows.Forms.Button()
         Me.BtnOpcion1 = New System.Windows.Forms.Button()
         Me.TextoPregunta = New System.Windows.Forms.RichTextBox()
         Me.artepersonajePictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.LTiempo = New System.Windows.Forms.Label()
         CType(Me.artepersonajePictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -101,11 +104,24 @@ Partial Class VentArte
         Me.artepersonajePictureBox1.TabIndex = 2
         Me.artepersonajePictureBox1.TabStop = False
         '
+        'Timer1
+        '
+        Me.Timer1.Interval = 1000
+        '
+        'LTiempo
+        '
+        Me.LTiempo.AutoSize = True
+        Me.LTiempo.Location = New System.Drawing.Point(492, 13)
+        Me.LTiempo.Name = "LTiempo"
+        Me.LTiempo.Size = New System.Drawing.Size(0, 13)
+        Me.LTiempo.TabIndex = 15
+        '
         'VentArte
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(560, 806)
+        Me.Controls.Add(Me.LTiempo)
         Me.Controls.Add(Me.BtnOpcion4)
         Me.Controls.Add(Me.BtnOpcion3)
         Me.Controls.Add(Me.BtnOpcion2)
@@ -120,6 +136,7 @@ Partial Class VentArte
         Me.Text = "Arte"
         CType(Me.artepersonajePictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents artepersonajePictureBox1 As PictureBox
@@ -128,4 +145,6 @@ Partial Class VentArte
     Friend WithEvents BtnOpcion2 As Button
     Friend WithEvents BtnOpcion1 As Button
     Friend WithEvents TextoPregunta As RichTextBox
+    Friend WithEvents Timer1 As Timer
+    Friend WithEvents LTiempo As Label
 End Class

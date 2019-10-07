@@ -444,6 +444,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property icon_crown_meter_full() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("icon-crown-meter-full", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property img_como_cambiar_el_idioma_en_preguntados_o_trivia_crack_33140_600() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("img_como_cambiar_el_idioma_en_preguntados_o_trivia_crack_33140_600", resourceCulture)

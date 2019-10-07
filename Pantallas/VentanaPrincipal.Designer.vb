@@ -23,6 +23,7 @@ Partial Class VentanaPrincipal
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.JugarAhoraButton1 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'JugarAhoraButton1
@@ -35,6 +36,15 @@ Partial Class VentanaPrincipal
         Me.JugarAhoraButton1.TabIndex = 0
         Me.JugarAhoraButton1.UseVisualStyleBackColor = True
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(131, 650)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(260, 47)
+        Me.Button1.TabIndex = 1
+        Me.Button1.Text = "Administración"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'VentanaPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -42,6 +52,7 @@ Partial Class VentanaPrincipal
         Me.BackgroundImage = Global.PreguntadosPC.My.Resources.Resources.img_como_cambiar_el_idioma_en_preguntados_o_trivia_crack_33140_600
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(556, 802)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.JugarAhoraButton1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.MaximizeBox = False
@@ -54,4 +65,5 @@ Partial Class VentanaPrincipal
     End Sub
 
     Friend WithEvents JugarAhoraButton1 As Button
+    Friend WithEvents Button1 As Button
 End Class

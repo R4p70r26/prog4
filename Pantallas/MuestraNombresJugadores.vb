@@ -40,7 +40,7 @@
         End Try
     End Sub
 
-    Private Sub EmpezarButton1_Click(sender As Object, e As EventArgs) Handles empezarButton1.Click
+    Private Sub EmpezarButton1_Click(sender As Object, e As EventArgs) Handles btnPregunta1.Click
 
 
     End Sub
@@ -71,7 +71,7 @@
         End Select
         picnum += 1 'aumenta para cambiar la imagen
 
-        If TVueltas.Interval >= 10 Then 'si el contador del tiempo llega a 10 detiene la rotacion de imagenes
+        If TVueltas.Interval >= 20 Then 'si el contador del tiempo llega a 10 detiene la rotacion de imagenes
             TVueltas.Enabled = Not (TVueltas.Enabled)
             TVueltas.Interval = 1 'vuelve a poner el intervalo en 1 para siguiente turno
 
@@ -131,5 +131,9 @@
             End Select
 
         End If
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        VentanaInicioArte.Show() 'muestra ventana categoria
     End Sub
 End Class

@@ -1,5 +1,13 @@
 ﻿Public Class VentArte
+
+    Private tiempo As Integer
+    Private id_pregunta As Integer
+
     Private Sub VentArte_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        conexion()
+        Timer1.Enabled = True
+
 
     End Sub
 
@@ -74,4 +82,74 @@
     Private Sub TextoPregunta_TextChanged(sender As Object, e As EventArgs) Handles TextoPregunta.TextChanged
 
     End Sub
+
+
+
+    Private Sub conexion()
+        Dim oleconex As String = "File Name=" & Application.StartupPath & "Conexion.udl"
+        Dim sqlquery As String
+        Dim sqlQRespuesta As String
+
+        oleconex = "Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=preguntadosDB;Data Source=DESKTOP-UQHUGC6\RAPTRSQLEXPRESS"
+
+        Using conexOle As New OleDb.OleDbConnection(oleconex)
+            conexOle.Open()
+            sqlquery = "SELECT TOP 1 * FROM PRENGUNTAS where id_tema = 1 ORDER BY NEWID()"      'trae un pregunta al azar(TEMA 1 = ARTE)
+
+            sqlQRespuesta = "select * from respuesta where id_pregunta = ?"
+
+
+            Using cmd As New OleDb.OleDbCommand(sqlquery, conexOle)
+                'Dim parametro As New OleDb.OleDbParameter()
+                'parametro.ParameterName = "?"
+                'parametro.OleDbType = SqlDbType.Char
+                'parametro.Direction = ParameterDirection.Input
+                'parametro.Value = 2
+                'cmd.Parameters.Add(parametro)
+
+                Using read As OleDb.OleDbDataReader = cmd.ExecuteReader
+                    If read.Read Then
+                        id_pregunta = read(0)
+                        TextoPregunta.Text = read(2)
+                        tiempo = read(3)
+                    End If
+
+                End Using
+
+
+            End Using
+
+            'revisar query respuestas
+            Dim TABLA_TEMPORAL As DataSet
+            Using consul As New OleDb.OleDbDataAdapter(sqlQRespuesta, conexOle)
+                consul.Fill(TABLA_TEMPORAL)
+
+                BtnOpcion1.Text = TABLA_TEMPORAL.Tables(0).Rows(0).Item(2)
+                BtnOpcion2.Text = TABLA_TEMPORAL.Tables(0).Rows(1).Item(2)
+                BtnOpcion3.Text = TABLA_TEMPORAL.Tables(0).Rows(2).Item(2)
+                BtnOpcion4.Text = TABLA_TEMPORAL.Tables(0).Rows(3).Item(2)
+            End Using
+
+
+
+            'L.Items.Add(tabla.Tables(0).Rows(i).Item(0))
+            '    L.Items(L.Items.Count - 1).SubItems.Add(tabla.Tables(0).Rows(i).Item(1))
+
+
+
+        End Using
+
+    End Sub
+
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        If tiempo > 0 Then
+            tiempo = tiempo - 1
+            LTiempo.Text = tiempo
+        Else
+            Timer1.Enabled = False
+        End If
+
+    End Sub
+
 End Class

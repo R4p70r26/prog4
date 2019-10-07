@@ -6,7 +6,7 @@
     End Sub
 
     Private Sub HistoriaButton4_Click(sender As Object, e As EventArgs) Handles HistoriaButton4.Click
-        My.Forms.VentanaInicionCiencia.Show()
+        My.Forms.VentanaInicioHistoria.Show()
         Me.Close()
 
     End Sub

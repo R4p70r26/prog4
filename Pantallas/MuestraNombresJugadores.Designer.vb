@@ -27,7 +27,7 @@ Partial Class MuestraNombresJugadores
         Me.NombreJugador1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.NombreJugador2 = New System.Windows.Forms.Label()
-        Me.empezarButton1 = New System.Windows.Forms.Button()
+        Me.btnPregunta1 = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.BtnEntretenimiento1 = New System.Windows.Forms.Button()
         Me.BtnGeografia2 = New System.Windows.Forms.Button()
@@ -43,6 +43,9 @@ Partial Class MuestraNombresJugadores
         Me.BtnDeportes1 = New System.Windows.Forms.Button()
         Me.picBoxRuleta = New System.Windows.Forms.PictureBox()
         Me.TVueltas = New System.Windows.Forms.Timer(Me.components)
+        Me.btnPregunta2 = New System.Windows.Forms.Button()
+        Me.btnPregunta3 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.picBoxRuleta, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -79,14 +82,15 @@ Partial Class MuestraNombresJugadores
         Me.NombreJugador2.TabIndex = 2
         Me.NombreJugador2.Text = "Muestrajug2"
         '
-        'empezarButton1
+        'btnPregunta1
         '
-        Me.empezarButton1.Location = New System.Drawing.Point(230, 674)
-        Me.empezarButton1.Name = "empezarButton1"
-        Me.empezarButton1.Size = New System.Drawing.Size(75, 23)
-        Me.empezarButton1.TabIndex = 3
-        Me.empezarButton1.Text = "Empezar"
-        Me.empezarButton1.UseVisualStyleBackColor = True
+        Me.btnPregunta1.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.btnPregunta1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnPregunta1.Location = New System.Drawing.Point(174, 715)
+        Me.btnPregunta1.Name = "btnPregunta1"
+        Me.btnPregunta1.Size = New System.Drawing.Size(64, 10)
+        Me.btnPregunta1.TabIndex = 3
+        Me.btnPregunta1.UseVisualStyleBackColor = False
         '
         'Panel1
         '
@@ -297,6 +301,36 @@ Partial Class MuestraNombresJugadores
         '
         Me.TVueltas.Interval = 1
         '
+        'btnPregunta2
+        '
+        Me.btnPregunta2.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.btnPregunta2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnPregunta2.Location = New System.Drawing.Point(245, 715)
+        Me.btnPregunta2.Name = "btnPregunta2"
+        Me.btnPregunta2.Size = New System.Drawing.Size(64, 10)
+        Me.btnPregunta2.TabIndex = 7
+        Me.btnPregunta2.UseVisualStyleBackColor = False
+        '
+        'btnPregunta3
+        '
+        Me.btnPregunta3.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.btnPregunta3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnPregunta3.Location = New System.Drawing.Point(316, 715)
+        Me.btnPregunta3.Name = "btnPregunta3"
+        Me.btnPregunta3.Size = New System.Drawing.Size(64, 10)
+        Me.btnPregunta3.TabIndex = 8
+        Me.btnPregunta3.UseVisualStyleBackColor = False
+        '
+        'Button1
+        '
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Image = Global.PreguntadosPC.My.Resources.Resources.icon_crown_meter_full
+        Me.Button1.Location = New System.Drawing.Point(245, 654)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(64, 42)
+        Me.Button1.TabIndex = 9
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'MuestraNombresJugadores
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -304,9 +338,12 @@ Partial Class MuestraNombresJugadores
         Me.BackgroundImage = Global.PreguntadosPC.My.Resources.Resources.Fondo
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(560, 806)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnPregunta3)
+        Me.Controls.Add(Me.btnPregunta2)
         Me.Controls.Add(Me.picBoxRuleta)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.empezarButton1)
+        Me.Controls.Add(Me.btnPregunta1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
         Me.MinimizeBox = False
@@ -323,7 +360,7 @@ Partial Class MuestraNombresJugadores
     Friend WithEvents NombreJugador1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents NombreJugador2 As Label
-    Friend WithEvents empezarButton1 As Button
+    Friend WithEvents btnPregunta1 As Button
     Friend WithEvents Panel1 As Panel
     Friend WithEvents BtnGeografia2 As Button
     Friend WithEvents BtnCiencia2 As Button
@@ -339,4 +376,7 @@ Partial Class MuestraNombresJugadores
     Friend WithEvents BtnEntretenimiento1 As Button
     Friend WithEvents picBoxRuleta As PictureBox
     Friend WithEvents TVueltas As Timer
+    Friend WithEvents btnPregunta2 As Button
+    Friend WithEvents btnPregunta3 As Button
+    Friend WithEvents Button1 As Button
 End Class

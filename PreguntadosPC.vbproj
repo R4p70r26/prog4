@@ -226,6 +226,12 @@
     </Compile>
     <Compile Include="PersonajesJugador1.vb" />
     <Compile Include="PersonajesJugador2.vb" />
+    <Compile Include="VentanaAdministracion.Designer.vb">
+      <DependentUpon>VentanaAdministracion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VentanaAdministracion.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Pantallas\Arte\VentanaInicioArte.resx">
@@ -293,6 +299,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pantallas\Historia\VentHistoria.resx">
       <DependentUpon>VentHistoria.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanaAdministracion.resx">
+      <DependentUpon>VentanaAdministracion.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -395,6 +404,7 @@
     <None Include="Resources\Ruletaentrete.png" />
     <None Include="Resources\Ruletageografia.png" />
     <None Include="Resources\Ruletahistoria.png" />
+    <None Include="Resources\icon-crown-meter-full.png" />
     <Content Include="Tareas.txt" />
     <None Include="Resources\0A6.png" />
   </ItemGroup>
