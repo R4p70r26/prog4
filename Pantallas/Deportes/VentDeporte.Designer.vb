@@ -22,12 +22,15 @@ Partial Class VentDeporte
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.BtnOpcion4 = New System.Windows.Forms.Button()
         Me.BtnOpcion3 = New System.Windows.Forms.Button()
         Me.BtnOpcion2 = New System.Windows.Forms.Button()
         Me.BtnOpcion1 = New System.Windows.Forms.Button()
         Me.TextoPregunta = New System.Windows.Forms.RichTextBox()
         Me.DeportepersonajePictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Ltiempo = New System.Windows.Forms.Label()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         CType(Me.DeportepersonajePictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -101,11 +104,24 @@ Partial Class VentDeporte
         Me.DeportepersonajePictureBox1.TabIndex = 2
         Me.DeportepersonajePictureBox1.TabStop = False
         '
+        'Ltiempo
+        '
+        Me.Ltiempo.AutoSize = True
+        Me.Ltiempo.Location = New System.Drawing.Point(491, 13)
+        Me.Ltiempo.Name = "Ltiempo"
+        Me.Ltiempo.Size = New System.Drawing.Size(0, 13)
+        Me.Ltiempo.TabIndex = 15
+        '
+        'Timer1
+        '
+        Me.Timer1.Interval = 1000
+        '
         'VentDeporte
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(560, 806)
+        Me.Controls.Add(Me.Ltiempo)
         Me.Controls.Add(Me.BtnOpcion4)
         Me.Controls.Add(Me.BtnOpcion3)
         Me.Controls.Add(Me.BtnOpcion2)
@@ -120,6 +136,7 @@ Partial Class VentDeporte
         Me.Text = "Deporte"
         CType(Me.DeportepersonajePictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents DeportepersonajePictureBox1 As PictureBox
@@ -128,4 +145,6 @@ Partial Class VentDeporte
     Friend WithEvents BtnOpcion2 As Button
     Friend WithEvents BtnOpcion1 As Button
     Friend WithEvents TextoPregunta As RichTextBox
+    Friend WithEvents Ltiempo As Label
+    Friend WithEvents Timer1 As Timer
 End Class

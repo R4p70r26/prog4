@@ -124,6 +124,12 @@
     <Compile Include="Pantallas\Historia\VentanaInicioHistoria.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Pantallas\IntroducionPreguntas.Designer.vb">
+      <DependentUpon>IntroducionPreguntas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas\IntroducionPreguntas.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Pantallas\Ruleta.Designer.vb">
       <DependentUpon>Ruleta.vb</DependentUpon>
     </Compile>
@@ -251,6 +257,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pantallas\Historia\VentanaInicioHistoria.resx">
       <DependentUpon>VentanaInicioHistoria.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas\IntroducionPreguntas.resx">
+      <DependentUpon>IntroducionPreguntas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pantallas\Ruleta.resx">
       <DependentUpon>Ruleta.vb</DependentUpon>

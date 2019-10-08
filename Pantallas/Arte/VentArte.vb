@@ -96,16 +96,10 @@
             conexOle.Open()
             sqlquery = "SELECT TOP 1 * FROM PRENGUNTAS where id_tema = 1 ORDER BY NEWID()"      'trae un pregunta al azar(TEMA 1 = ARTE)
 
-            sqlQRespuesta = "select * from respuesta where id_pregunta = ?"
+
 
 
             Using cmd As New OleDb.OleDbCommand(sqlquery, conexOle)
-                'Dim parametro As New OleDb.OleDbParameter()
-                'parametro.ParameterName = "?"
-                'parametro.OleDbType = SqlDbType.Char
-                'parametro.Direction = ParameterDirection.Input
-                'parametro.Value = 2
-                'cmd.Parameters.Add(parametro)
 
                 Using read As OleDb.OleDbDataReader = cmd.ExecuteReader
                     If read.Read Then
@@ -113,29 +107,27 @@
                         TextoPregunta.Text = read(2)
                         tiempo = read(3)
                     End If
-
                 End Using
-
-
             End Using
 
-            'revisar query respuestas
-            Dim TABLA_TEMPORAL As DataSet
+
+            sqlQRespuesta = "select opcion from Respuesta where id_pregunta = " & id_pregunta
+
+
             Using consul As New OleDb.OleDbDataAdapter(sqlQRespuesta, conexOle)
-                consul.Fill(TABLA_TEMPORAL)
+                Try
+                    Dim TABLA_TEMPORAL = New DataSet()
+                    consul.Fill(TABLA_TEMPORAL)
 
-                BtnOpcion1.Text = TABLA_TEMPORAL.Tables(0).Rows(0).Item(2)
-                BtnOpcion2.Text = TABLA_TEMPORAL.Tables(0).Rows(1).Item(2)
-                BtnOpcion3.Text = TABLA_TEMPORAL.Tables(0).Rows(2).Item(2)
-                BtnOpcion4.Text = TABLA_TEMPORAL.Tables(0).Rows(3).Item(2)
+                    BtnOpcion1.Text = TABLA_TEMPORAL.Tables(0).Rows(0).Item(0)
+                    BtnOpcion2.Text = TABLA_TEMPORAL.Tables(0).Rows(1).Item(0)
+                    BtnOpcion3.Text = TABLA_TEMPORAL.Tables(0).Rows(2).Item(0)
+                    BtnOpcion4.Text = TABLA_TEMPORAL.Tables(0).Rows(3).Item(0)
+                Catch ex As Exception
+                    Console.WriteLine(ex.Message)
+                End Try
+
             End Using
-
-
-
-            'L.Items.Add(tabla.Tables(0).Rows(i).Item(0))
-            '    L.Items(L.Items.Count - 1).SubItems.Add(tabla.Tables(0).Rows(i).Item(1))
-
-
 
         End Using
 
