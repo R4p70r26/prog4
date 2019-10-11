@@ -74,50 +74,22 @@
     End Sub
 
     Private Sub conexion()
-        Dim oleconex As String = "File Name=" & Application.StartupPath & "Conexion.udl"
-        Dim sqlquery As String
-        Dim sqlQRespuesta As String
 
-        oleconex = "Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=preguntadosDB;Data Source=DESKTOP-UQHUGC6\RAPTRSQLEXPRESS"
+        Dim sql = "SELECT TOP 1 * FROM PRENGUNTAS where id_tema = 6 ORDER BY NEWID()"      'trae un pregunta al azar(TEMA 6 = historia)
+        Dim arrPregu = LeeValorPregunta(sql)
 
-        Using conexOle As New OleDb.OleDbConnection(oleconex)
-            conexOle.Open()
-            sqlquery = "SELECT TOP 1 * FROM PRENGUNTAS where id_tema = 6 ORDER BY NEWID()"      'trae un pregunta al azar(TEMA 6 = historia)
+        id_pregunta = arrPregu(0)
+        TextoPregunta.Text = arrPregu(1)
+        tiempo = arrPregu(2)
 
 
+        Dim sqlResp = "select opcion from Respuesta where id_pregunta = " & id_pregunta
+        Dim arrRespu = LeeValorRespuestas(sqlResp)
 
-
-            Using cmd As New OleDb.OleDbCommand(sqlquery, conexOle)
-
-                Using read As OleDb.OleDbDataReader = cmd.ExecuteReader
-                    If read.Read Then
-                        id_pregunta = read(0)
-                        TextoPregunta.Text = read(2)
-                        tiempo = read(3)
-                    End If
-                End Using
-            End Using
-
-
-            sqlQRespuesta = "select opcion from Respuesta where id_pregunta = " & id_pregunta
-
-
-            Using consul As New OleDb.OleDbDataAdapter(sqlQRespuesta, conexOle)
-                Try
-                    Dim TABLA_TEMPORAL = New DataSet()
-                    consul.Fill(TABLA_TEMPORAL)
-
-                    BtnOpcion1.Text = TABLA_TEMPORAL.Tables(0).Rows(0).Item(0)
-                    BtnOpcion2.Text = TABLA_TEMPORAL.Tables(0).Rows(1).Item(0)
-                    BtnOpcion3.Text = TABLA_TEMPORAL.Tables(0).Rows(2).Item(0)
-                    BtnOpcion4.Text = TABLA_TEMPORAL.Tables(0).Rows(3).Item(0)
-                Catch ex As Exception
-                    Console.WriteLine(ex.Message)
-                End Try
-
-            End Using
-
-        End Using
+        BtnOpcion1.Text = arrRespu(0)
+        BtnOpcion2.Text = arrRespu(1)
+        BtnOpcion3.Text = arrRespu(2)
+        BtnOpcion4.Text = arrRespu(3)
 
     End Sub
 

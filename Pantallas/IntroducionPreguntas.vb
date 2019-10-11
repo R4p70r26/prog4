@@ -58,149 +58,93 @@
 
     Private Sub IngresaPregunta()
         Dim currentId As Integer
-        Dim oleconex = "Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=preguntadosDB;Data Source=DESKTOP-UQHUGC6\RAPTRSQLEXPRESS"
 
-        Using conexOle As New OleDb.OleDbConnection(oleconex) 'declara la conexion
-            conexOle.Open() 'abre la conexion
-            Dim Sql = "insert into prenguntas(id_tema, pregunta, tiempo) values(?,?,?); SELECT SCOPE_IDENTITY()"
+        'query insercion de pregunta
+        Dim sql = "insert into prenguntas(id_tema, pregunta, tiempo) values(" & CbxTemas.SelectedIndex & ", '" & TxtPregunta.Text & "', " & validarTiempo() & "); select scope_identity()"
 
+        Try 'ejecuta el queri en la bd
+            'ejecutar(sql)
+            currentId = ejecutarScalar(sql) 'regresa la id de pregunta
+            MsgBox("La pregunta ha sido almacenada", MsgBoxStyle.Information + MsgBoxStyle.OkOnly, "Guardando")
 
-            Using cmand As New OleDb.OleDbCommand(Sql, conexOle) 'declara los comandos
-                With cmand.Parameters 'añade los parametros
-                    ''.Add("@id", oleDbType:=OleDb.OleDbType.Integer).Value = id
-                    .Add("@id_tema", oleDbType:=OleDb.OleDbType.Integer).Value = CbxTemas.SelectedIndex
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Error")
+        End Try
 
-                    .Add("@pregunta", oleDbType:=OleDb.OleDbType.Char).Value = TxtPregunta.Text
-                    .Add("@tiempo", oleDbType:=OleDb.OleDbType.Integer).Value = validarTiempo()
-                End With
+        'query insercion de pregunta
+        sql = "insert into respuesta(id_pregunta, opcion, resp_correcta) values(" & currentId & ", '" & Txtrespuesta1.Text & "', " & ReturnRespuestaCorrecta(1) & ")"
 
-                Try
-                    cmand.ExecuteNonQuery()
-                    MsgBox("la informacion ha sido almacenada", MsgBoxStyle.Information + MsgBoxStyle.OkOnly, "Guardando")
-                    currentId = cmand.ExecuteScalar()
-                Catch ex As Exception
-                    MsgBox(ex.Message, MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Error")
-                End Try
+        Try
+            ejecutar(sql)
 
-                Dim query = "insert into respuesta (id_pregunta, opcion, resp_correcta) values(?,?,?)"
+        Catch ex As Exception
+            Console.WriteLine(ex.Message)
+        End Try
 
 
-                'Try
+        sql = "insert into respuesta(id_pregunta, opcion, resp_correcta) values(" & currentId & ", '" & Txtrespuesta2.Text & "', " & ReturnRespuestaCorrecta(2) & ")"
 
-                '    Using cmd As New OleDb.OleDbCommand(query, conexOle)
+        Try
+            ejecutar(sql)
 
-                '        For index = 1 To 5
-                '            With cmd.Parameters
-                '                .Add("@id_pregunta", oleDbType:=OleDb.OleDbType.Integer).Value = currentId
-                '                .Add("@opcion", oleDbType:=OleDb.OleDbType.Char).Value = retornaRespuesta(index)
-                '                .Add("@resp_correcta", oleDbType:=OleDb.OleDbType.Boolean).Value = retornaRespCorrecta(index)
-                '            End With
-                '            cmd.ExecuteNonQuery()
-                '        Next
+        Catch ex As Exception
+            Console.WriteLine(ex.Message)
+        End Try
 
-                '    End Using
-                'Catch ex As Exception
-                '    MsgBox(ex.ToString)
-                'End Try
 
-                Try
+        sql = "insert into respuesta(id_pregunta, opcion, resp_correcta) values(" & currentId & ", '" & Txtrespuesta3.Text & "', " & ReturnRespuestaCorrecta(3) & ")"
 
-                    Using cmd As New OleDb.OleDbCommand(query, conexOle)
+        Try
+            ejecutar(sql)
 
-                        With cmd.Parameters
-                            .Add("@id_pregunta", oleDbType:=OleDb.OleDbType.Integer).Value = currentId
-                            .Add("@opcion", oleDbType:=OleDb.OleDbType.Char).Value = Txtrespuesta1.Text
-                            .Add("@resp_correcta", oleDbType:=OleDb.OleDbType.Boolean).Value = RbRespuesta1.Checked
-                        End With
-                        cmd.ExecuteNonQuery()
-                    End Using
-                Catch ex As Exception
-                    MsgBox(ex.ToString)
-                End Try
+        Catch ex As Exception
+            Console.WriteLine(ex.Message)
+        End Try
 
-                Try
 
-                    Using cmd As New OleDb.OleDbCommand(query, conexOle)
+        sql = "insert into respuesta(id_pregunta, opcion, resp_correcta) values(" & currentId & ", '" & Txtrespuesta4.Text & "', " & ReturnRespuestaCorrecta(4) & ")"
 
-                        With cmd.Parameters
-                                .Add("@id_pregunta", oleDbType:=OleDb.OleDbType.Integer).Value = currentId
-                                .Add("@opcion", oleDbType:=OleDb.OleDbType.Char).Value = Txtrespuesta2.Text
-                                .Add("@resp_correcta", oleDbType:=OleDb.OleDbType.Boolean).Value = RbRespuesta2.Checked
-                            End With
-                        cmd.ExecuteNonQuery()
-                    End Using
-                Catch ex As Exception
-                    MsgBox(ex.ToString)
-                End Try
+        Try
+            ejecutar(sql)
 
-                Try
+        Catch ex As Exception
+            Console.WriteLine(ex.Message)
+        End Try
 
-                    Using cmd As New OleDb.OleDbCommand(query, conexOle)
-
-                        With cmd.Parameters
-                                .Add("@id_pregunta", oleDbType:=OleDb.OleDbType.Integer).Value = currentId
-                            .Add("@opcion", oleDbType:=OleDb.OleDbType.Char).Value = Txtrespuesta3.Text
-                            .Add("@resp_correcta", oleDbType:=OleDb.OleDbType.Boolean).Value = RbRespuesta3.Checked
-                        End With
-                        cmd.ExecuteNonQuery()
-
-                    End Using
-                Catch ex As Exception
-                    MsgBox(ex.ToString)
-                End Try
-
-                Try
-
-                    Using cmd As New OleDb.OleDbCommand(query, conexOle)
-
-                        With cmd.Parameters
-                            .Add("@id_pregunta", oleDbType:=OleDb.OleDbType.Integer).Value = currentId
-                            .Add("@opcion", oleDbType:=OleDb.OleDbType.Char).Value = Txtrespuesta4.Text
-                            .Add("@resp_correcta", oleDbType:=OleDb.OleDbType.Boolean).Value = RbRespuesta4.Checked
-                        End With
-                        cmd.ExecuteNonQuery()
-
-                    End Using
-                Catch ex As Exception
-                    MsgBox(ex.ToString)
-                End Try
-
-            End Using
-
-        End Using
 
     End Sub
 
-    Private Function retornaRespuesta(ByRef indice) As String
-        Select Case indice
+    Private Function ReturnRespuestaCorrecta(ByVal respuesta) As Integer 'funcion regresa 1 si es true o false si es 0
+        Select Case respuesta
             Case 1
-                Return Txtrespuesta1.Text
+                If RbRespuesta1.Checked Then
+                    Return 1
+                Else
+                    Return 0
+                End If
             Case 2
-                Return Txtrespuesta2.Text
+                If RbRespuesta2.Checked Then
+                    Return 1
+                Else
+                    Return 0
+                End If
             Case 3
-                Return Txtrespuesta3.Text
+                If RbRespuesta3.Checked Then
+                    Return 1
+                Else
+                    Return 0
+                End If
             Case 4
-                Return Txtrespuesta4.Text
+                If RbRespuesta4.Checked Then
+                    Return 1
+                Else
+                    Return 0
+                End If
 
         End Select
 
-        Return ""
+        Return 0
     End Function
 
-    Private Function retornaRespCorrecta(ByVal indice As Integer) As Boolean
-
-        Select Case indice
-            Case 1
-                Return RbRespuesta1.Checked
-            Case 2
-                Return RbRespuesta2.Checked
-            Case 3
-                Return RbRespuesta3.Checked
-            Case 4
-                Return RbRespuesta4.Checked
-
-        End Select
-        Return False
-    End Function
 
 End Class
