@@ -187,6 +187,66 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property cat_01_2x() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("cat_01_2x", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property cat_02_2x() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("cat_02_2x", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property cat_03_2x() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("cat_03_2x", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property cat_04_2x() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("cat_04_2x", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property cat_05_2x() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("cat_05_2x", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property cat_06_2x() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("cat_06_2x", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         '''</summary>
         Friend ReadOnly Property Categories_Rules() As System.IO.UnmanagedMemoryStream
@@ -655,9 +715,9 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property Ruletaarte() As System.Drawing.Bitmap
+        Friend ReadOnly Property ruletaarte() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("Ruletaarte", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("ruletaarte", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -665,9 +725,9 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property Ruletaciencia() As System.Drawing.Bitmap
+        Friend ReadOnly Property ruletaarte1() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("Ruletaciencia", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("ruletaarte1", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -675,9 +735,9 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property Ruletacorona() As System.Drawing.Bitmap
+        Friend ReadOnly Property ruletaCiencia() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("Ruletacorona", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("ruletaCiencia", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -685,9 +745,9 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property Ruletadeporte() As System.Drawing.Bitmap
+        Friend ReadOnly Property ruletaCorona() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("Ruletadeporte", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("ruletaCorona", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -695,9 +755,9 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property Ruletaentrete() As System.Drawing.Bitmap
+        Friend ReadOnly Property ruletaDeportes() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("Ruletaentrete", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("ruletaDeportes", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -705,9 +765,9 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property Ruletageografia() As System.Drawing.Bitmap
+        Friend ReadOnly Property ruletaEntretenimiento() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("Ruletageografia", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("ruletaEntretenimiento", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -715,9 +775,19 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property Ruletahistoria() As System.Drawing.Bitmap
+        Friend ReadOnly Property ruletaGeografia() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("Ruletahistoria", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("ruletaGeografia", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property ruletaHistoria() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("ruletaHistoria", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -755,6 +825,36 @@ Namespace My.Resources
         Friend ReadOnly Property Startup_App() As System.IO.UnmanagedMemoryStream
             Get
                 Return ResourceManager.GetStream("Startup_App", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property text_correct__1_() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("text_correct__1_", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property text_incorrect__1_() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("text_incorrect__1_", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property text_timeup__1_() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("text_timeup__1_", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
         
@@ -818,6 +918,26 @@ Namespace My.Resources
         Friend ReadOnly Property Use_Extra() As System.IO.UnmanagedMemoryStream
             Get
                 Return ResourceManager.GetStream("Use_Extra", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property vs_divider() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("vs_divider", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property wheel_spin() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("wheel_spin", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
         

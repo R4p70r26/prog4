@@ -31,7 +31,9 @@ Partial Class VentCiencia
         Me.cienciapersonajePictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Ltiempo = New System.Windows.Forms.Label()
+        Me.pictiempofuera = New System.Windows.Forms.PictureBox()
         CType(Me.cienciapersonajePictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pictiempofuera, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BtnOpcion4
@@ -116,11 +118,23 @@ Partial Class VentCiencia
         Me.Ltiempo.Size = New System.Drawing.Size(0, 13)
         Me.Ltiempo.TabIndex = 15
         '
+        'pictiempofuera
+        '
+        Me.pictiempofuera.BackgroundImage = Global.PreguntadosPC.My.Resources.Resources.text_timeup__1_
+        Me.pictiempofuera.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pictiempofuera.Enabled = False
+        Me.pictiempofuera.Location = New System.Drawing.Point(61, 137)
+        Me.pictiempofuera.Name = "pictiempofuera"
+        Me.pictiempofuera.Size = New System.Drawing.Size(428, 117)
+        Me.pictiempofuera.TabIndex = 17
+        Me.pictiempofuera.TabStop = False
+        '
         'VentCiencia
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(560, 806)
+        Me.Controls.Add(Me.pictiempofuera)
         Me.Controls.Add(Me.Ltiempo)
         Me.Controls.Add(Me.BtnOpcion4)
         Me.Controls.Add(Me.BtnOpcion3)
@@ -135,6 +149,7 @@ Partial Class VentCiencia
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Ciencia"
         CType(Me.cienciapersonajePictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pictiempofuera, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -148,4 +163,5 @@ Partial Class VentCiencia
     Friend WithEvents TextoPregunta As RichTextBox
     Friend WithEvents Timer1 As Timer
     Friend WithEvents Ltiempo As Label
+    Friend WithEvents pictiempofuera As PictureBox
 End Class

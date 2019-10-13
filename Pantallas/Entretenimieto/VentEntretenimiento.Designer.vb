@@ -31,7 +31,9 @@ Partial Class VentEntretenimiento
         Me.EntretenimpersonajePictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Ltiempo = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.pictiempofuera = New System.Windows.Forms.PictureBox()
         CType(Me.EntretenimpersonajePictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pictiempofuera, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BtnOpcion4
@@ -109,19 +111,31 @@ Partial Class VentEntretenimiento
         Me.Ltiempo.AutoSize = True
         Me.Ltiempo.Location = New System.Drawing.Point(506, 13)
         Me.Ltiempo.Name = "Ltiempo"
-        Me.Ltiempo.Size = New System.Drawing.Size(39, 13)
+        Me.Ltiempo.Size = New System.Drawing.Size(0, 13)
         Me.Ltiempo.TabIndex = 15
-        Me.Ltiempo.Text = "Label1"
         '
         'Timer1
         '
         Me.Timer1.Interval = 1000
+        '
+        'pictiempofuera
+        '
+        Me.pictiempofuera.BackColor = System.Drawing.Color.Transparent
+        Me.pictiempofuera.BackgroundImage = Global.PreguntadosPC.My.Resources.Resources.text_timeup__1_
+        Me.pictiempofuera.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pictiempofuera.Enabled = False
+        Me.pictiempofuera.Location = New System.Drawing.Point(64, 138)
+        Me.pictiempofuera.Name = "pictiempofuera"
+        Me.pictiempofuera.Size = New System.Drawing.Size(428, 117)
+        Me.pictiempofuera.TabIndex = 19
+        Me.pictiempofuera.TabStop = False
         '
         'VentEntretenimiento
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(560, 806)
+        Me.Controls.Add(Me.pictiempofuera)
         Me.Controls.Add(Me.Ltiempo)
         Me.Controls.Add(Me.BtnOpcion4)
         Me.Controls.Add(Me.BtnOpcion3)
@@ -136,6 +150,7 @@ Partial Class VentEntretenimiento
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Entretenimiento"
         CType(Me.EntretenimpersonajePictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pictiempofuera, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -148,4 +163,5 @@ Partial Class VentEntretenimiento
     Friend WithEvents TextoPregunta As RichTextBox
     Friend WithEvents Ltiempo As Label
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents pictiempofuera As PictureBox
 End Class

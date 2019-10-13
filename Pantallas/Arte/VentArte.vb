@@ -7,6 +7,7 @@
 
         conexion()
         Timer1.Enabled = True
+        pictiempofuera.Visible = False
 
 
     End Sub
@@ -14,14 +15,19 @@
     Private Sub BtnOpcion1_Click(sender As Object, e As EventArgs) Handles BtnOpcion1.Click
         Try
             'falta validar si la respuesta seleccionada es la corecta
-            If True Then
+            If False Then
                 BtnOpcion1.BackColor = Color.GreenYellow
+                Timer1.Enabled = False
                 MessageBox.Show("Correcto", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 My.Forms.MuestraNombresJugadores.Show()
                 Me.Close()
             Else
-                MessageBox.Show("Incorrecto", "", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 BtnOpcion1.BackColor = Color.Red
+                ComprobarRondaGlobal(Timer1) 'llamar cuando se contesta de manera incorrecta
+                MessageBox.Show("Incorrecto", "", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+
+
             End If
         Catch ex As Exception
 
@@ -33,12 +39,15 @@
             'falta validar si la respuesta seleccionada es la corecta
             If True Then
                 BtnOpcion4.BackColor = Color.GreenYellow
+                Timer1.Enabled = False
                 MessageBox.Show("Correcto", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 My.Forms.MuestraNombresJugadores.Show()
                 Me.Close()
             Else
-                MessageBox.Show("Incorrecto", "", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 BtnOpcion4.BackColor = Color.Red
+                ComprobarRondaGlobal(Timer1) 'llamar cuando se contesta de manera incorrecta
+                MessageBox.Show("Incorrecto", "", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
             End If
         Catch ex As Exception
 
@@ -50,12 +59,15 @@
             'falta validar si la respuesta seleccionada es la corecta
             If True Then
                 BtnOpcion2.BackColor = Color.GreenYellow
+                Timer1.Enabled = False
                 MessageBox.Show("Correcto", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 My.Forms.MuestraNombresJugadores.Show()
                 Me.Close()
             Else
-                MessageBox.Show("Incorrecto", "", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 BtnOpcion2.BackColor = Color.Red
+                ComprobarRondaGlobal(Timer1) 'llamar cuando se contesta de manera incorrecta
+                MessageBox.Show("Incorrecto", "", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
             End If
         Catch ex As Exception
 
@@ -67,12 +79,15 @@
             'falta validar si la respuesta seleccionada es la corecta
             If True Then
                 BtnOpcion3.BackColor = Color.GreenYellow
+                Timer1.Enabled = False
                 MessageBox.Show("Correcto", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 My.Forms.MuestraNombresJugadores.Show()
                 Me.Close()
             Else
-                MessageBox.Show("Incorrecto", "", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 BtnOpcion3.BackColor = Color.Red
+                ComprobarRondaGlobal(Timer1) 'llamar cuando se contesta de manera incorrecta
+                MessageBox.Show("Incorrecto", "", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
             End If
         Catch ex As Exception
 
@@ -114,7 +129,34 @@
         Else
             Timer1.Enabled = False
         End If
+        TiempoPregunta()
+
 
     End Sub
+
+    Private Sub TiempoPregunta()
+
+        If tiempo = 0 Then
+            If Persona1EstaJugando Then
+                Persona1EstaJugando = False
+                Persona2EstaJugando = True
+            ElseIf Persona2EstaJugando Then
+                Persona1EstaJugando = True
+                Persona2EstaJugando = False
+
+            End If
+
+            BtnOpcion1.Enabled = False
+            BtnOpcion2.Enabled = False
+            BtnOpcion3.Enabled = False
+            BtnOpcion4.Enabled = False
+
+            pictiempofuera.Visible = True
+
+        End If
+
+    End Sub
+
+
 
 End Class

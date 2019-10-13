@@ -31,7 +31,9 @@ Partial Class VentArte
         Me.artepersonajePictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.LTiempo = New System.Windows.Forms.Label()
+        Me.pictiempofuera = New System.Windows.Forms.PictureBox()
         CType(Me.artepersonajePictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pictiempofuera, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BtnOpcion4
@@ -116,11 +118,22 @@ Partial Class VentArte
         Me.LTiempo.Size = New System.Drawing.Size(0, 13)
         Me.LTiempo.TabIndex = 15
         '
+        'pictiempofuera
+        '
+        Me.pictiempofuera.BackgroundImage = Global.PreguntadosPC.My.Resources.Resources.text_timeup__1_
+        Me.pictiempofuera.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pictiempofuera.Location = New System.Drawing.Point(64, 141)
+        Me.pictiempofuera.Name = "pictiempofuera"
+        Me.pictiempofuera.Size = New System.Drawing.Size(428, 117)
+        Me.pictiempofuera.TabIndex = 16
+        Me.pictiempofuera.TabStop = False
+        '
         'VentArte
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(560, 806)
+        Me.Controls.Add(Me.pictiempofuera)
         Me.Controls.Add(Me.LTiempo)
         Me.Controls.Add(Me.BtnOpcion4)
         Me.Controls.Add(Me.BtnOpcion3)
@@ -135,6 +148,7 @@ Partial Class VentArte
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Arte"
         CType(Me.artepersonajePictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pictiempofuera, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -147,4 +161,5 @@ Partial Class VentArte
     Friend WithEvents TextoPregunta As RichTextBox
     Friend WithEvents Timer1 As Timer
     Friend WithEvents LTiempo As Label
+    Friend WithEvents pictiempofuera As PictureBox
 End Class

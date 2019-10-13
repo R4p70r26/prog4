@@ -38,11 +38,11 @@ Partial Class VentanaPrincipal
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(131, 650)
+        Me.Button1.Location = New System.Drawing.Point(131, 648)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(260, 47)
         Me.Button1.TabIndex = 1
-        Me.Button1.Text = "Administración"
+        Me.Button1.Text = "Agregar Preguntas"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'VentanaPrincipal

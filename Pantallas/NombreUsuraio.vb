@@ -12,6 +12,8 @@
                 MessageBox.Show("Debe Ingresar el nombre de los jugadores", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)  'muestra una ventana de alerta
             Else
                 'Reproduce el audio al dar click en el boton EMPEZAR - no continua con la siguiente linea hasta reproducirlo por completo ( AudioPlayMode.WaitToComplete )
+                NombreJugador1Global = Jugardor1.Text
+                NombreJugador2Global = Jugador2.Text
                 My.Computer.Audio.Play(My.Resources.Random_Oponent, AudioPlayMode.WaitToComplete)
                 My.Forms.MuestraNombresJugadores.Show()
                 Me.Close()

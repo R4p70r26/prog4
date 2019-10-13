@@ -94,6 +94,8 @@
 
         Catch ex As Exception
             MsgBox("Error al extraer las respuestas")
+            desconectar()
+
         End Try
 
         Return respuesta

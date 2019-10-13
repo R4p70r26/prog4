@@ -88,6 +88,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FuncionesGlobales.vb" />
     <Compile Include="Pantallas\Arte\VentanaInicioArte.Designer.vb">
       <DependentUpon>VentanaInicioArte.vb</DependentUpon>
     </Compile>
@@ -131,22 +132,10 @@
     <Compile Include="Pantallas\IntroducionPreguntas.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pantallas\Ruleta.Designer.vb">
-      <DependentUpon>Ruleta.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Pantallas\Ruleta.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Pantallas\VentanaInicio.Designer.vb">
       <DependentUpon>VentanaInicio.vb</DependentUpon>
     </Compile>
     <Compile Include="Pantallas\VentanaInicio.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Pantallas\MenuJuego.Designer.vb">
-      <DependentUpon>MenuJuego.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Pantallas\MenuJuego.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Pantallas\MuestraNombresJugadores.Designer.vb">
@@ -262,14 +251,8 @@
     <EmbeddedResource Include="Pantallas\IntroducionPreguntas.resx">
       <DependentUpon>IntroducionPreguntas.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pantallas\Ruleta.resx">
-      <DependentUpon>Ruleta.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Pantallas\VentanaInicio.resx">
       <DependentUpon>VentanaInicio.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Pantallas\MenuJuego.resx">
-      <DependentUpon>MenuJuego.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pantallas\MuestraNombresJugadores.resx">
       <DependentUpon>MuestraNombresJugadores.vb</DependentUpon>
@@ -407,14 +390,26 @@
     <None Include="Resources\PreguntaGeografia.jpg" />
     <None Include="Resources\Pregunta.jpg" />
     <None Include="Resources\Fondo.jpg" />
-    <None Include="Resources\Ruletaarte.png" />
-    <None Include="Resources\Ruletaciencia.png" />
-    <None Include="Resources\Ruletacorona.png" />
-    <None Include="Resources\Ruletadeporte.png" />
-    <None Include="Resources\Ruletaentrete.png" />
-    <None Include="Resources\Ruletageografia.png" />
-    <None Include="Resources\Ruletahistoria.png" />
     <None Include="Resources\icon-crown-meter-full.png" />
+    <None Include="Resources\cat_01%402x.png" />
+    <None Include="Resources\cat_02%402x.png" />
+    <None Include="Resources\cat_03%402x.png" />
+    <None Include="Resources\cat_04%402x.png" />
+    <None Include="Resources\cat_05%402x.png" />
+    <None Include="Resources\cat_06%402x.png" />
+    <None Include="Resources\text-correct %281%29.png" />
+    <None Include="Resources\text-incorrect %281%29.png" />
+    <None Include="Resources\text-timeup %281%29.png" />
+    <None Include="Resources\vs-divider.png" />
+    <None Include="Resources\wheel-spin.png" />
+    <None Include="Resources\ruletaarte.png" />
+    <None Include="Resources\ruletaCiencia.png" />
+    <None Include="Resources\ruletaCorona.png" />
+    <None Include="Resources\ruletaDeportes.png" />
+    <None Include="Resources\ruletaEntretenimiento.png" />
+    <None Include="Resources\ruletaGeografia.png" />
+    <None Include="Resources\ruletaHistoria.png" />
+    <None Include="Resources\ruletaarte1.png" />
     <Content Include="Tareas.txt" />
     <None Include="Resources\0A6.png" />
   </ItemGroup>

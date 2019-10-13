@@ -31,7 +31,9 @@ Partial Class VentGeografia
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Ltiempo = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.pictiempofuera = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pictiempofuera, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TextoPregunta
@@ -117,12 +119,25 @@ Partial Class VentGeografia
         '
         Me.Timer1.Interval = 1000
         '
+        'pictiempofuera
+        '
+        Me.pictiempofuera.BackColor = System.Drawing.Color.Transparent
+        Me.pictiempofuera.BackgroundImage = Global.PreguntadosPC.My.Resources.Resources.text_timeup__1_
+        Me.pictiempofuera.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pictiempofuera.Enabled = False
+        Me.pictiempofuera.Location = New System.Drawing.Point(68, 139)
+        Me.pictiempofuera.Name = "pictiempofuera"
+        Me.pictiempofuera.Size = New System.Drawing.Size(428, 117)
+        Me.pictiempofuera.TabIndex = 20
+        Me.pictiempofuera.TabStop = False
+        '
         'VentGeografia
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.ClientSize = New System.Drawing.Size(560, 806)
+        Me.Controls.Add(Me.pictiempofuera)
         Me.Controls.Add(Me.Ltiempo)
         Me.Controls.Add(Me.BtnOpcion4)
         Me.Controls.Add(Me.BtnOpcion3)
@@ -137,6 +152,7 @@ Partial Class VentGeografia
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Geografia"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pictiempofuera, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -150,4 +166,5 @@ Partial Class VentGeografia
     Friend WithEvents BtnOpcion4 As Button
     Friend WithEvents Ltiempo As Label
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents pictiempofuera As PictureBox
 End Class
