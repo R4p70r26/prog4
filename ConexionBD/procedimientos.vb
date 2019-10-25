@@ -74,8 +74,8 @@
         Return arr
     End Function
 
-    Friend Function LeeValorRespuestas(ByVal sql As String) As String()
-        Dim respuesta(5) As String
+    Friend Function LeeValorRespuestas(ByVal sql As String) As String(,)
+        Dim respuesta(4, 2) As String 'declara un arreglo de 4*2
         Dim tabla As New DataSet()
 
         Try
@@ -84,12 +84,17 @@
 
             adaptador.Fill(tabla)
 
-            respuesta(0) = tabla.Tables(0).Rows(0).Item(0)
-            respuesta(1) = tabla.Tables(0).Rows(1).Item(0)
-            respuesta(2) = tabla.Tables(0).Rows(2).Item(0)
-            respuesta(3) = tabla.Tables(0).Rows(3).Item(0)
+            respuesta(0, 0) = tabla.Tables(0).Rows(0).Item(0) 'guarda la opcion'
+            respuesta(1, 0) = tabla.Tables(0).Rows(1).Item(0)
+            respuesta(2, 0) = tabla.Tables(0).Rows(2).Item(0)
+            respuesta(3, 0) = tabla.Tables(0).Rows(3).Item(0)
 
+            respuesta(0, 1) = tabla.Tables(0).Rows(0).Item(1) 'guarda la respuestas '
+            respuesta(1, 1) = tabla.Tables(0).Rows(1).Item(1)
+            respuesta(2, 1) = tabla.Tables(0).Rows(2).Item(1)
+            respuesta(3, 1) = tabla.Tables(0).Rows(3).Item(1)
             desconectar()
+
 
 
         Catch ex As Exception

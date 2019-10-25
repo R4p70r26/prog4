@@ -2,6 +2,7 @@
 
     Private tiempo As Integer
     Private id_pregunta As Integer
+    Private Tmp_Respuestas As String(,) ' creacion de variable global 
 
     Private Sub VentArte_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -12,19 +13,35 @@
 
     End Sub
 
+    Private Sub RespuestaCorrecta()
+
+
+        My.Computer.Audio.Play(My.Resources.Correct, AudioPlayMode.WaitToComplete)
+        My.Forms.VentanaRespuesta.Tag = TextoPregunta.Text
+        My.Forms.VentanaRespuesta.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub RespuestaIncorrecta()
+
+        MessageBox.Show("Incorrecto", "", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        My.Computer.Audio.Play(My.Resources.Incorrect, AudioPlayMode.WaitToComplete)
+        My.Forms.VentanaIncorrecta.Tag = TextoPregunta.Text
+        My.Forms.VentanaIncorrecta.Show()
+        Me.Close()
+    End Sub
+
     Private Sub BtnOpcion1_Click(sender As Object, e As EventArgs) Handles BtnOpcion1.Click
         Try
-            'falta validar si la respuesta seleccionada es la corecta
-            If False Then
+            Dim Respuesta = Tmp_Respuestas(0, 1)
+            If (Respuesta = "True") Then
                 BtnOpcion1.BackColor = Color.GreenYellow
                 Timer1.Enabled = False
-                MessageBox.Show("Correcto", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                My.Forms.MuestraNombresJugadores.Show()
-                Me.Close()
+                Me.RespuestaCorrecta()
             Else
                 BtnOpcion1.BackColor = Color.Red
                 ComprobarRondaGlobal(Timer1) 'llamar cuando se contesta de manera incorrecta
-                MessageBox.Show("Incorrecto", "", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Me.RespuestaIncorrecta()
 
 
 
@@ -40,14 +57,11 @@
             If True Then
                 BtnOpcion4.BackColor = Color.GreenYellow
                 Timer1.Enabled = False
-                MessageBox.Show("Correcto", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                My.Forms.MuestraNombresJugadores.Show()
-                Me.Close()
+                Me.RespuestaCorrecta()
             Else
                 BtnOpcion4.BackColor = Color.Red
                 ComprobarRondaGlobal(Timer1) 'llamar cuando se contesta de manera incorrecta
-                MessageBox.Show("Incorrecto", "", MessageBoxButtons.OK, MessageBoxIcon.Error)
-
+                Me.RespuestaIncorrecta()
             End If
         Catch ex As Exception
 
@@ -60,13 +74,11 @@
             If True Then
                 BtnOpcion2.BackColor = Color.GreenYellow
                 Timer1.Enabled = False
-                MessageBox.Show("Correcto", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                My.Forms.MuestraNombresJugadores.Show()
-                Me.Close()
+                Me.RespuestaCorrecta()
             Else
                 BtnOpcion2.BackColor = Color.Red
                 ComprobarRondaGlobal(Timer1) 'llamar cuando se contesta de manera incorrecta
-                MessageBox.Show("Incorrecto", "", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Me.RespuestaIncorrecta()
 
             End If
         Catch ex As Exception
@@ -80,13 +92,11 @@
             If True Then
                 BtnOpcion3.BackColor = Color.GreenYellow
                 Timer1.Enabled = False
-                MessageBox.Show("Correcto", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                My.Forms.MuestraNombresJugadores.Show()
-                Me.Close()
+                Me.RespuestaCorrecta()
             Else
                 BtnOpcion3.BackColor = Color.Red
                 ComprobarRondaGlobal(Timer1) 'llamar cuando se contesta de manera incorrecta
-                MessageBox.Show("Incorrecto", "", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Me.RespuestaIncorrecta()
 
             End If
         Catch ex As Exception
@@ -110,13 +120,13 @@
         tiempo = arrPregu(2)
 
 
-        Dim sqlResp = "select opcion from Respuesta where id_pregunta = " & id_pregunta
-        Dim arrRespu = LeeValorRespuestas(sqlResp)
+        Dim sqlResp = "select opcion,Resp_correcta from Respuesta where id_pregunta = " & id_pregunta 'selecciona la opcion y el estado de respuesta'
+        Tmp_Respuestas = LeeValorRespuestas(sqlResp)
 
-        BtnOpcion1.Text = arrRespu(0)
-        BtnOpcion2.Text = arrRespu(1)
-        BtnOpcion3.Text = arrRespu(2)
-        BtnOpcion4.Text = arrRespu(3)
+        BtnOpcion1.Text = Tmp_Respuestas(0, 0) ' esto da el texto de las opciones'
+        BtnOpcion2.Text = Tmp_Respuestas(1, 0)
+        BtnOpcion3.Text = Tmp_Respuestas(2, 0)
+        BtnOpcion4.Text = Tmp_Respuestas(3, 0)
 
 
     End Sub
