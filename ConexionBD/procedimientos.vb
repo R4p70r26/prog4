@@ -108,4 +108,29 @@
     End Function
 
 
+    Friend Function LeeJugadores(ByVal sql As String) As DataSet
+        Dim respuesta(5) As String
+        Dim tabla As New DataSet()
+
+        Try
+            conectar()
+            Dim adaptador As New OleDb.OleDbDataAdapter(sql, db)
+
+            adaptador.Fill(tabla)
+
+
+            desconectar()
+
+
+        Catch ex As Exception
+            MsgBox("Error al extraer las respuestas")
+            desconectar()
+
+        End Try
+
+        Return tabla
+
+    End Function
+
+
 End Module
