@@ -22,32 +22,18 @@ Partial Class NombreUsuraio
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Jugardor1 = New System.Windows.Forms.TextBox()
-        Me.Jugador2 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.JugarAhoraButton1 = New System.Windows.Forms.Button()
+        Me.Jugador1 = New System.Windows.Forms.ComboBox()
+        Me.Jugador2 = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
-        '
-        'Jugardor1
-        '
-        Me.Jugardor1.Location = New System.Drawing.Point(179, 84)
-        Me.Jugardor1.Name = "Jugardor1"
-        Me.Jugardor1.Size = New System.Drawing.Size(195, 20)
-        Me.Jugardor1.TabIndex = 0
-        '
-        'Jugador2
-        '
-        Me.Jugador2.Location = New System.Drawing.Point(179, 199)
-        Me.Jugador2.Name = "Jugador2"
-        Me.Jugador2.Size = New System.Drawing.Size(195, 20)
-        Me.Jugador2.TabIndex = 1
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(176, 68)
+        Me.Label1.Location = New System.Drawing.Point(169, 68)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(136, 16)
         Me.Label1.TabIndex = 2
@@ -57,7 +43,7 @@ Partial Class NombreUsuraio
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(176, 183)
+        Me.Label2.Location = New System.Drawing.Point(169, 183)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(136, 16)
         Me.Label2.TabIndex = 3
@@ -73,16 +59,32 @@ Partial Class NombreUsuraio
         Me.JugarAhoraButton1.TabIndex = 6
         Me.JugarAhoraButton1.UseVisualStyleBackColor = True
         '
+        'Jugador1
+        '
+        Me.Jugador1.FormattingEnabled = True
+        Me.Jugador1.Location = New System.Drawing.Point(172, 88)
+        Me.Jugador1.Name = "Jugador1"
+        Me.Jugador1.Size = New System.Drawing.Size(241, 21)
+        Me.Jugador1.TabIndex = 7
+        '
+        'Jugador2
+        '
+        Me.Jugador2.FormattingEnabled = True
+        Me.Jugador2.Location = New System.Drawing.Point(172, 202)
+        Me.Jugador2.Name = "Jugador2"
+        Me.Jugador2.Size = New System.Drawing.Size(241, 21)
+        Me.Jugador2.TabIndex = 7
+        '
         'NombreUsuraio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(560, 806)
+        Me.ClientSize = New System.Drawing.Size(560, 733)
+        Me.Controls.Add(Me.Jugador2)
+        Me.Controls.Add(Me.Jugador1)
         Me.Controls.Add(Me.JugarAhoraButton1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.Jugador2)
-        Me.Controls.Add(Me.Jugardor1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
         Me.MinimizeBox = False
@@ -93,10 +95,9 @@ Partial Class NombreUsuraio
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents Jugardor1 As TextBox
-    Friend WithEvents Jugador2 As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents JugarAhoraButton1 As Button
+    Friend WithEvents Jugador1 As ComboBox
+    Friend WithEvents Jugador2 As ComboBox
 End Class
