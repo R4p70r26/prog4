@@ -101,7 +101,7 @@ Partial Class VentArte
         Me.artepersonajePictureBox1.Image = Global.PreguntadosPC.My.Resources.Resources.Pregunta
         Me.artepersonajePictureBox1.Location = New System.Drawing.Point(0, 0)
         Me.artepersonajePictureBox1.Name = "artepersonajePictureBox1"
-        Me.artepersonajePictureBox1.Size = New System.Drawing.Size(560, 733)
+        Me.artepersonajePictureBox1.Size = New System.Drawing.Size(560, 806)
         Me.artepersonajePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.artepersonajePictureBox1.TabIndex = 2
         Me.artepersonajePictureBox1.TabStop = False
@@ -132,7 +132,7 @@ Partial Class VentArte
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(560, 733)
+        Me.ClientSize = New System.Drawing.Size(560, 806)
         Me.Controls.Add(Me.pictiempofuera)
         Me.Controls.Add(Me.LTiempo)
         Me.Controls.Add(Me.BtnOpcion4)
