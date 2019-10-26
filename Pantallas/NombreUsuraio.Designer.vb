@@ -53,7 +53,7 @@ Partial Class NombreUsuraio
         '
         Me.JugarAhoraButton1.BackgroundImage = Global.PreguntadosPC.My.Resources.Resources._0A6
         Me.JugarAhoraButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.JugarAhoraButton1.Location = New System.Drawing.Point(129, 635)
+        Me.JugarAhoraButton1.Location = New System.Drawing.Point(163, 633)
         Me.JugarAhoraButton1.Name = "JugarAhoraButton1"
         Me.JugarAhoraButton1.Size = New System.Drawing.Size(260, 60)
         Me.JugarAhoraButton1.TabIndex = 6
@@ -61,6 +61,7 @@ Partial Class NombreUsuraio
         '
         'Jugador1
         '
+        Me.Jugador1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.Jugador1.FormattingEnabled = True
         Me.Jugador1.Location = New System.Drawing.Point(172, 88)
         Me.Jugador1.Name = "Jugador1"
@@ -69,6 +70,7 @@ Partial Class NombreUsuraio
         '
         'Jugador2
         '
+        Me.Jugador2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.Jugador2.FormattingEnabled = True
         Me.Jugador2.Location = New System.Drawing.Point(172, 202)
         Me.Jugador2.Name = "Jugador2"
