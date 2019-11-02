@@ -123,7 +123,7 @@
 
 
         Catch ex As Exception
-            MsgBox("Error al extraer las respuestas")
+            MsgBox("Error al extraer jugadores")
             desconectar()
 
         End Try
