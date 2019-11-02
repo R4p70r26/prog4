@@ -335,9 +335,12 @@ Partial Class MuestraNombresJugadores
         'LRonda
         '
         Me.LRonda.AutoSize = True
-        Me.LRonda.Location = New System.Drawing.Point(255, 20)
+        Me.LRonda.BackColor = System.Drawing.Color.DeepSkyBlue
+        Me.LRonda.Font = New System.Drawing.Font("Showcard Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LRonda.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.LRonda.Location = New System.Drawing.Point(211, 9)
         Me.LRonda.Name = "LRonda"
-        Me.LRonda.Size = New System.Drawing.Size(65, 13)
+        Me.LRonda.Size = New System.Drawing.Size(124, 23)
         Me.LRonda.TabIndex = 10
         Me.LRonda.Text = "Ronda 1/25"
         '
@@ -347,7 +350,7 @@ Partial Class MuestraNombresJugadores
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.PreguntadosPC.My.Resources.Resources.Fondo
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(560, 806)
+        Me.ClientSize = New System.Drawing.Size(560, 749)
         Me.Controls.Add(Me.LRonda)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.btnPregunta3)
@@ -356,6 +359,7 @@ Partial Class MuestraNombresJugadores
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.btnPregunta1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "MuestraNombresJugadores"

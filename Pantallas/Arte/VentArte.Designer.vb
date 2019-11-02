@@ -23,6 +23,7 @@ Partial Class VentArte
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(VentArte))
         Me.BtnOpcion4 = New System.Windows.Forms.Button()
         Me.BtnOpcion3 = New System.Windows.Forms.Button()
         Me.BtnOpcion2 = New System.Windows.Forms.Button()
@@ -41,10 +42,11 @@ Partial Class VentArte
         Me.BtnOpcion4.BackColor = System.Drawing.Color.White
         Me.BtnOpcion4.FlatAppearance.BorderColor = System.Drawing.Color.Gray
         Me.BtnOpcion4.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.BtnOpcion4.Location = New System.Drawing.Point(18, 828)
-        Me.BtnOpcion4.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.BtnOpcion4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.BtnOpcion4.ForeColor = System.Drawing.SystemColors.ControlDark
+        Me.BtnOpcion4.Location = New System.Drawing.Point(12, 644)
         Me.BtnOpcion4.Name = "BtnOpcion4"
-        Me.BtnOpcion4.Size = New System.Drawing.Size(804, 65)
+        Me.BtnOpcion4.Size = New System.Drawing.Size(536, 42)
         Me.BtnOpcion4.TabIndex = 14
         Me.BtnOpcion4.Text = "Button4"
         Me.BtnOpcion4.UseVisualStyleBackColor = False
@@ -54,10 +56,11 @@ Partial Class VentArte
         Me.BtnOpcion3.BackColor = System.Drawing.Color.White
         Me.BtnOpcion3.FlatAppearance.BorderColor = System.Drawing.Color.Gray
         Me.BtnOpcion3.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.BtnOpcion3.Location = New System.Drawing.Point(18, 738)
-        Me.BtnOpcion3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.BtnOpcion3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.BtnOpcion3.ForeColor = System.Drawing.SystemColors.ControlDark
+        Me.BtnOpcion3.Location = New System.Drawing.Point(12, 544)
         Me.BtnOpcion3.Name = "BtnOpcion3"
-        Me.BtnOpcion3.Size = New System.Drawing.Size(804, 65)
+        Me.BtnOpcion3.Size = New System.Drawing.Size(536, 42)
         Me.BtnOpcion3.TabIndex = 13
         Me.BtnOpcion3.Text = "Button3"
         Me.BtnOpcion3.UseVisualStyleBackColor = False
@@ -67,10 +70,11 @@ Partial Class VentArte
         Me.BtnOpcion2.BackColor = System.Drawing.Color.White
         Me.BtnOpcion2.FlatAppearance.BorderColor = System.Drawing.Color.Gray
         Me.BtnOpcion2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.BtnOpcion2.Location = New System.Drawing.Point(18, 651)
-        Me.BtnOpcion2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.BtnOpcion2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.BtnOpcion2.ForeColor = System.Drawing.SystemColors.ControlDark
+        Me.BtnOpcion2.Location = New System.Drawing.Point(12, 444)
         Me.BtnOpcion2.Name = "BtnOpcion2"
-        Me.BtnOpcion2.Size = New System.Drawing.Size(804, 65)
+        Me.BtnOpcion2.Size = New System.Drawing.Size(536, 42)
         Me.BtnOpcion2.TabIndex = 12
         Me.BtnOpcion2.Text = "Button2"
         Me.BtnOpcion2.UseVisualStyleBackColor = False
@@ -80,10 +84,11 @@ Partial Class VentArte
         Me.BtnOpcion1.BackColor = System.Drawing.Color.White
         Me.BtnOpcion1.FlatAppearance.BorderColor = System.Drawing.Color.Gray
         Me.BtnOpcion1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.BtnOpcion1.Location = New System.Drawing.Point(18, 563)
-        Me.BtnOpcion1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.BtnOpcion1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnOpcion1.ForeColor = System.Drawing.SystemColors.ControlDark
+        Me.BtnOpcion1.Location = New System.Drawing.Point(12, 344)
         Me.BtnOpcion1.Name = "BtnOpcion1"
-        Me.BtnOpcion1.Size = New System.Drawing.Size(804, 65)
+        Me.BtnOpcion1.Size = New System.Drawing.Size(536, 42)
         Me.BtnOpcion1.TabIndex = 11
         Me.BtnOpcion1.Text = "Button1"
         Me.BtnOpcion1.UseVisualStyleBackColor = False
@@ -92,11 +97,10 @@ Partial Class VentArte
         '
         Me.TextoPregunta.BackColor = System.Drawing.Color.White
         Me.TextoPregunta.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextoPregunta.Location = New System.Drawing.Point(48, 154)
-        Me.TextoPregunta.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.TextoPregunta.Location = New System.Drawing.Point(32, 100)
         Me.TextoPregunta.Name = "TextoPregunta"
         Me.TextoPregunta.ReadOnly = True
-        Me.TextoPregunta.Size = New System.Drawing.Size(750, 308)
+        Me.TextoPregunta.Size = New System.Drawing.Size(500, 200)
         Me.TextoPregunta.TabIndex = 10
         Me.TextoPregunta.Text = ""
         '
@@ -107,20 +111,18 @@ Partial Class VentArte
         'LTiempo
         '
         Me.LTiempo.AutoSize = True
-        Me.LTiempo.Location = New System.Drawing.Point(738, 20)
-        Me.LTiempo.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LTiempo.Location = New System.Drawing.Point(492, 13)
         Me.LTiempo.Name = "LTiempo"
-        Me.LTiempo.Size = New System.Drawing.Size(0, 20)
+        Me.LTiempo.Size = New System.Drawing.Size(0, 13)
         Me.LTiempo.TabIndex = 15
         '
         'pictiempofuera
         '
         Me.pictiempofuera.BackgroundImage = Global.PreguntadosPC.My.Resources.Resources.text_timeup__1_
         Me.pictiempofuera.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pictiempofuera.Location = New System.Drawing.Point(96, 217)
-        Me.pictiempofuera.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.pictiempofuera.Location = New System.Drawing.Point(64, 141)
         Me.pictiempofuera.Name = "pictiempofuera"
-        Me.pictiempofuera.Size = New System.Drawing.Size(642, 180)
+        Me.pictiempofuera.Size = New System.Drawing.Size(428, 117)
         Me.pictiempofuera.TabIndex = 16
         Me.pictiempofuera.TabStop = False
         '
@@ -129,18 +131,17 @@ Partial Class VentArte
         Me.artepersonajePictureBox1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.artepersonajePictureBox1.Image = Global.PreguntadosPC.My.Resources.Resources.Pregunta
         Me.artepersonajePictureBox1.Location = New System.Drawing.Point(0, 0)
-        Me.artepersonajePictureBox1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.artepersonajePictureBox1.Name = "artepersonajePictureBox1"
-        Me.artepersonajePictureBox1.Size = New System.Drawing.Size(840, 1050)
+        Me.artepersonajePictureBox1.Size = New System.Drawing.Size(560, 749)
         Me.artepersonajePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.artepersonajePictureBox1.TabIndex = 2
         Me.artepersonajePictureBox1.TabStop = False
         '
         'VentArte
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(840, 1050)
+        Me.ClientSize = New System.Drawing.Size(560, 749)
         Me.Controls.Add(Me.pictiempofuera)
         Me.Controls.Add(Me.LTiempo)
         Me.Controls.Add(Me.BtnOpcion4)
@@ -150,7 +151,7 @@ Partial Class VentArte
         Me.Controls.Add(Me.TextoPregunta)
         Me.Controls.Add(Me.artepersonajePictureBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
-        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "VentArte"

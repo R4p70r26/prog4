@@ -22,6 +22,7 @@ Partial Class NombreUsuraio
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(NombreUsuraio))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.JugarAhoraButton1 = New System.Windows.Forms.Button()
@@ -32,20 +33,24 @@ Partial Class NombreUsuraio
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(169, 68)
+        Me.Label1.BackColor = System.Drawing.Color.DeepSkyBlue
+        Me.Label1.Font = New System.Drawing.Font("Showcard Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label1.Location = New System.Drawing.Point(137, 64)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(136, 16)
+        Me.Label1.Size = New System.Drawing.Size(286, 33)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Nombre Jugador 1"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(169, 183)
+        Me.Label2.BackColor = System.Drawing.Color.DeepSkyBlue
+        Me.Label2.Font = New System.Drawing.Font("Showcard Gothic", 20.25!, System.Drawing.FontStyle.Bold)
+        Me.Label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label2.Location = New System.Drawing.Point(136, 265)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(136, 16)
+        Me.Label2.Size = New System.Drawing.Size(287, 33)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Nombre Jugador 2"
         '
@@ -63,24 +68,26 @@ Partial Class NombreUsuraio
         '
         Me.Jugador1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.Jugador1.FormattingEnabled = True
-        Me.Jugador1.Location = New System.Drawing.Point(172, 88)
+        Me.Jugador1.Location = New System.Drawing.Point(142, 132)
         Me.Jugador1.Name = "Jugador1"
-        Me.Jugador1.Size = New System.Drawing.Size(241, 21)
+        Me.Jugador1.Size = New System.Drawing.Size(280, 21)
         Me.Jugador1.TabIndex = 7
         '
         'Jugador2
         '
         Me.Jugador2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.Jugador2.FormattingEnabled = True
-        Me.Jugador2.Location = New System.Drawing.Point(172, 202)
+        Me.Jugador2.Location = New System.Drawing.Point(133, 344)
         Me.Jugador2.Name = "Jugador2"
-        Me.Jugador2.Size = New System.Drawing.Size(241, 21)
+        Me.Jugador2.Size = New System.Drawing.Size(281, 21)
         Me.Jugador2.TabIndex = 7
         '
         'NombreUsuraio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = Global.PreguntadosPC.My.Resources.Resources.Inicio
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(560, 733)
         Me.Controls.Add(Me.Jugador2)
         Me.Controls.Add(Me.Jugador1)
@@ -88,6 +95,7 @@ Partial Class NombreUsuraio
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "NombreUsuraio"

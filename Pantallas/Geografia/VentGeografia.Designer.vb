@@ -23,6 +23,7 @@ Partial Class VentGeografia
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(VentGeografia))
         Me.TextoPregunta = New System.Windows.Forms.RichTextBox()
         Me.BtnOpcion1 = New System.Windows.Forms.Button()
         Me.BtnOpcion2 = New System.Windows.Forms.Button()
@@ -52,7 +53,9 @@ Partial Class VentGeografia
         Me.BtnOpcion1.BackColor = System.Drawing.Color.White
         Me.BtnOpcion1.FlatAppearance.BorderColor = System.Drawing.Color.Gray
         Me.BtnOpcion1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.BtnOpcion1.Location = New System.Drawing.Point(12, 366)
+        Me.BtnOpcion1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.BtnOpcion1.ForeColor = System.Drawing.SystemColors.ControlDark
+        Me.BtnOpcion1.Location = New System.Drawing.Point(12, 344)
         Me.BtnOpcion1.Name = "BtnOpcion1"
         Me.BtnOpcion1.Size = New System.Drawing.Size(536, 42)
         Me.BtnOpcion1.TabIndex = 6
@@ -64,7 +67,9 @@ Partial Class VentGeografia
         Me.BtnOpcion2.BackColor = System.Drawing.Color.White
         Me.BtnOpcion2.FlatAppearance.BorderColor = System.Drawing.Color.Gray
         Me.BtnOpcion2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.BtnOpcion2.Location = New System.Drawing.Point(12, 423)
+        Me.BtnOpcion2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.BtnOpcion2.ForeColor = System.Drawing.SystemColors.ControlDark
+        Me.BtnOpcion2.Location = New System.Drawing.Point(12, 444)
         Me.BtnOpcion2.Name = "BtnOpcion2"
         Me.BtnOpcion2.Size = New System.Drawing.Size(536, 42)
         Me.BtnOpcion2.TabIndex = 7
@@ -76,7 +81,9 @@ Partial Class VentGeografia
         Me.BtnOpcion3.BackColor = System.Drawing.Color.White
         Me.BtnOpcion3.FlatAppearance.BorderColor = System.Drawing.Color.Gray
         Me.BtnOpcion3.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.BtnOpcion3.Location = New System.Drawing.Point(12, 480)
+        Me.BtnOpcion3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.BtnOpcion3.ForeColor = System.Drawing.SystemColors.ControlDark
+        Me.BtnOpcion3.Location = New System.Drawing.Point(12, 544)
         Me.BtnOpcion3.Name = "BtnOpcion3"
         Me.BtnOpcion3.Size = New System.Drawing.Size(536, 42)
         Me.BtnOpcion3.TabIndex = 8
@@ -88,7 +95,9 @@ Partial Class VentGeografia
         Me.BtnOpcion4.BackColor = System.Drawing.Color.White
         Me.BtnOpcion4.FlatAppearance.BorderColor = System.Drawing.Color.Gray
         Me.BtnOpcion4.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.BtnOpcion4.Location = New System.Drawing.Point(12, 538)
+        Me.BtnOpcion4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.BtnOpcion4.ForeColor = System.Drawing.SystemColors.ControlDark
+        Me.BtnOpcion4.Location = New System.Drawing.Point(12, 644)
         Me.BtnOpcion4.Name = "BtnOpcion4"
         Me.BtnOpcion4.Size = New System.Drawing.Size(536, 42)
         Me.BtnOpcion4.TabIndex = 9
@@ -102,7 +111,7 @@ Partial Class VentGeografia
         Me.PictureBox1.Image = Global.PreguntadosPC.My.Resources.Resources.Pregunta
         Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(560, 806)
+        Me.PictureBox1.Size = New System.Drawing.Size(560, 749)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 4
         Me.PictureBox1.TabStop = False
@@ -136,7 +145,7 @@ Partial Class VentGeografia
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.ClientSize = New System.Drawing.Size(560, 806)
+        Me.ClientSize = New System.Drawing.Size(560, 749)
         Me.Controls.Add(Me.pictiempofuera)
         Me.Controls.Add(Me.Ltiempo)
         Me.Controls.Add(Me.BtnOpcion4)
@@ -146,6 +155,7 @@ Partial Class VentGeografia
         Me.Controls.Add(Me.TextoPregunta)
         Me.Controls.Add(Me.PictureBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "VentGeografia"
