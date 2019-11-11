@@ -53,11 +53,11 @@ Partial Class IntroducionPreguntas
         '
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.DeepSkyBlue
-        Me.Label1.Font = New System.Drawing.Font("Showcard Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label1.Location = New System.Drawing.Point(12, 52)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(223, 23)
+        Me.Label1.Size = New System.Drawing.Size(174, 24)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Digite la pregunta"
         '
@@ -65,11 +65,11 @@ Partial Class IntroducionPreguntas
         '
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.DeepSkyBlue
-        Me.Label2.Font = New System.Drawing.Font("Showcard Gothic", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold)
         Me.Label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label2.Location = New System.Drawing.Point(12, 229)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(252, 23)
+        Me.Label2.Size = New System.Drawing.Size(202, 24)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Digite las respuestas"
         '
@@ -77,11 +77,11 @@ Partial Class IntroducionPreguntas
         '
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.DeepSkyBlue
-        Me.Label3.Font = New System.Drawing.Font("Showcard Gothic", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold)
         Me.Label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label3.Location = New System.Drawing.Point(12, 476)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(193, 23)
+        Me.Label3.Size = New System.Drawing.Size(155, 24)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Digite el tiempo"
         '
@@ -89,11 +89,11 @@ Partial Class IntroducionPreguntas
         '
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.DeepSkyBlue
-        Me.Label4.Font = New System.Drawing.Font("Showcard Gothic", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold)
         Me.Label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label4.Location = New System.Drawing.Point(316, 477)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(216, 23)
+        Me.Label4.Size = New System.Drawing.Size(189, 24)
         Me.Label4.TabIndex = 3
         Me.Label4.Text = "Seleccione el tema"
         '
@@ -233,7 +233,7 @@ Partial Class IntroducionPreguntas
         'btnGuardar
         '
         Me.btnGuardar.BackColor = System.Drawing.Color.DeepSkyBlue
-        Me.btnGuardar.Font = New System.Drawing.Font("Showcard Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnGuardar.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.btnGuardar.Location = New System.Drawing.Point(137, 622)
         Me.btnGuardar.Name = "btnGuardar"
@@ -245,7 +245,7 @@ Partial Class IntroducionPreguntas
         'btnCancelar
         '
         Me.btnCancelar.BackColor = System.Drawing.Color.DeepSkyBlue
-        Me.btnCancelar.Font = New System.Drawing.Font("Showcard Gothic", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.btnCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
         Me.btnCancelar.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.btnCancelar.Location = New System.Drawing.Point(269, 621)
         Me.btnCancelar.Name = "btnCancelar"
