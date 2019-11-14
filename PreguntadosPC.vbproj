@@ -233,6 +233,11 @@
     </Compile>
     <Compile Include="PersonajesJugador1.vb" />
     <Compile Include="PersonajesJugador2.vb" />
+    <Compile Include="preguntadossDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>preguntadossDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="VentanaAdministracion.Designer.vb">
       <DependentUpon>VentanaAdministracion.vb</DependentUpon>
     </Compile>
@@ -327,6 +332,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="preguntadossDataSet.xsc">
+      <DependentUpon>preguntadossDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="preguntadossDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>preguntadossDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="preguntadossDataSet.xss">
+      <DependentUpon>preguntadossDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Resources\inicio_preguntados.jpg" />
     <None Include="Resources\Inicio.png" />
     <None Include="Resources\Achievement Unlocked.wav" />
@@ -415,6 +431,9 @@
     <None Include="Resources\Ruletageografia.png" />
     <None Include="Resources\Ruletahistoria.png" />
     <None Include="Resources\icon-crown-meter-full.png" />
+    <Content Include="preguntadoss.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Tareas.txt" />
     <None Include="Resources\0A6.png" />
   </ItemGroup>
