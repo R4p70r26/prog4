@@ -46,6 +46,7 @@ Partial Class MuestraNombresJugadores
         Me.btnPregunta2 = New System.Windows.Forms.Button()
         Me.btnPregunta3 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.LRonda = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.picBoxRuleta, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -288,8 +289,8 @@ Partial Class MuestraNombresJugadores
         'picBoxRuleta
         '
         Me.picBoxRuleta.BackColor = System.Drawing.Color.Transparent
-        Me.picBoxRuleta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.picBoxRuleta.Image = Global.PreguntadosPC.My.Resources.Resources.Ruletaarte
+        Me.picBoxRuleta.BackgroundImage = Global.PreguntadosPC.My.Resources.Resources.ruletaarte1
+        Me.picBoxRuleta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.picBoxRuleta.Location = New System.Drawing.Point(53, 206)
         Me.picBoxRuleta.Name = "picBoxRuleta"
         Me.picBoxRuleta.Size = New System.Drawing.Size(454, 442)
@@ -331,13 +332,26 @@ Partial Class MuestraNombresJugadores
         Me.Button1.TabIndex = 9
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'LRonda
+        '
+        Me.LRonda.AutoSize = True
+        Me.LRonda.BackColor = System.Drawing.Color.DeepSkyBlue
+        Me.LRonda.Font = New System.Drawing.Font("Showcard Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LRonda.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.LRonda.Location = New System.Drawing.Point(211, 9)
+        Me.LRonda.Name = "LRonda"
+        Me.LRonda.Size = New System.Drawing.Size(124, 23)
+        Me.LRonda.TabIndex = 10
+        Me.LRonda.Text = "Ronda 1/25"
+        '
         'MuestraNombresJugadores
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.PreguntadosPC.My.Resources.Resources.Fondo
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(560, 806)
+        Me.ClientSize = New System.Drawing.Size(560, 749)
+        Me.Controls.Add(Me.LRonda)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.btnPregunta3)
         Me.Controls.Add(Me.btnPregunta2)
@@ -345,6 +359,7 @@ Partial Class MuestraNombresJugadores
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.btnPregunta1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "MuestraNombresJugadores"
@@ -354,6 +369,7 @@ Partial Class MuestraNombresJugadores
         Me.Panel1.PerformLayout()
         CType(Me.picBoxRuleta, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -379,4 +395,5 @@ Partial Class MuestraNombresJugadores
     Friend WithEvents btnPregunta2 As Button
     Friend WithEvents btnPregunta3 As Button
     Friend WithEvents Button1 As Button
+    Friend WithEvents LRonda As Label
 End Class

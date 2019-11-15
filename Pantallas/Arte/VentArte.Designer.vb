@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class VentArte
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,17 +20,20 @@ Partial Class VentArte
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(VentArte))
         Me.BtnOpcion4 = New System.Windows.Forms.Button()
         Me.BtnOpcion3 = New System.Windows.Forms.Button()
         Me.BtnOpcion2 = New System.Windows.Forms.Button()
         Me.BtnOpcion1 = New System.Windows.Forms.Button()
         Me.TextoPregunta = New System.Windows.Forms.RichTextBox()
-        Me.artepersonajePictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.LTiempo = New System.Windows.Forms.Label()
+        Me.pictiempofuera = New System.Windows.Forms.PictureBox()
+        Me.artepersonajePictureBox1 = New System.Windows.Forms.PictureBox()
+        CType(Me.pictiempofuera, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.artepersonajePictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -39,7 +42,9 @@ Partial Class VentArte
         Me.BtnOpcion4.BackColor = System.Drawing.Color.White
         Me.BtnOpcion4.FlatAppearance.BorderColor = System.Drawing.Color.Gray
         Me.BtnOpcion4.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.BtnOpcion4.Location = New System.Drawing.Point(12, 538)
+        Me.BtnOpcion4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.BtnOpcion4.ForeColor = System.Drawing.SystemColors.ControlDark
+        Me.BtnOpcion4.Location = New System.Drawing.Point(12, 644)
         Me.BtnOpcion4.Name = "BtnOpcion4"
         Me.BtnOpcion4.Size = New System.Drawing.Size(536, 42)
         Me.BtnOpcion4.TabIndex = 14
@@ -51,7 +56,9 @@ Partial Class VentArte
         Me.BtnOpcion3.BackColor = System.Drawing.Color.White
         Me.BtnOpcion3.FlatAppearance.BorderColor = System.Drawing.Color.Gray
         Me.BtnOpcion3.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.BtnOpcion3.Location = New System.Drawing.Point(12, 480)
+        Me.BtnOpcion3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.BtnOpcion3.ForeColor = System.Drawing.SystemColors.ControlDark
+        Me.BtnOpcion3.Location = New System.Drawing.Point(12, 544)
         Me.BtnOpcion3.Name = "BtnOpcion3"
         Me.BtnOpcion3.Size = New System.Drawing.Size(536, 42)
         Me.BtnOpcion3.TabIndex = 13
@@ -63,7 +70,9 @@ Partial Class VentArte
         Me.BtnOpcion2.BackColor = System.Drawing.Color.White
         Me.BtnOpcion2.FlatAppearance.BorderColor = System.Drawing.Color.Gray
         Me.BtnOpcion2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.BtnOpcion2.Location = New System.Drawing.Point(12, 423)
+        Me.BtnOpcion2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.BtnOpcion2.ForeColor = System.Drawing.SystemColors.ControlDark
+        Me.BtnOpcion2.Location = New System.Drawing.Point(12, 444)
         Me.BtnOpcion2.Name = "BtnOpcion2"
         Me.BtnOpcion2.Size = New System.Drawing.Size(536, 42)
         Me.BtnOpcion2.TabIndex = 12
@@ -75,7 +84,9 @@ Partial Class VentArte
         Me.BtnOpcion1.BackColor = System.Drawing.Color.White
         Me.BtnOpcion1.FlatAppearance.BorderColor = System.Drawing.Color.Gray
         Me.BtnOpcion1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.BtnOpcion1.Location = New System.Drawing.Point(12, 366)
+        Me.BtnOpcion1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnOpcion1.ForeColor = System.Drawing.SystemColors.ControlDark
+        Me.BtnOpcion1.Location = New System.Drawing.Point(12, 344)
         Me.BtnOpcion1.Name = "BtnOpcion1"
         Me.BtnOpcion1.Size = New System.Drawing.Size(536, 42)
         Me.BtnOpcion1.TabIndex = 11
@@ -93,17 +104,6 @@ Partial Class VentArte
         Me.TextoPregunta.TabIndex = 10
         Me.TextoPregunta.Text = ""
         '
-        'artepersonajePictureBox1
-        '
-        Me.artepersonajePictureBox1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.artepersonajePictureBox1.Image = Global.PreguntadosPC.My.Resources.Resources.Pregunta
-        Me.artepersonajePictureBox1.Location = New System.Drawing.Point(0, 0)
-        Me.artepersonajePictureBox1.Name = "artepersonajePictureBox1"
-        Me.artepersonajePictureBox1.Size = New System.Drawing.Size(560, 806)
-        Me.artepersonajePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.artepersonajePictureBox1.TabIndex = 2
-        Me.artepersonajePictureBox1.TabStop = False
-        '
         'Timer1
         '
         Me.Timer1.Interval = 1000
@@ -116,11 +116,33 @@ Partial Class VentArte
         Me.LTiempo.Size = New System.Drawing.Size(0, 13)
         Me.LTiempo.TabIndex = 15
         '
+        'pictiempofuera
+        '
+        Me.pictiempofuera.BackgroundImage = Global.PreguntadosPC.My.Resources.Resources.text_timeup__1_
+        Me.pictiempofuera.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pictiempofuera.Location = New System.Drawing.Point(64, 141)
+        Me.pictiempofuera.Name = "pictiempofuera"
+        Me.pictiempofuera.Size = New System.Drawing.Size(428, 117)
+        Me.pictiempofuera.TabIndex = 16
+        Me.pictiempofuera.TabStop = False
+        '
+        'artepersonajePictureBox1
+        '
+        Me.artepersonajePictureBox1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.artepersonajePictureBox1.Image = Global.PreguntadosPC.My.Resources.Resources.Pregunta
+        Me.artepersonajePictureBox1.Location = New System.Drawing.Point(0, 0)
+        Me.artepersonajePictureBox1.Name = "artepersonajePictureBox1"
+        Me.artepersonajePictureBox1.Size = New System.Drawing.Size(560, 749)
+        Me.artepersonajePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.artepersonajePictureBox1.TabIndex = 2
+        Me.artepersonajePictureBox1.TabStop = False
+        '
         'VentArte
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(560, 806)
+        Me.ClientSize = New System.Drawing.Size(560, 749)
+        Me.Controls.Add(Me.pictiempofuera)
         Me.Controls.Add(Me.LTiempo)
         Me.Controls.Add(Me.BtnOpcion4)
         Me.Controls.Add(Me.BtnOpcion3)
@@ -129,11 +151,13 @@ Partial Class VentArte
         Me.Controls.Add(Me.TextoPregunta)
         Me.Controls.Add(Me.artepersonajePictureBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "VentArte"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Arte"
+        CType(Me.pictiempofuera, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.artepersonajePictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -147,4 +171,5 @@ Partial Class VentArte
     Friend WithEvents TextoPregunta As RichTextBox
     Friend WithEvents Timer1 As Timer
     Friend WithEvents LTiempo As Label
+    Friend WithEvents pictiempofuera As PictureBox
 End Class

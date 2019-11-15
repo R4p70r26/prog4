@@ -4,12 +4,33 @@
         If Validacion() Then
             IngresaPregunta()
 
+            Limpiar()
 
         End If
 
 
     End Sub
 
+    Private Sub Limpiar()
+        TxtPregunta.Text = ""
+        Txtrespuesta1.Text = ""
+        Txtrespuesta2.Text = ""
+        Txtrespuesta3.Text = ""
+        Txtrespuesta4.Text = ""
+
+        Rb15sec.Checked = False
+        Rb30sec.Checked = False
+        Rb45sec.Checked = False
+        Rb60sec.Checked = False
+        RbRespuesta1.Checked = False
+        RbRespuesta2.Checked = False
+        RbRespuesta3.Checked = False
+        RbRespuesta4.Checked = False
+
+        CbxTemas.SelectedIndex = 0
+
+
+    End Sub
 
 
     Private Function Validacion() As Boolean
@@ -69,6 +90,7 @@
 
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Error")
+            desconectar()
         End Try
 
         'query insercion de pregunta
@@ -79,6 +101,8 @@
 
         Catch ex As Exception
             Console.WriteLine(ex.Message)
+            desconectar()
+
         End Try
 
 
@@ -89,6 +113,7 @@
 
         Catch ex As Exception
             Console.WriteLine(ex.Message)
+            desconectar()
         End Try
 
 
@@ -99,6 +124,7 @@
 
         Catch ex As Exception
             Console.WriteLine(ex.Message)
+            desconectar()
         End Try
 
 
@@ -109,6 +135,7 @@
 
         Catch ex As Exception
             Console.WriteLine(ex.Message)
+            desconectar()
         End Try
 
 
@@ -146,5 +173,12 @@
         Return 0
     End Function
 
+    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
 
+    End Sub
+
+    Private Sub BtnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
+        Me.Close()
+
+    End Sub
 End Class
