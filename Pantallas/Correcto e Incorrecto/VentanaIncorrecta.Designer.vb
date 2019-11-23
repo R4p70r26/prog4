@@ -35,7 +35,7 @@ Partial Class VentanaIncorrecta
         '
         Me.Pregunta.BackColor = System.Drawing.Color.White
         Me.Pregunta.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.Pregunta.Location = New System.Drawing.Point(17, 88)
+        Me.Pregunta.Location = New System.Drawing.Point(29, 77)
         Me.Pregunta.Name = "Pregunta"
         Me.Pregunta.ReadOnly = True
         Me.Pregunta.Size = New System.Drawing.Size(500, 200)
@@ -49,7 +49,7 @@ Partial Class VentanaIncorrecta
         Me.LinkLabel2.DisabledLinkColor = System.Drawing.Color.White
         Me.LinkLabel2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LinkLabel2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.LinkLabel2.Location = New System.Drawing.Point(302, 389)
+        Me.LinkLabel2.Location = New System.Drawing.Point(306, 371)
         Me.LinkLabel2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LinkLabel2.Name = "LinkLabel2"
         Me.LinkLabel2.Size = New System.Drawing.Size(85, 15)
@@ -63,7 +63,7 @@ Partial Class VentanaIncorrecta
         Me.LinkLabel1.BackColor = System.Drawing.Color.Transparent
         Me.LinkLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LinkLabel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.LinkLabel1.Location = New System.Drawing.Point(166, 389)
+        Me.LinkLabel1.Location = New System.Drawing.Point(160, 371)
         Me.LinkLabel1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LinkLabel1.Name = "LinkLabel1"
         Me.LinkLabel1.Size = New System.Drawing.Size(78, 15)
@@ -78,7 +78,7 @@ Partial Class VentanaIncorrecta
         Me.Btn_Continuar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Btn_Continuar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Continuar.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Btn_Continuar.Location = New System.Drawing.Point(55, 438)
+        Me.Btn_Continuar.Location = New System.Drawing.Point(65, 491)
         Me.Btn_Continuar.Name = "Btn_Continuar"
         Me.Btn_Continuar.Size = New System.Drawing.Size(407, 40)
         Me.Btn_Continuar.TabIndex = 25
@@ -90,7 +90,7 @@ Partial Class VentanaIncorrecta
         Me.BtnCompartir.BackColor = System.Drawing.Color.DeepSkyBlue
         Me.BtnCompartir.FlatAppearance.BorderColor = System.Drawing.Color.Gray
         Me.BtnCompartir.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.BtnCompartir.Font = New System.Drawing.Font("Showcard Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnCompartir.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnCompartir.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.BtnCompartir.Location = New System.Drawing.Point(131, 331)
         Me.BtnCompartir.Name = "BtnCompartir"
@@ -105,7 +105,7 @@ Partial Class VentanaIncorrecta
         Me.cienciapersonajePictureBox1.Image = Global.PreguntadosPC.My.Resources.Resources.Pregunta
         Me.cienciapersonajePictureBox1.Location = New System.Drawing.Point(0, 0)
         Me.cienciapersonajePictureBox1.Name = "cienciapersonajePictureBox1"
-        Me.cienciapersonajePictureBox1.Size = New System.Drawing.Size(533, 487)
+        Me.cienciapersonajePictureBox1.Size = New System.Drawing.Size(560, 733)
         Me.cienciapersonajePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.cienciapersonajePictureBox1.TabIndex = 23
         Me.cienciapersonajePictureBox1.TabStop = False
@@ -114,16 +114,18 @@ Partial Class VentanaIncorrecta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(533, 487)
+        Me.ClientSize = New System.Drawing.Size(560, 733)
         Me.Controls.Add(Me.Pregunta)
         Me.Controls.Add(Me.LinkLabel2)
         Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.Btn_Continuar)
         Me.Controls.Add(Me.BtnCompartir)
         Me.Controls.Add(Me.cienciapersonajePictureBox1)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "VentanaIncorrecta"
-        Me.Text = "VentanaIncorrecta"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Respuesta incorrecta"
         CType(Me.cienciapersonajePictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

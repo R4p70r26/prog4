@@ -44,19 +44,19 @@
                             Return True
 
                         Else
-                            MsgBox("Seleccione el tema")
+                            MsgBox("Seleccione el tema", MsgBoxStyle.Information, "Seleccione el tema")
                         End If
                     Else
-                        MsgBox("Seleccione el tiempo")
+                        MsgBox("Seleccione el tiempo", MsgBoxStyle.Information, "Seleccione el tiempo")
                     End If
                 Else
-                    MsgBox("Marque la respuesta")
+                    MsgBox("Marque la respuesta", MsgBoxStyle.Information, "Marque la respuesta")
                 End If
             Else
-                MsgBox("Ingrese las cuatro respuestas")
+                MsgBox("Ingrese las cuatro respuestas", MsgBoxStyle.Information, "Ingrese las respuestas")
             End If
         Else
-            MsgBox("Ingrese la pregunta")
+            MsgBox("Ingrese la pregunta", MsgBoxStyle.Information, "Ingrese la pregunta")
         End If
 
         Return False
@@ -71,7 +71,6 @@
             Return 45
         Else
             Return 60
-
         End If
 
     End Function
@@ -105,18 +104,17 @@
 
         End Try
 
-
+        'query insercion de respuestas
         sql = "insert into respuesta(id_pregunta, opcion, resp_correcta) values(" & currentId & ", '" & Txtrespuesta2.Text & "', " & ReturnRespuestaCorrecta(2) & ")"
 
         Try
             ejecutar(sql)
-
         Catch ex As Exception
             Console.WriteLine(ex.Message)
             desconectar()
         End Try
 
-
+        'query insercion de respuestas
         sql = "insert into respuesta(id_pregunta, opcion, resp_correcta) values(" & currentId & ", '" & Txtrespuesta3.Text & "', " & ReturnRespuestaCorrecta(3) & ")"
 
         Try
@@ -127,7 +125,7 @@
             desconectar()
         End Try
 
-
+        'query insercion de respuestas
         sql = "insert into respuesta(id_pregunta, opcion, resp_correcta) values(" & currentId & ", '" & Txtrespuesta4.Text & "', " & ReturnRespuestaCorrecta(4) & ")"
 
         Try

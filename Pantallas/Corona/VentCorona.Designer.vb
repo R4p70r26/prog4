@@ -53,13 +53,13 @@ Partial Class VentCorona
         '
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.DeepSkyBlue
-        Me.Label1.Font = New System.Drawing.Font("Showcard Gothic", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label1.Location = New System.Drawing.Point(6, 280)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(555, 33)
+        Me.Label1.Size = New System.Drawing.Size(474, 31)
         Me.Label1.TabIndex = 3
-        Me.Label1.Text = "Elige el Personaje que deseas obtener"
+        Me.Label1.Text = "Elige el personaje que deseas obtener"
         '
         'Panel1
         '
@@ -79,7 +79,7 @@ Partial Class VentCorona
         Me.Panel1.Controls.Add(Me.BtnEntretenimiento2)
         Me.Panel1.Controls.Add(Me.NombreJugador2)
         Me.Panel1.Controls.Add(Me.BtnDeportes1)
-        Me.Panel1.Font = New System.Drawing.Font("Showcard Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Panel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Panel1.Location = New System.Drawing.Point(12, 55)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(536, 161)
@@ -374,7 +374,8 @@ Partial Class VentCorona
         Me.Controls.Add(Me.EntreteimientoButton1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "VentCorona"
-        Me.Text = "VentCorona"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Corona"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)

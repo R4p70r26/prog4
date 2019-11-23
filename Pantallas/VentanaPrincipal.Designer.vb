@@ -31,22 +31,22 @@ Partial Class VentanaPrincipal
         '
         Me.JugarAhoraButton1.BackgroundImage = Global.PreguntadosPC.My.Resources.Resources._0A6
         Me.JugarAhoraButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.JugarAhoraButton1.Location = New System.Drawing.Point(131, 441)
+        Me.JugarAhoraButton1.Location = New System.Drawing.Point(131, 505)
         Me.JugarAhoraButton1.Name = "JugarAhoraButton1"
-        Me.JugarAhoraButton1.Size = New System.Drawing.Size(260, 60)
+        Me.JugarAhoraButton1.Size = New System.Drawing.Size(260, 52)
         Me.JugarAhoraButton1.TabIndex = 0
         Me.JugarAhoraButton1.UseVisualStyleBackColor = True
         '
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.DeepSkyBlue
-        Me.Button1.Font = New System.Drawing.Font("Showcard Gothic", 15.75!, System.Drawing.FontStyle.Bold)
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold)
         Me.Button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Button1.Location = New System.Drawing.Point(131, 590)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(260, 47)
         Me.Button1.TabIndex = 1
-        Me.Button1.Text = "Agregar Preguntas"
+        Me.Button1.Text = "Agregar preguntas"
         Me.Button1.UseVisualStyleBackColor = False
         '
         'VentanaPrincipal

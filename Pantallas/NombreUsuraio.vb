@@ -68,7 +68,7 @@
 
     Private Sub Jugador2_MouseClick(sender As Object, e As MouseEventArgs) Handles Jugador2.MouseClick
         If Jugador1.SelectedIndex = -1 Then
-            MsgBox("Por favor seleccione el jugador 1", MsgBoxStyle.Information)
+            MsgBox("Por favor seleccione el jugador 1", MsgBoxStyle.Information, "Seleccion jugador")
         End If
     End Sub
 End Class

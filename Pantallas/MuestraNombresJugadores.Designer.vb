@@ -86,6 +86,7 @@ Partial Class MuestraNombresJugadores
         'btnPregunta1
         '
         Me.btnPregunta1.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.btnPregunta1.Enabled = False
         Me.btnPregunta1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnPregunta1.Location = New System.Drawing.Point(174, 715)
         Me.btnPregunta1.Name = "btnPregunta1"
@@ -95,7 +96,7 @@ Partial Class MuestraNombresJugadores
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.BackColor = System.Drawing.Color.Transparent
         Me.Panel1.Controls.Add(Me.BtnEntretenimiento1)
         Me.Panel1.Controls.Add(Me.BtnGeografia2)
         Me.Panel1.Controls.Add(Me.NombreJugador1)
@@ -305,6 +306,7 @@ Partial Class MuestraNombresJugadores
         'btnPregunta2
         '
         Me.btnPregunta2.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.btnPregunta2.Enabled = False
         Me.btnPregunta2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnPregunta2.Location = New System.Drawing.Point(245, 715)
         Me.btnPregunta2.Name = "btnPregunta2"
@@ -315,6 +317,7 @@ Partial Class MuestraNombresJugadores
         'btnPregunta3
         '
         Me.btnPregunta3.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.btnPregunta3.Enabled = False
         Me.btnPregunta3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnPregunta3.Location = New System.Drawing.Point(316, 715)
         Me.btnPregunta3.Name = "btnPregunta3"
@@ -324,23 +327,24 @@ Partial Class MuestraNombresJugadores
         '
         'Button1
         '
+        Me.Button1.BackColor = System.Drawing.Color.Transparent
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Image = Global.PreguntadosPC.My.Resources.Resources.icon_crown_meter_full
         Me.Button1.Location = New System.Drawing.Point(245, 654)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(64, 42)
         Me.Button1.TabIndex = 9
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'LRonda
         '
         Me.LRonda.AutoSize = True
         Me.LRonda.BackColor = System.Drawing.Color.DeepSkyBlue
-        Me.LRonda.Font = New System.Drawing.Font("Showcard Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LRonda.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LRonda.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.LRonda.Location = New System.Drawing.Point(211, 9)
         Me.LRonda.Name = "LRonda"
-        Me.LRonda.Size = New System.Drawing.Size(124, 23)
+        Me.LRonda.Size = New System.Drawing.Size(116, 24)
         Me.LRonda.TabIndex = 10
         Me.LRonda.Text = "Ronda 1/25"
         '
@@ -364,7 +368,7 @@ Partial Class MuestraNombresJugadores
         Me.MinimizeBox = False
         Me.Name = "MuestraNombresJugadores"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "MuestraNombresJugadores"
+        Me.Text = "Ruleta"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.picBoxRuleta, System.ComponentModel.ISupportInitialize).EndInit()
