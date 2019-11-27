@@ -42,7 +42,7 @@ Partial Class VentCiencia
         Me.BtnOpcion4.BackColor = System.Drawing.Color.White
         Me.BtnOpcion4.FlatAppearance.BorderColor = System.Drawing.Color.Gray
         Me.BtnOpcion4.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.BtnOpcion4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.BtnOpcion4.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
         Me.BtnOpcion4.ForeColor = System.Drawing.SystemColors.ControlDark
         Me.BtnOpcion4.Location = New System.Drawing.Point(12, 488)
         Me.BtnOpcion4.Name = "BtnOpcion4"
@@ -56,7 +56,7 @@ Partial Class VentCiencia
         Me.BtnOpcion3.BackColor = System.Drawing.Color.White
         Me.BtnOpcion3.FlatAppearance.BorderColor = System.Drawing.Color.Gray
         Me.BtnOpcion3.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.BtnOpcion3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.BtnOpcion3.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
         Me.BtnOpcion3.ForeColor = System.Drawing.SystemColors.ControlDark
         Me.BtnOpcion3.Location = New System.Drawing.Point(12, 440)
         Me.BtnOpcion3.Name = "BtnOpcion3"
@@ -70,7 +70,7 @@ Partial Class VentCiencia
         Me.BtnOpcion2.BackColor = System.Drawing.Color.White
         Me.BtnOpcion2.FlatAppearance.BorderColor = System.Drawing.Color.Gray
         Me.BtnOpcion2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.BtnOpcion2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.BtnOpcion2.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
         Me.BtnOpcion2.ForeColor = System.Drawing.SystemColors.ControlDark
         Me.BtnOpcion2.Location = New System.Drawing.Point(12, 392)
         Me.BtnOpcion2.Name = "BtnOpcion2"
@@ -84,7 +84,7 @@ Partial Class VentCiencia
         Me.BtnOpcion1.BackColor = System.Drawing.Color.White
         Me.BtnOpcion1.FlatAppearance.BorderColor = System.Drawing.Color.Gray
         Me.BtnOpcion1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.BtnOpcion1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.BtnOpcion1.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
         Me.BtnOpcion1.ForeColor = System.Drawing.SystemColors.ControlDark
         Me.BtnOpcion1.Location = New System.Drawing.Point(12, 344)
         Me.BtnOpcion1.Name = "BtnOpcion1"
@@ -97,7 +97,8 @@ Partial Class VentCiencia
         '
         Me.TextoPregunta.BackColor = System.Drawing.Color.White
         Me.TextoPregunta.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextoPregunta.Location = New System.Drawing.Point(32, 100)
+        Me.TextoPregunta.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextoPregunta.Location = New System.Drawing.Point(26, 84)
         Me.TextoPregunta.Name = "TextoPregunta"
         Me.TextoPregunta.ReadOnly = True
         Me.TextoPregunta.Size = New System.Drawing.Size(500, 200)
@@ -122,9 +123,10 @@ Partial Class VentCiencia
         'Ltiempo
         '
         Me.Ltiempo.AutoSize = True
+        Me.Ltiempo.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Ltiempo.Location = New System.Drawing.Point(475, 13)
         Me.Ltiempo.Name = "Ltiempo"
-        Me.Ltiempo.Size = New System.Drawing.Size(0, 13)
+        Me.Ltiempo.Size = New System.Drawing.Size(0, 26)
         Me.Ltiempo.TabIndex = 15
         '
         'pictiempofuera

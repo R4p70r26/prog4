@@ -24,10 +24,9 @@ Partial Class DueloSeleccionPers
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(DueloSeleccionPers))
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.NombreJugador1 = New System.Windows.Forms.Label()
-        Me.NombreJugador2 = New System.Windows.Forms.Label()
         Me.BtnEntretenimiento1 = New System.Windows.Forms.Button()
         Me.BtnGeografia2 = New System.Windows.Forms.Button()
+        Me.NombreJugador1 = New System.Windows.Forms.Label()
         Me.BtnCiencia2 = New System.Windows.Forms.Button()
         Me.BtnHistoria1 = New System.Windows.Forms.Button()
         Me.BtnHistoria2 = New System.Windows.Forms.Button()
@@ -37,6 +36,7 @@ Partial Class DueloSeleccionPers
         Me.BtnArte2 = New System.Windows.Forms.Button()
         Me.BtnArte1 = New System.Windows.Forms.Button()
         Me.BtnEntretenimiento2 = New System.Windows.Forms.Button()
+        Me.NombreJugador2 = New System.Windows.Forms.Label()
         Me.BtnDeportes1 = New System.Windows.Forms.Button()
         Me.BtnInicoDuelo = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -64,28 +64,6 @@ Partial Class DueloSeleccionPers
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(536, 366)
         Me.Panel1.TabIndex = 5
-        '
-        'NombreJugador1
-        '
-        Me.NombreJugador1.AutoSize = True
-        Me.NombreJugador1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NombreJugador1.ForeColor = System.Drawing.Color.DarkTurquoise
-        Me.NombreJugador1.Location = New System.Drawing.Point(217, 15)
-        Me.NombreJugador1.Name = "NombreJugador1"
-        Me.NombreJugador1.Size = New System.Drawing.Size(108, 20)
-        Me.NombreJugador1.TabIndex = 0
-        Me.NombreJugador1.Text = "Muestrajug1"
-        '
-        'NombreJugador2
-        '
-        Me.NombreJugador2.AutoSize = True
-        Me.NombreJugador2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NombreJugador2.ForeColor = System.Drawing.Color.DarkTurquoise
-        Me.NombreJugador2.Location = New System.Drawing.Point(221, 258)
-        Me.NombreJugador2.Name = "NombreJugador2"
-        Me.NombreJugador2.Size = New System.Drawing.Size(108, 20)
-        Me.NombreJugador2.TabIndex = 2
-        Me.NombreJugador2.Text = "Muestrajug2"
         '
         'BtnEntretenimiento1
         '
@@ -115,6 +93,17 @@ Partial Class DueloSeleccionPers
         Me.BtnGeografia2.Size = New System.Drawing.Size(32, 32)
         Me.BtnGeografia2.TabIndex = 10
         Me.BtnGeografia2.UseVisualStyleBackColor = True
+        '
+        'NombreJugador1
+        '
+        Me.NombreJugador1.AutoSize = True
+        Me.NombreJugador1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NombreJugador1.ForeColor = System.Drawing.Color.DarkTurquoise
+        Me.NombreJugador1.Location = New System.Drawing.Point(217, 15)
+        Me.NombreJugador1.Name = "NombreJugador1"
+        Me.NombreJugador1.Size = New System.Drawing.Size(108, 20)
+        Me.NombreJugador1.TabIndex = 0
+        Me.NombreJugador1.Text = "Muestrajug1"
         '
         'BtnCiencia2
         '
@@ -243,6 +232,17 @@ Partial Class DueloSeleccionPers
         Me.BtnEntretenimiento2.TabIndex = 16
         Me.BtnEntretenimiento2.UseVisualStyleBackColor = True
         '
+        'NombreJugador2
+        '
+        Me.NombreJugador2.AutoSize = True
+        Me.NombreJugador2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NombreJugador2.ForeColor = System.Drawing.Color.DarkTurquoise
+        Me.NombreJugador2.Location = New System.Drawing.Point(221, 258)
+        Me.NombreJugador2.Name = "NombreJugador2"
+        Me.NombreJugador2.Size = New System.Drawing.Size(108, 20)
+        Me.NombreJugador2.TabIndex = 2
+        Me.NombreJugador2.Text = "Muestrajug2"
+        '
         'BtnDeportes1
         '
         Me.BtnDeportes1.FlatAppearance.BorderColor = System.Drawing.Color.White
@@ -259,9 +259,10 @@ Partial Class DueloSeleccionPers
         '
         'BtnInicoDuelo
         '
-        Me.BtnInicoDuelo.Location = New System.Drawing.Point(199, 655)
+        Me.BtnInicoDuelo.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnInicoDuelo.Location = New System.Drawing.Point(199, 651)
         Me.BtnInicoDuelo.Name = "BtnInicoDuelo"
-        Me.BtnInicoDuelo.Size = New System.Drawing.Size(166, 31)
+        Me.BtnInicoDuelo.Size = New System.Drawing.Size(166, 35)
         Me.BtnInicoDuelo.TabIndex = 6
         Me.BtnInicoDuelo.Text = "Iniciar duelo"
         Me.BtnInicoDuelo.UseVisualStyleBackColor = True
@@ -269,9 +270,10 @@ Partial Class DueloSeleccionPers
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(171, 72)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(94, 72)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(194, 13)
+        Me.Label1.Size = New System.Drawing.Size(396, 26)
         Me.Label1.TabIndex = 7
         Me.Label1.Text = "Seleccione los personajes para el duelo"
         '

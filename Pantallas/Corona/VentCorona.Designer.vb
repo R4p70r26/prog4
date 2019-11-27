@@ -55,7 +55,7 @@ Partial Class VentCorona
         Me.Label1.BackColor = System.Drawing.Color.DeepSkyBlue
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label1.Location = New System.Drawing.Point(6, 280)
+        Me.Label1.Location = New System.Drawing.Point(47, 278)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(474, 31)
         Me.Label1.TabIndex = 3
@@ -299,12 +299,13 @@ Partial Class VentCorona
         '
         'GeografiaButton6
         '
+        Me.GeografiaButton6.BackColor = System.Drawing.SystemColors.Control
         Me.GeografiaButton6.Image = Global.PreguntadosPC.My.Resources.Resources.boton_6
         Me.GeografiaButton6.Location = New System.Drawing.Point(26, 349)
         Me.GeografiaButton6.Name = "GeografiaButton6"
         Me.GeografiaButton6.Size = New System.Drawing.Size(160, 120)
         Me.GeografiaButton6.TabIndex = 6
-        Me.GeografiaButton6.UseVisualStyleBackColor = True
+        Me.GeografiaButton6.UseVisualStyleBackColor = False
         '
         'cienciaButton5
         '

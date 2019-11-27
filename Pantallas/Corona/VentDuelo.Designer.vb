@@ -42,6 +42,7 @@ Partial Class VentDuelo
         'BtnCorona
         '
         Me.BtnCorona.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(133, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.BtnCorona.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnCorona.Location = New System.Drawing.Point(105, 611)
         Me.BtnCorona.Name = "BtnCorona"
         Me.BtnCorona.Size = New System.Drawing.Size(138, 49)
@@ -52,6 +53,7 @@ Partial Class VentDuelo
         'BtnDuelo
         '
         Me.BtnDuelo.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(189, Byte), Integer), CType(CType(167, Byte), Integer))
+        Me.BtnDuelo.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnDuelo.Location = New System.Drawing.Point(311, 611)
         Me.BtnDuelo.Name = "BtnDuelo"
         Me.BtnDuelo.Size = New System.Drawing.Size(138, 49)

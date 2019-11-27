@@ -34,6 +34,7 @@ Partial Class VentanaRespuesta
         '
         Me.TextoPregunta.BackColor = System.Drawing.Color.White
         Me.TextoPregunta.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextoPregunta.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextoPregunta.Location = New System.Drawing.Point(30, 81)
         Me.TextoPregunta.Name = "TextoPregunta"
         Me.TextoPregunta.ReadOnly = True
@@ -46,7 +47,7 @@ Partial Class VentanaRespuesta
         Me.Btn_Continuar.BackColor = System.Drawing.Color.LightSeaGreen
         Me.Btn_Continuar.FlatAppearance.BorderColor = System.Drawing.Color.Gray
         Me.Btn_Continuar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Btn_Continuar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_Continuar.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Continuar.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Btn_Continuar.Location = New System.Drawing.Point(60, 419)
         Me.Btn_Continuar.Name = "Btn_Continuar"

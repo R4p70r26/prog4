@@ -36,7 +36,7 @@ Partial Class NombreUsuraio
         Me.Label1.BackColor = System.Drawing.Color.DeepSkyBlue
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label1.Location = New System.Drawing.Point(137, 64)
+        Me.Label1.Location = New System.Drawing.Point(136, 63)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(245, 31)
         Me.Label1.TabIndex = 2
@@ -48,7 +48,7 @@ Partial Class NombreUsuraio
         Me.Label2.BackColor = System.Drawing.Color.DeepSkyBlue
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold)
         Me.Label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label2.Location = New System.Drawing.Point(136, 265)
+        Me.Label2.Location = New System.Drawing.Point(127, 265)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(245, 31)
         Me.Label2.TabIndex = 3
