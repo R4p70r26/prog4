@@ -44,7 +44,7 @@ Partial Class VentHistoria
         Me.BtnOpcion4.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.BtnOpcion4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.BtnOpcion4.ForeColor = System.Drawing.SystemColors.ControlDark
-        Me.BtnOpcion4.Location = New System.Drawing.Point(12, 644)
+        Me.BtnOpcion4.Location = New System.Drawing.Point(12, 488)
         Me.BtnOpcion4.Name = "BtnOpcion4"
         Me.BtnOpcion4.Size = New System.Drawing.Size(536, 42)
         Me.BtnOpcion4.TabIndex = 14
@@ -58,7 +58,7 @@ Partial Class VentHistoria
         Me.BtnOpcion3.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.BtnOpcion3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.BtnOpcion3.ForeColor = System.Drawing.SystemColors.ControlDark
-        Me.BtnOpcion3.Location = New System.Drawing.Point(12, 544)
+        Me.BtnOpcion3.Location = New System.Drawing.Point(12, 440)
         Me.BtnOpcion3.Name = "BtnOpcion3"
         Me.BtnOpcion3.Size = New System.Drawing.Size(536, 42)
         Me.BtnOpcion3.TabIndex = 13
@@ -72,7 +72,7 @@ Partial Class VentHistoria
         Me.BtnOpcion2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.BtnOpcion2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.BtnOpcion2.ForeColor = System.Drawing.SystemColors.ControlDark
-        Me.BtnOpcion2.Location = New System.Drawing.Point(12, 444)
+        Me.BtnOpcion2.Location = New System.Drawing.Point(12, 392)
         Me.BtnOpcion2.Name = "BtnOpcion2"
         Me.BtnOpcion2.Size = New System.Drawing.Size(536, 42)
         Me.BtnOpcion2.TabIndex = 12

@@ -23,12 +23,11 @@ Partial Class VentanaIncorrecta
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Pregunta = New System.Windows.Forms.RichTextBox()
-        Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
-        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.Btn_Continuar = New System.Windows.Forms.Button()
-        Me.BtnCompartir = New System.Windows.Forms.Button()
         Me.cienciapersonajePictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.cienciapersonajePictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Pregunta
@@ -42,35 +41,6 @@ Partial Class VentanaIncorrecta
         Me.Pregunta.TabIndex = 28
         Me.Pregunta.Text = ""
         '
-        'LinkLabel2
-        '
-        Me.LinkLabel2.AutoSize = True
-        Me.LinkLabel2.BackColor = System.Drawing.Color.Transparent
-        Me.LinkLabel2.DisabledLinkColor = System.Drawing.Color.White
-        Me.LinkLabel2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LinkLabel2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.LinkLabel2.Location = New System.Drawing.Point(306, 371)
-        Me.LinkLabel2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.LinkLabel2.Name = "LinkLabel2"
-        Me.LinkLabel2.Size = New System.Drawing.Size(85, 15)
-        Me.LinkLabel2.TabIndex = 27
-        Me.LinkLabel2.TabStop = True
-        Me.LinkLabel2.Text = "Reportar Error"
-        '
-        'LinkLabel1
-        '
-        Me.LinkLabel1.AutoSize = True
-        Me.LinkLabel1.BackColor = System.Drawing.Color.Transparent
-        Me.LinkLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LinkLabel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.LinkLabel1.Location = New System.Drawing.Point(160, 371)
-        Me.LinkLabel1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.LinkLabel1.Name = "LinkLabel1"
-        Me.LinkLabel1.Size = New System.Drawing.Size(78, 15)
-        Me.LinkLabel1.TabIndex = 26
-        Me.LinkLabel1.TabStop = True
-        Me.LinkLabel1.Text = "Ver Pregunta"
-        '
         'Btn_Continuar
         '
         Me.Btn_Continuar.BackColor = System.Drawing.Color.LightSeaGreen
@@ -78,26 +48,12 @@ Partial Class VentanaIncorrecta
         Me.Btn_Continuar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Btn_Continuar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Continuar.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Btn_Continuar.Location = New System.Drawing.Point(65, 491)
+        Me.Btn_Continuar.Location = New System.Drawing.Point(65, 428)
         Me.Btn_Continuar.Name = "Btn_Continuar"
         Me.Btn_Continuar.Size = New System.Drawing.Size(407, 40)
         Me.Btn_Continuar.TabIndex = 25
         Me.Btn_Continuar.Text = "Continuar"
         Me.Btn_Continuar.UseVisualStyleBackColor = False
-        '
-        'BtnCompartir
-        '
-        Me.BtnCompartir.BackColor = System.Drawing.Color.DeepSkyBlue
-        Me.BtnCompartir.FlatAppearance.BorderColor = System.Drawing.Color.Gray
-        Me.BtnCompartir.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.BtnCompartir.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnCompartir.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.BtnCompartir.Location = New System.Drawing.Point(131, 331)
-        Me.BtnCompartir.Name = "BtnCompartir"
-        Me.BtnCompartir.Size = New System.Drawing.Size(280, 37)
-        Me.BtnCompartir.TabIndex = 24
-        Me.BtnCompartir.Text = "¡Compartir preguntas!"
-        Me.BtnCompartir.UseVisualStyleBackColor = False
         '
         'cienciapersonajePictureBox1
         '
@@ -110,16 +66,24 @@ Partial Class VentanaIncorrecta
         Me.cienciapersonajePictureBox1.TabIndex = 23
         Me.cienciapersonajePictureBox1.TabStop = False
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.Image = Global.PreguntadosPC.My.Resources.Resources.text_incorrect__1_
+        Me.PictureBox1.Location = New System.Drawing.Point(65, 196)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(407, 81)
+        Me.PictureBox1.TabIndex = 29
+        Me.PictureBox1.TabStop = False
+        '
         'VentanaIncorrecta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(560, 733)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Pregunta)
-        Me.Controls.Add(Me.LinkLabel2)
-        Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.Btn_Continuar)
-        Me.Controls.Add(Me.BtnCompartir)
         Me.Controls.Add(Me.cienciapersonajePictureBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Margin = New System.Windows.Forms.Padding(2)
@@ -127,15 +91,13 @@ Partial Class VentanaIncorrecta
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Respuesta incorrecta"
         CType(Me.cienciapersonajePictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents Pregunta As RichTextBox
-    Friend WithEvents LinkLabel2 As LinkLabel
-    Friend WithEvents LinkLabel1 As LinkLabel
     Friend WithEvents Btn_Continuar As Button
-    Friend WithEvents BtnCompartir As Button
     Friend WithEvents cienciapersonajePictureBox1 As PictureBox
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

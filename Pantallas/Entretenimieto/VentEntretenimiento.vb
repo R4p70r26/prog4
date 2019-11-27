@@ -129,8 +129,9 @@
             Ltiempo.Text = tiempo
         Else
             Timer1.Enabled = False
+            TiempoPregunta()
         End If
-        TiempoPregunta()
+
     End Sub
 
     Private Sub TiempoPregunta()
@@ -151,6 +152,12 @@
             BtnOpcion4.Enabled = False
 
             pictiempofuera.Visible = True
+
+
+            MsgBox("Tiempo agotado", MsgBoxStyle.Information, "Preguntados")
+            ComprobarRondaGlobal(Timer1)
+            Me.Close()
+            MuestraNombresJugadores.Show()
 
         End If
 

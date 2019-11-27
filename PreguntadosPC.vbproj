@@ -102,6 +102,18 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ConexionBD\procedimientos.vb" />
+    <Compile Include="Pantallas\Corona\DueloSeleccionPers.Designer.vb">
+      <DependentUpon>DueloSeleccionPers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas\Corona\DueloSeleccionPers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas\Corona\VentDuelo.Designer.vb">
+      <DependentUpon>VentDuelo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas\Corona\VentDuelo.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Pantallas\Correcto e Incorrecto\VentanaIncorrecta.Designer.vb">
       <DependentUpon>VentanaIncorrecta.vb</DependentUpon>
     </Compile>
@@ -247,6 +259,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pantallas\Ciencia\VentanaInicionCiencia.resx">
       <DependentUpon>VentanaInicionCiencia.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas\Corona\DueloSeleccionPers.resx">
+      <DependentUpon>DueloSeleccionPers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas\Corona\VentDuelo.resx">
+      <DependentUpon>VentDuelo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pantallas\Correcto e Incorrecto\VentanaIncorrecta.resx">
       <DependentUpon>VentanaIncorrecta.vb</DependentUpon>
@@ -428,7 +446,10 @@
     <None Include="Resources\ruletaGeografia.png" />
     <None Include="Resources\ruletaHistoria.png" />
     <None Include="Resources\ruletaarte1.png" />
+    <None Include="Resources\b27d141aa336a5e65ae9f69116b44c72.gif" />
     <Content Include="Resources\correcto.jpg" />
+    <None Include="Resources\WhatsApp Image 2019-11-26 at 17.34.51.jpeg" />
+    <None Include="Resources\inici.jpeg" />
     <Content Include="Tareas.txt" />
     <None Include="Resources\0A6.png" />
   </ItemGroup>

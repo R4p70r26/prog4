@@ -15,11 +15,11 @@
 
     Private Sub RespuestaCorrecta()
 
-
         My.Computer.Audio.Play(My.Resources.Correct, AudioPlayMode.WaitToComplete)
         My.Forms.VentanaRespuesta.Tag = TextoPregunta.Text
         My.Forms.VentanaRespuesta.Show()
         Me.Close()
+
     End Sub
 
     Private Sub RespuestaIncorrecta()
@@ -53,8 +53,8 @@
 
     Private Sub BtnOpcion4_Click(sender As Object, e As EventArgs) Handles BtnOpcion4.Click
         Try
-            'falta validar si la respuesta seleccionada es la corecta
-            If True Then
+            Dim Respuesta = Tmp_Respuestas(3, 1)
+            If (Respuesta = "True") Then
                 BtnOpcion4.BackColor = Color.GreenYellow
                 Timer1.Enabled = False
                 Me.RespuestaCorrecta()
@@ -70,8 +70,8 @@
 
     Private Sub BtnOpcion2_Click(sender As Object, e As EventArgs) Handles BtnOpcion2.Click
         Try
-            'falta validar si la respuesta seleccionada es la corecta
-            If True Then
+            Dim Respuesta = Tmp_Respuestas(1, 1)
+            If (Respuesta = "True") Then
                 BtnOpcion2.BackColor = Color.GreenYellow
                 Timer1.Enabled = False
                 Me.RespuestaCorrecta()
@@ -88,8 +88,8 @@
 
     Private Sub BtnOpcion3_Click(sender As Object, e As EventArgs) Handles BtnOpcion3.Click
         Try
-            'falta validar si la respuesta seleccionada es la corecta
-            If True Then
+            Dim Respuesta = Tmp_Respuestas(2, 1)
+            If (Respuesta = "True") Then
                 BtnOpcion3.BackColor = Color.GreenYellow
                 Timer1.Enabled = False
                 Me.RespuestaCorrecta()
@@ -138,8 +138,10 @@
             LTiempo.Text = tiempo
         Else
             Timer1.Enabled = False
+            TiempoPregunta()
+
         End If
-        TiempoPregunta()
+        'TiempoPregunta()
 
 
     End Sub
@@ -162,6 +164,15 @@
             BtnOpcion4.Enabled = False
 
             pictiempofuera.Visible = True
+
+            MsgBox("Tiempo agotado", MsgBoxStyle.Information, "Preguntados")
+
+            ComprobarRondaGlobal(Timer1)
+            Me.Close()
+            MuestraNombresJugadores.Show()
+
+
+
 
         End If
 

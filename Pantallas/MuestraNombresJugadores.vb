@@ -101,8 +101,14 @@
                 Case 3
                     picBoxRuleta.Image = My.Resources.ruletaCorona
 
-                    VentCorona.Show() 'muestra ventana categoria
-                    Me.Close()'cierra esta ventana
+                    If ComprobarPersonajes() Then
+                        VentDuelo.Show()
+                        Me.Close()
+                    Else
+                        VentCorona.Show() 'muestra ventana categoria
+                        Me.Close() 'cierra esta ventana
+                    End If
+
 
 
                 Case 4

@@ -6,8 +6,23 @@
 
 
     Private Sub Btn_Continuar_Click(sender As Object, e As EventArgs) Handles Btn_Continuar.Click
-        My.Forms.MuestraNombresJugadores.Show()
-        Me.Close()
+        If esDuelo Then
+            contadorPreguntaduelo += 1
+            If jugadorduelo1 Then
+
+                My.Forms.DueloSeleccionPers.dueloJugador1(contadorPreguntaduelo)
+            Else
+
+                My.Forms.DueloSeleccionPers.dueloJugador2(contadorPreguntaduelo)
+            End If
+        Else
+            My.Forms.MuestraNombresJugadores.Show()
+            Me.Close()
+        End If
+
+
+
+
     End Sub
 
     Private Sub VentanaIncorrecta_Load(sender As Object, e As EventArgs) Handles MyBase.Load

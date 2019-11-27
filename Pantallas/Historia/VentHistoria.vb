@@ -115,11 +115,12 @@
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         If tiempo > 0 Then
             tiempo = tiempo - 1
-            LTiempo.Text = tiempo
+            Ltiempo.Text = tiempo
         Else
             Timer1.Enabled = False
+            TiempoPregunta()
         End If
-        TiempoPregunta()
+
 
     End Sub
 
@@ -147,6 +148,11 @@
             BtnOpcion4.Enabled = False
 
             pictiempofuera.Visible = True
+
+            MsgBox("Tiempo agotado", MsgBoxStyle.Information, "Preguntados")
+            ComprobarRondaGlobal(Timer1)
+            Me.Close()
+            MuestraNombresJugadores.Show()
 
         End If
 

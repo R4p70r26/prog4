@@ -400,4 +400,13 @@
   <data name="ruletaarte1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ruletaarte1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="inici" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\inici.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WhatsApp_Image_2019_11_26_at_17_34_51" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WhatsApp Image 2019-11-26 at 17.34.51.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="b27d141aa336a5e65ae9f69116b44c72" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\b27d141aa336a5e65ae9f69116b44c72.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

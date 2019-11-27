@@ -100,6 +100,16 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property b27d141aa336a5e65ae9f69116b44c72() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("b27d141aa336a5e65ae9f69116b44c72", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         '''</summary>
         Friend ReadOnly Property Bomb_Powerup() As System.IO.UnmanagedMemoryStream
@@ -542,6 +552,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property inici() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("inici", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property Inicio() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("Inicio", resourceCulture)
@@ -927,6 +947,16 @@ Namespace My.Resources
         Friend ReadOnly Property vs_divider() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("vs_divider", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property WhatsApp_Image_2019_11_26_at_17_34_51() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("WhatsApp_Image_2019_11_26_at_17_34_51", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
