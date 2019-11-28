@@ -1,6 +1,4 @@
-seleccionar un tamaño adecuado para todos los forms
+C:\Windows\syswow64\rundll32.exe "C:\Program Files (x86)\Common Files\System\Ole DB\oledb32.dll", OpenDSLFile C:\Users\Progra\Documents\Visual Studio 2019\Projects\PreguntadosPC\bin\Debug\conexionA.udl
 
-tiempo fuera cierre ventana
-o muestre respuesta incorrecta
 
 

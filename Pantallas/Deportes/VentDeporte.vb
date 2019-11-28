@@ -96,10 +96,18 @@
 
     Private Sub conexion()
 
-        Dim sql = "SELECT TOP 1 * FROM PRENGUNTAS where id_tema = 3 ORDER BY NEWID()"      'trae un pregunta al azar(TEMA 3 = deporte)
+        Dim num As System.Random = New System.Random()
+
+        Dim sql
+        If tipodb = "\conexionA.udl" Then
+            sql = "SELECT TOP 1 * FROM PRENGUNTAS where id_tema = 3 and id_pregunta = " & num.Next(62, 77 + 1)
+        Else
+            sql = "SELECT TOP 1 * FROM PRENGUNTAS where id_tema = 3 ORDER BY NEWID()"      'trae un pregunta al azar(TEMA 3 = deporte)
+        End If
+
         Dim arrPregu = LeeValorPregunta(sql)
 
-        id_pregunta = arrPregu(0)
+            id_pregunta = arrPregu(0)
         TextoPregunta.Text = arrPregu(1)
         tiempo = arrPregu(2)
 

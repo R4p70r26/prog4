@@ -11,22 +11,22 @@
 
     Private Sub AccessButton1_Click(sender As Object, e As EventArgs) Handles AccessButton1.Click
         Try
+            tipodb = "\conexionA.udl"
             My.Forms.NombreUsuraio.Show()
-
             Me.Close() 'cierra la ventana
         Catch ex As Exception
-
+            MsgBox("Error al conectar con access", MsgBoxStyle.Critical, "Preguntados")
         End Try
 
     End Sub
 
     Private Sub SqlButton2_Click(sender As Object, e As EventArgs) Handles sqlButton2.Click
         Try
+            tipodb = "\conexion.udl"
             My.Forms.NombreUsuraio.Show()
-
             Me.Close() 'cierra la ventana
         Catch ex As Exception
-
+            MsgBox("Error al conectar con sql", MsgBoxStyle.Critical, "Preguntados")
         End Try
 
     End Sub

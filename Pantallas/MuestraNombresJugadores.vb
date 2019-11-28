@@ -5,7 +5,6 @@
     Private randomObjeto As New Random()
 
 
-
     Private Sub MuestraNombresJugadores_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         FindeRonda()

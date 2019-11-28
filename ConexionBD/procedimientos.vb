@@ -4,7 +4,19 @@
     'esta variable sera la encargada de conectarnos con la base de datos creada
 
     'este procedimiento nos conectara con la base de datos usando el archivo udl
+
     Friend Sub conectar()
+        Dim ruta As String ' esta variable guarda la ruta de la bd, es una var local al salir del proceso desaparece
+
+        ruta = "File Name= " & Application.StartupPath + tipodb
+        db.ConnectionString = ruta
+
+        db.Open() 'abre la conexion
+
+        Exit Sub
+    End Sub 'sub es procedimiento
+
+    Friend Sub conectarAgregapreg()
         Dim ruta As String ' esta variable guarda la ruta de la bd, es una var local al salir del proceso desaparece
 
         ruta = "File Name= " & Application.StartupPath & "\conexion.udl"
@@ -15,13 +27,6 @@
         Exit Sub
     End Sub 'sub es procedimiento
 
-    Function ConexStrOle()
-        Dim ruta As String ' esta variable guarda la ruta de la bd, es una var local al salir del proceso desaparece
-
-        ruta = "File Name= " & Application.StartupPath & "\conexion.udl"
-
-        Return ruta
-    End Function
 
     Friend Sub desconectar()
         db.Close() ' cierra bd
@@ -55,6 +60,7 @@
     End Function
 
     Friend Function LeeValorPregunta(ByVal sql As String) As String()
+
         Dim arr(4) As String
 
         conectar()
@@ -118,9 +124,7 @@
 
             adaptador.Fill(tabla)
 
-
             desconectar()
-
 
         Catch ex As Exception
             MsgBox("Error al extraer jugadores")

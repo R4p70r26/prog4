@@ -1,5 +1,7 @@
 ﻿Module FuncionesGlobales
 
+    Public tipodb = "\conexion.udl"
+
     Public esDuelo As Boolean = False
     Public jugadorduelo1 As Boolean = True
     Public jugadorduelo2 As Boolean = False
@@ -46,6 +48,8 @@
         End If
 
     End Function
+
+
 
 
 End Module
