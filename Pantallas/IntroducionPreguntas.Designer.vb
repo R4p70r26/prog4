@@ -235,7 +235,7 @@ Partial Class IntroducionPreguntas
         Me.btnGuardar.BackColor = System.Drawing.Color.DeepSkyBlue
         Me.btnGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnGuardar.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnGuardar.Location = New System.Drawing.Point(137, 622)
+        Me.btnGuardar.Location = New System.Drawing.Point(141, 621)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(107, 49)
         Me.btnGuardar.TabIndex = 18
@@ -256,6 +256,7 @@ Partial Class IntroducionPreguntas
         '
         'Panel1
         '
+        Me.Panel1.BackColor = System.Drawing.Color.Transparent
         Me.Panel1.Controls.Add(Me.RbRespuesta1)
         Me.Panel1.Controls.Add(Me.RbRespuesta2)
         Me.Panel1.Controls.Add(Me.RbRespuesta3)
@@ -267,13 +268,14 @@ Partial Class IntroducionPreguntas
         '
         'Panel2
         '
+        Me.Panel2.BackColor = System.Drawing.Color.Transparent
         Me.Panel2.Controls.Add(Me.Rb15sec)
         Me.Panel2.Controls.Add(Me.Rb30sec)
         Me.Panel2.Controls.Add(Me.Rb45sec)
         Me.Panel2.Controls.Add(Me.Rb60sec)
         Me.Panel2.Location = New System.Drawing.Point(7, 503)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(89, 100)
+        Me.Panel2.Size = New System.Drawing.Size(93, 100)
         Me.Panel2.TabIndex = 21
         '
         'IntroducionPreguntas

@@ -153,11 +153,11 @@
         If RondaGlobal > 25 Then
 
             If personajeJugador1() > PersonajeJugador2() Then
-                MsgBox(NombreJugador1Global & "Gano")
+                MsgBox(NombreJugador1Global & " Gano", MsgBoxStyle.Information, "Felicidades")
                 VentanaPrincipal.Show()
                 Me.Close()
             Else
-                MsgBox(NombreJugador2Global & "Gano")
+                MsgBox(NombreJugador2Global & " Gano", MsgBoxStyle.Information, "Felicidades")
                 VentanaPrincipal.Show()
                 Me.Close()
             End If

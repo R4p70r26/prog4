@@ -1,6 +1,6 @@
 seleccionar un tamaño adecuado para todos los forms
 
-buscar imagen de la ruleta y modificar el centro
-
+tiempo fuera cierre ventana
+o muestre respuesta incorrecta
 
 

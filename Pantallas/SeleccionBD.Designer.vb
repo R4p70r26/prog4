@@ -31,7 +31,7 @@ Partial Class SeleccionBD
         'AccessButton1
         '
         Me.AccessButton1.BackColor = System.Drawing.Color.DeepSkyBlue
-        Me.AccessButton1.Font = New System.Drawing.Font("Showcard Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.AccessButton1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.AccessButton1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.AccessButton1.Location = New System.Drawing.Point(129, 160)
         Me.AccessButton1.Name = "AccessButton1"
@@ -43,7 +43,7 @@ Partial Class SeleccionBD
         'sqlButton2
         '
         Me.sqlButton2.BackColor = System.Drawing.Color.DeepSkyBlue
-        Me.sqlButton2.Font = New System.Drawing.Font("Showcard Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.sqlButton2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.sqlButton2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.sqlButton2.Location = New System.Drawing.Point(129, 346)
         Me.sqlButton2.Name = "sqlButton2"
@@ -56,11 +56,11 @@ Partial Class SeleccionBD
         '
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.DeepSkyBlue
-        Me.Label1.Font = New System.Drawing.Font("Showcard Gothic", 13.0!, System.Drawing.FontStyle.Bold)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Bold)
         Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label1.Location = New System.Drawing.Point(1, 52)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(551, 23)
+        Me.Label1.Size = New System.Drawing.Size(471, 22)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Seleccione tipo de base de datos que desea utilizar"
         '
@@ -80,7 +80,7 @@ Partial Class SeleccionBD
         Me.MinimizeBox = False
         Me.Name = "SeleccionBD"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Seleccion Base Datos"
+        Me.Text = "Seleccion base datos"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
