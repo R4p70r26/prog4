@@ -35,34 +35,34 @@
 
     Private Function Validacion() As Boolean
 
-        If TxtPregunta.Text <> String.Empty Then
-            If Txtrespuesta1.Text <> String.Empty And Txtrespuesta2.Text <> String.Empty And Txtrespuesta3.Text <> String.Empty And Txtrespuesta4.Text <> String.Empty Then
-                If RbRespuesta1.Checked = True Or RbRespuesta2.Checked = True Or RbRespuesta3.Checked = True Or RbRespuesta4.Checked = True Then
-                    If Rb15sec.Checked = True Or Rb30sec.Checked = True Or Rb45sec.Checked = True Or Rb60sec.Checked = True Then
-                        If CbxTemas.SelectedIndex <> 0 Then
+        If TxtPregunta.Text <> String.Empty Then ' compara si esta vacia
+            If Txtrespuesta1.Text <> String.Empty And Txtrespuesta2.Text <> String.Empty And Txtrespuesta3.Text <> String.Empty And Txtrespuesta4.Text <> String.Empty Then 'compara si estan vacios
+                If RbRespuesta1.Checked = True Or RbRespuesta2.Checked = True Or RbRespuesta3.Checked = True Or RbRespuesta4.Checked = True Then 'compara si alguno esta seleccionado
+                    If Rb15sec.Checked = True Or Rb30sec.Checked = True Or Rb45sec.Checked = True Or Rb60sec.Checked = True Then 'compara si alguno esta seleccionado
+                        If CbxTemas.SelectedIndex <> 0 Then 'si hay un campo seleccionado del combobx
 
                             Return True
 
                         Else
-                            MsgBox("Seleccione el tema", MsgBoxStyle.Information, "Seleccione el tema")
+                            MsgBox("Seleccione el tema", vbInformation, "Seleccione el tema")
                         End If
                     Else
-                        MsgBox("Seleccione el tiempo", MsgBoxStyle.Information, "Seleccione el tiempo")
+                        MsgBox("Seleccione el tiempo", vbInformation, "Seleccione el tiempo")
                     End If
                 Else
-                    MsgBox("Marque la respuesta", MsgBoxStyle.Information, "Marque la respuesta")
+                    MsgBox("Marque la respuesta", vbInformation, "Marque la respuesta")
                 End If
             Else
-                MsgBox("Ingrese las cuatro respuestas", MsgBoxStyle.Information, "Ingrese las respuestas")
+                MsgBox("Ingrese las cuatro respuestas", vbInformation, "Ingrese las respuestas")
             End If
         Else
-            MsgBox("Ingrese la pregunta", MsgBoxStyle.Information, "Ingrese la pregunta")
+            MsgBox("Ingrese la pregunta", vbInformation, "Ingrese la pregunta")
         End If
 
         Return False
     End Function
 
-    Private Function validarTiempo() As Integer
+    Private Function validarTiempo() As Integer 'convierte el tiempo a enteros
         If Rb15sec.Checked Then
             Return 15
         ElseIf Rb30sec.Checked Then
@@ -171,12 +171,9 @@
         Return 0
     End Function
 
-    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
-
-    End Sub
-
     Private Sub BtnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
         Me.Close()
 
     End Sub
+
 End Class

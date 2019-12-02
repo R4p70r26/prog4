@@ -5,7 +5,6 @@
 
     Private Sub RespuestaCorrecta()
 
-
         My.Computer.Audio.Play(My.Resources.Correct, AudioPlayMode.WaitToComplete)
         My.Forms.VentanaRespuesta.Tag = TextoPregunta.Text
         My.Forms.VentanaRespuesta.Show()
@@ -15,7 +14,7 @@
 
     Private Sub RespuestaIncorrecta()
 
-        MessageBox.Show("Incorrecto", "", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        'MessageBox.Show("Incorrecto", "", MessageBoxButtons.OK, MessageBoxIcon.Error)
         My.Computer.Audio.Play(My.Resources.Incorrect, AudioPlayMode.WaitToComplete)
         My.Forms.VentanaIncorrecta.Tag = TextoPregunta.Text
         My.Forms.VentanaIncorrecta.Show()
@@ -24,10 +23,10 @@
 
     Private Sub BtnOpcion1_Click(sender As Object, e As EventArgs) Handles BtnOpcion1.Click
         Try
-            Dim Respuesta = Tmp_Respuestas(0, 1)
-            If (Respuesta = "True") Then
-                BtnOpcion1.BackColor = Color.GreenYellow
-                Timer1.Enabled = False
+            Dim Respuesta = Tmp_Respuestas(0, 1) 'almacena la respuesta 
+            If (Respuesta = "True") Then 'compara si es la correcta
+                BtnOpcion1.BackColor = Color.Green
+                Timer1.Enabled = False 'desactiva el tiempo
                 Me.RespuestaCorrecta()
             Else
                 BtnOpcion1.BackColor = Color.Red
@@ -35,16 +34,16 @@
                 Me.RespuestaIncorrecta()
             End If
         Catch ex As Exception
-
+            Console.WriteLine(ex.Message)
         End Try
     End Sub
 
     Private Sub BtnOpcion3_Click(sender As Object, e As EventArgs) Handles BtnOpcion3.Click
         Try
-            Dim Respuesta = Tmp_Respuestas(2, 1)
-            If (Respuesta = "True") Then
-                BtnOpcion3.BackColor = Color.GreenYellow
-                Timer1.Enabled = False
+            Dim Respuesta = Tmp_Respuestas(2, 1) 'almacena la respuesta 
+            If (Respuesta = "True") Then 'compara si es la correcta
+                BtnOpcion3.BackColor = Color.Green
+                Timer1.Enabled = False 'almacena la respuesta 
                 Me.RespuestaCorrecta()
             Else
                 BtnOpcion3.BackColor = Color.Red
@@ -52,16 +51,16 @@
                 Me.RespuestaIncorrecta()
             End If
         Catch ex As Exception
-
+            Console.WriteLine(ex.Message)
         End Try
     End Sub
 
     Private Sub BtnOpcion2_Click(sender As Object, e As EventArgs) Handles BtnOpcion2.Click
         Try
-            Dim Respuesta = Tmp_Respuestas(1, 1)
-            If (Respuesta = "True") Then
-                BtnOpcion2.BackColor = Color.GreenYellow
-                Timer1.Enabled = False
+            Dim Respuesta = Tmp_Respuestas(1, 1) 'almacena la respuesta 
+            If (Respuesta = "True") Then 'compara si es la correcta
+                BtnOpcion2.BackColor = Color.Green
+                Timer1.Enabled = False 'almacena la respuesta 
                 Me.RespuestaCorrecta()
             Else
                 BtnOpcion2.BackColor = Color.Red
@@ -69,16 +68,16 @@
                 Me.RespuestaIncorrecta()
             End If
         Catch ex As Exception
-
+            Console.WriteLine(ex.Message)
         End Try
     End Sub
 
     Private Sub BtnOpcion4_Click(sender As Object, e As EventArgs) Handles BtnOpcion4.Click
         Try
-            Dim Respuesta = Tmp_Respuestas(3, 1)
-            If (Respuesta = "True") Then
-                BtnOpcion4.BackColor = Color.GreenYellow
-                Timer1.Enabled = False
+            Dim Respuesta = Tmp_Respuestas(3, 1) 'almacena la respuesta 
+            If (Respuesta = "True") Then 'compara si es la correcta
+                BtnOpcion4.BackColor = Color.Green
+                Timer1.Enabled = False 'desactiva el tiempo
                 Me.RespuestaCorrecta()
             Else
                 BtnOpcion4.BackColor = Color.Red
@@ -86,28 +85,25 @@
                 Me.RespuestaIncorrecta()
             End If
         Catch ex As Exception
-
+            Console.WriteLine(ex.Message)
         End Try
     End Sub
 
-    Private Sub TextoPregunta_TextChanged(sender As Object, e As EventArgs) Handles TextoPregunta.TextChanged
-
-    End Sub
 
     Private Sub conexion()
 
         Dim num As System.Random = New System.Random()
 
         Dim sql
-        If tipodb = "\conexionA.udl" Then
-            sql = "SELECT TOP 1 * FROM PRENGUNTAS where id_tema = 2 and id_pregunta = " & num.Next(122, 137 + 1)
+        If tipodb = "\conexionA.udl" Then 'si access esta seleccionado ejecute este query
+            sql = "SELECT TOP 1 * FROM PRENGUNTAS where id_tema = 2 and id_pregunta = " & num.Next(122, 137 + 1) 'selecciona una pregunta al azar
         Else
             sql = "SELECT TOP 1 * FROM PRENGUNTAS where id_tema = 2 ORDER BY NEWID()"      'trae un pregunta al azar(TEMA  = ciencia)
         End If
 
         Dim arrPregu = LeeValorPregunta(sql)
 
-            id_pregunta = arrPregu(0)
+        id_pregunta = arrPregu(0)
         TextoPregunta.Text = arrPregu(1)
         tiempo = arrPregu(2)
 
@@ -123,11 +119,11 @@
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        If tiempo > 0 Then
+        If tiempo > 0 Then 'disminuye el tiempo
             tiempo = tiempo - 1
             Ltiempo.Text = tiempo
         Else
-            Timer1.Enabled = False
+            Timer1.Enabled = False 'desactiva el tiempo
             TiempoPregunta()
         End If
 
@@ -141,7 +137,7 @@
         pictiempofuera.Visible = False
     End Sub
 
-    Private Sub TiempoPregunta()
+    Private Sub TiempoPregunta() 'cambio de jugador si se acaba el tiempo
 
         If tiempo = 0 Then
             If Persona1EstaJugando Then
@@ -163,7 +159,7 @@
             MsgBox("Tiempo agotado", MsgBoxStyle.Information, "Preguntados")
             ComprobarRondaGlobal(Timer1)
             Me.Close()
-            MuestraNombresJugadores.Show()
+            MuestraNombresJugadores.Show() 'llama a la ruleta
 
 
         End If

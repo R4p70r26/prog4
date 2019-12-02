@@ -35,6 +35,7 @@
         End Try
     End Sub
 
+    'variable del estado de los personajes del jugador 1
     Private PersonajeArte1temp As Boolean = False
     Private PersonajeHistoria1temp As Boolean = False
     Private PersonajeCiencia1temp As Boolean = False
@@ -42,6 +43,7 @@
     Private PersonajeEntretenimiento1temp As Boolean = False
     Private PersonajeGeografia1temp As Boolean = False
 
+    'variable del estado de los personajes del jugador 2
     Private PersonajeArte2temp As Boolean = False
     Private PersonajeHistoria2temp As Boolean = False
     Private PersonajeCiencia2temp As Boolean = False
@@ -52,11 +54,7 @@
     Private ContadorJug1 = 0
     Private ContadorJug2 = 0
 
-
-
-
-
-
+    'metodos que selecciona el presonaje que el jugador seleccione
     Private Sub BtnEntretenimiento1_Click(sender As Object, e As EventArgs) Handles BtnEntretenimiento1.Click
 
         BtnArte1.Enabled = False
@@ -203,16 +201,14 @@
 
     Private Sub BtnInicoDuelo_Click(sender As Object, e As EventArgs) Handles BtnInicoDuelo.Click
 
-        esDuelo = True
+        esDuelo = True 'activa el duelo
         dueloJugador1(contadorPreguntaduelo)
-
-
-
 
     End Sub
 
     Public Sub dueloJugador1(ByRef index As Integer)
 
+        'abre las preguntas 
         Select Case index
             Case 1
                 VentCiencia.Show()
@@ -227,10 +223,10 @@
             Case 6
                 VentArte.Show()
             Case Else
-                jugadorduelo1 = False
-                jugadorduelo2 = True
-                contadorPreguntaduelo = 1
-                dueloJugador2(contadorPreguntaduelo)
+                jugadorduelo1 = False 'duelo de jugador 1 acaba
+                jugadorduelo2 = True 'duelo de jugador 2 inicia
+                contadorPreguntaduelo = 1 'reset al contador de las preguntas
+                dueloJugador2(contadorPreguntaduelo) 'inicia el duelo jugador 2
 
         End Select
 
@@ -240,10 +236,10 @@
     End Sub
 
     Public Sub dueloJugador2(ByRef index As Integer)
-
+        'abre las preguntas 
         Select Case index
             Case 1
-                MsgBox("Turno del jugador " + NombreJugador2Global, MsgBoxStyle.Information.OkOnly)
+                MsgBox("Turno del jugador " + NombreJugador2Global, vbInformation)
                 VentCiencia.Show()
             Case 2
                 VentDeporte.Show()
@@ -256,10 +252,10 @@
             Case 6
                 VentArte.Show()
             Case Else
-                jugadorduelo1 = True
-                jugadorduelo2 = False
-                esDuelo = False
-                contadorPreguntaduelo = 1
+                jugadorduelo1 = False 'duelo de jugador 1 acaba
+                jugadorduelo2 = False 'duelo de jugador 2 inicia
+                esDuelo = False 'termina el duelo
+                contadorPreguntaduelo = 1 'reset al contador de las preguntas
 
                 ganadorDuelo()
         End Select
@@ -269,8 +265,10 @@
     End Sub
 
     Private Sub ganadorDuelo()
-        If contadorJugador1 < contadorJugador2 Then
-            MsgBox("El jugador " + NombreJugador1Global + " ha ganado el duelo", MsgBoxStyle.Information)
+        If contadorJugador1 < contadorJugador2 Then 'comprueba quien gano mas preguntas
+            MsgBox("El jugador " + NombreJugador1Global + " ha ganado el duelo", vbInformation)
+
+            'activa el personaje seleccionado 
             If PersonajeArte2temp Then
                 PersonajeArte1 = True
                 PersonajeArte2 = False
@@ -298,6 +296,8 @@
 
         Else
             MsgBox("El jugador " + NombreJugador2Global + " ha ganado el duelo", MsgBoxStyle.Information)
+
+            'activa el personaje seleccionado 
             If PersonajeArte1temp Then
                 PersonajeArte1 = False
                 PersonajeArte2 = True

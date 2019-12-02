@@ -1,4 +1,6 @@
 ﻿Public Class VentCorona
+
+    'metodos que abre la ventana del personaje seleccionado
     Private Sub EntreteimientoButton1_Click(sender As Object, e As EventArgs) Handles EntreteimientoButton1.Click
         My.Forms.VentanaInicioEntretenimiento.Show()
         Me.Close()

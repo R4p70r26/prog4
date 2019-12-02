@@ -51,7 +51,7 @@
 
     End Sub
 
-    Friend Function ejecutarScalar(ByVal sql As String) As Integer
+    Friend Function ejecutarScalar(ByVal sql As String) As Integer ' ejecuta el query y regresa la id de pregunta
         conectar()
         Dim comando As New OleDb.OleDbCommand(sql, db)
         Dim valor = comando.ExecuteScalar()
@@ -59,9 +59,9 @@
         Return valor
     End Function
 
-    Friend Function LeeValorPregunta(ByVal sql As String) As String()
+    Friend Function LeeValorPregunta(ByVal sql As String) As String() 'lee el valor de las preguntas y la almacena en un array
 
-        Dim arr(4) As String
+        Dim arr(4) As String 'array
 
         conectar()
         Dim comando As New OleDb.OleDbCommand(sql, db)
@@ -80,7 +80,7 @@
         Return arr
     End Function
 
-    Friend Function LeeValorRespuestas(ByVal sql As String) As String(,)
+    Friend Function LeeValorRespuestas(ByVal sql As String) As String(,) 'lee las respusestas y las guarda en un array
         Dim respuesta(4, 2) As String 'declara un arreglo de 4*2
         Dim tabla As New DataSet()
 
@@ -104,7 +104,7 @@
 
 
         Catch ex As Exception
-            MsgBox("Error al extraer las respuestas")
+            MsgBox("Error al extraer las respuestas", vbInformation, "Preguntados")
             desconectar()
 
         End Try
@@ -114,7 +114,7 @@
     End Function
 
 
-    Friend Function LeeJugadores(ByVal sql As String) As DataSet
+    Friend Function LeeJugadores(ByVal sql As String) As DataSet 'lee los juagadore de la base de datos
         Dim respuesta(5) As String
         Dim tabla As New DataSet()
 
@@ -127,7 +127,7 @@
             desconectar()
 
         Catch ex As Exception
-            MsgBox("Error al extraer jugadores")
+            MsgBox("Error al extraer jugadores", vbInformation, "Preguntados")
             desconectar()
 
         End Try

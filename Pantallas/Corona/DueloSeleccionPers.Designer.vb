@@ -287,6 +287,7 @@ Partial Class DueloSeleccionPers
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "DueloSeleccionPers"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Seleccion de personaje"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()

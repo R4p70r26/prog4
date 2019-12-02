@@ -53,11 +53,11 @@ Partial Class IntroducionPreguntas
         '
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.DeepSkyBlue
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label1.Location = New System.Drawing.Point(12, 52)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(174, 24)
+        Me.Label1.Size = New System.Drawing.Size(200, 26)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Digite la pregunta"
         '
@@ -65,11 +65,11 @@ Partial Class IntroducionPreguntas
         '
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.DeepSkyBlue
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Bold)
         Me.Label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label2.Location = New System.Drawing.Point(12, 229)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(202, 24)
+        Me.Label2.Size = New System.Drawing.Size(235, 26)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Digite las respuestas"
         '
@@ -77,11 +77,11 @@ Partial Class IntroducionPreguntas
         '
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.DeepSkyBlue
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Bold)
         Me.Label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label3.Location = New System.Drawing.Point(12, 476)
+        Me.Label3.Location = New System.Drawing.Point(12, 454)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(155, 24)
+        Me.Label3.Size = New System.Drawing.Size(179, 26)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Digite el tiempo"
         '
@@ -89,17 +89,19 @@ Partial Class IntroducionPreguntas
         '
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.DeepSkyBlue
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Bold)
         Me.Label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label4.Location = New System.Drawing.Point(316, 477)
+        Me.Label4.Location = New System.Drawing.Point(316, 454)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(189, 24)
+        Me.Label4.Size = New System.Drawing.Size(215, 26)
         Me.Label4.TabIndex = 3
         Me.Label4.Text = "Seleccione el tema"
         '
         'TxtPregunta
         '
+        Me.TxtPregunta.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtPregunta.Location = New System.Drawing.Point(12, 90)
+        Me.TxtPregunta.MaxLength = 100
         Me.TxtPregunta.Multiline = True
         Me.TxtPregunta.Name = "TxtPregunta"
         Me.TxtPregunta.Size = New System.Drawing.Size(536, 103)
@@ -108,38 +110,46 @@ Partial Class IntroducionPreguntas
         'Txtrespuesta1
         '
         Me.Txtrespuesta1.AccessibleName = "TxtPregunta2"
+        Me.Txtrespuesta1.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Txtrespuesta1.Location = New System.Drawing.Point(32, 272)
+        Me.Txtrespuesta1.MaxLength = 100
         Me.Txtrespuesta1.Name = "Txtrespuesta1"
-        Me.Txtrespuesta1.Size = New System.Drawing.Size(516, 20)
+        Me.Txtrespuesta1.Size = New System.Drawing.Size(516, 32)
         Me.Txtrespuesta1.TabIndex = 5
         '
         'Txtrespuesta2
         '
         Me.Txtrespuesta2.AccessibleName = ""
-        Me.Txtrespuesta2.Location = New System.Drawing.Point(32, 298)
+        Me.Txtrespuesta2.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Txtrespuesta2.Location = New System.Drawing.Point(32, 310)
+        Me.Txtrespuesta2.MaxLength = 100
         Me.Txtrespuesta2.Name = "Txtrespuesta2"
-        Me.Txtrespuesta2.Size = New System.Drawing.Size(516, 20)
+        Me.Txtrespuesta2.Size = New System.Drawing.Size(516, 32)
         Me.Txtrespuesta2.TabIndex = 6
         '
         'Txtrespuesta3
         '
         Me.Txtrespuesta3.AccessibleName = ""
-        Me.Txtrespuesta3.Location = New System.Drawing.Point(32, 324)
+        Me.Txtrespuesta3.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Txtrespuesta3.Location = New System.Drawing.Point(32, 348)
+        Me.Txtrespuesta3.MaxLength = 100
         Me.Txtrespuesta3.Name = "Txtrespuesta3"
-        Me.Txtrespuesta3.Size = New System.Drawing.Size(516, 20)
+        Me.Txtrespuesta3.Size = New System.Drawing.Size(516, 32)
         Me.Txtrespuesta3.TabIndex = 7
         '
         'Txtrespuesta4
         '
-        Me.Txtrespuesta4.Location = New System.Drawing.Point(32, 350)
+        Me.Txtrespuesta4.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Txtrespuesta4.Location = New System.Drawing.Point(32, 386)
+        Me.Txtrespuesta4.MaxLength = 100
         Me.Txtrespuesta4.Name = "Txtrespuesta4"
-        Me.Txtrespuesta4.Size = New System.Drawing.Size(516, 20)
+        Me.Txtrespuesta4.Size = New System.Drawing.Size(516, 32)
         Me.Txtrespuesta4.TabIndex = 8
         '
         'RbRespuesta1
         '
         Me.RbRespuesta1.AutoSize = True
-        Me.RbRespuesta1.Location = New System.Drawing.Point(3, 3)
+        Me.RbRespuesta1.Location = New System.Drawing.Point(3, 12)
         Me.RbRespuesta1.Name = "RbRespuesta1"
         Me.RbRespuesta1.Size = New System.Drawing.Size(14, 13)
         Me.RbRespuesta1.TabIndex = 9
@@ -149,7 +159,7 @@ Partial Class IntroducionPreguntas
         'RbRespuesta2
         '
         Me.RbRespuesta2.AutoSize = True
-        Me.RbRespuesta2.Location = New System.Drawing.Point(3, 29)
+        Me.RbRespuesta2.Location = New System.Drawing.Point(3, 50)
         Me.RbRespuesta2.Name = "RbRespuesta2"
         Me.RbRespuesta2.Size = New System.Drawing.Size(14, 13)
         Me.RbRespuesta2.TabIndex = 10
@@ -159,7 +169,7 @@ Partial Class IntroducionPreguntas
         'RbRespuesta3
         '
         Me.RbRespuesta3.AutoSize = True
-        Me.RbRespuesta3.Location = New System.Drawing.Point(3, 55)
+        Me.RbRespuesta3.Location = New System.Drawing.Point(3, 88)
         Me.RbRespuesta3.Name = "RbRespuesta3"
         Me.RbRespuesta3.Size = New System.Drawing.Size(14, 13)
         Me.RbRespuesta3.TabIndex = 11
@@ -169,7 +179,7 @@ Partial Class IntroducionPreguntas
         'RbRespuesta4
         '
         Me.RbRespuesta4.AutoSize = True
-        Me.RbRespuesta4.Location = New System.Drawing.Point(3, 81)
+        Me.RbRespuesta4.Location = New System.Drawing.Point(3, 126)
         Me.RbRespuesta4.Name = "RbRespuesta4"
         Me.RbRespuesta4.Size = New System.Drawing.Size(14, 13)
         Me.RbRespuesta4.TabIndex = 12
@@ -179,9 +189,10 @@ Partial Class IntroducionPreguntas
         'Rb15sec
         '
         Me.Rb15sec.AutoSize = True
+        Me.Rb15sec.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Rb15sec.Location = New System.Drawing.Point(3, 3)
         Me.Rb15sec.Name = "Rb15sec"
-        Me.Rb15sec.Size = New System.Drawing.Size(86, 17)
+        Me.Rb15sec.Size = New System.Drawing.Size(119, 24)
         Me.Rb15sec.TabIndex = 13
         Me.Rb15sec.TabStop = True
         Me.Rb15sec.Text = "15 segundos"
@@ -190,9 +201,10 @@ Partial Class IntroducionPreguntas
         'Rb30sec
         '
         Me.Rb30sec.AutoSize = True
-        Me.Rb30sec.Location = New System.Drawing.Point(3, 26)
+        Me.Rb30sec.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Rb30sec.Location = New System.Drawing.Point(3, 37)
         Me.Rb30sec.Name = "Rb30sec"
-        Me.Rb30sec.Size = New System.Drawing.Size(86, 17)
+        Me.Rb30sec.Size = New System.Drawing.Size(119, 24)
         Me.Rb30sec.TabIndex = 14
         Me.Rb30sec.TabStop = True
         Me.Rb30sec.Text = "30 segundos"
@@ -201,9 +213,10 @@ Partial Class IntroducionPreguntas
         'Rb45sec
         '
         Me.Rb45sec.AutoSize = True
-        Me.Rb45sec.Location = New System.Drawing.Point(3, 49)
+        Me.Rb45sec.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Rb45sec.Location = New System.Drawing.Point(3, 67)
         Me.Rb45sec.Name = "Rb45sec"
-        Me.Rb45sec.Size = New System.Drawing.Size(86, 17)
+        Me.Rb45sec.Size = New System.Drawing.Size(119, 24)
         Me.Rb45sec.TabIndex = 15
         Me.Rb45sec.TabStop = True
         Me.Rb45sec.Text = "45 segundos"
@@ -212,9 +225,10 @@ Partial Class IntroducionPreguntas
         'Rb60sec
         '
         Me.Rb60sec.AutoSize = True
-        Me.Rb60sec.Location = New System.Drawing.Point(3, 72)
+        Me.Rb60sec.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Rb60sec.Location = New System.Drawing.Point(3, 97)
         Me.Rb60sec.Name = "Rb60sec"
-        Me.Rb60sec.Size = New System.Drawing.Size(86, 17)
+        Me.Rb60sec.Size = New System.Drawing.Size(119, 24)
         Me.Rb60sec.TabIndex = 16
         Me.Rb60sec.TabStop = True
         Me.Rb60sec.Text = "60 segundos"
@@ -222,11 +236,12 @@ Partial Class IntroducionPreguntas
         '
         'CbxTemas
         '
+        Me.CbxTemas.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CbxTemas.FormattingEnabled = True
         Me.CbxTemas.Items.AddRange(New Object() {"Ninguno", "Arte", "Ciencia", "Deporte", "Entretenimiento", "Geografia", "Historia"})
-        Me.CbxTemas.Location = New System.Drawing.Point(320, 503)
+        Me.CbxTemas.Location = New System.Drawing.Point(346, 502)
         Me.CbxTemas.Name = "CbxTemas"
-        Me.CbxTemas.Size = New System.Drawing.Size(121, 21)
+        Me.CbxTemas.Size = New System.Drawing.Size(145, 28)
         Me.CbxTemas.TabIndex = 17
         Me.CbxTemas.Text = "Ninguno"
         '
@@ -263,7 +278,7 @@ Partial Class IntroducionPreguntas
         Me.Panel1.Controls.Add(Me.RbRespuesta4)
         Me.Panel1.Location = New System.Drawing.Point(4, 272)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(22, 100)
+        Me.Panel1.Size = New System.Drawing.Size(22, 146)
         Me.Panel1.TabIndex = 20
         '
         'Panel2
@@ -273,9 +288,9 @@ Partial Class IntroducionPreguntas
         Me.Panel2.Controls.Add(Me.Rb30sec)
         Me.Panel2.Controls.Add(Me.Rb45sec)
         Me.Panel2.Controls.Add(Me.Rb60sec)
-        Me.Panel2.Location = New System.Drawing.Point(7, 503)
+        Me.Panel2.Location = New System.Drawing.Point(16, 487)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(93, 100)
+        Me.Panel2.Size = New System.Drawing.Size(128, 128)
         Me.Panel2.TabIndex = 21
         '
         'IntroducionPreguntas
@@ -304,6 +319,7 @@ Partial Class IntroducionPreguntas
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "IntroducionPreguntas"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Digite su pregunta"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()

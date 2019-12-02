@@ -45,11 +45,10 @@
 
     Private Sub EmpezarButton1_Click(sender As Object, e As EventArgs) Handles btnPregunta1.Click
 
-
     End Sub
 
     Private Sub PicBoxRuleta_Click(sender As Object, e As EventArgs) Handles picBoxRuleta.Click
-        TVueltas.Enabled = Not (TVueltas.Enabled)
+        TVueltas.Enabled = Not (TVueltas.Enabled) 'gira la ruleta
 
     End Sub
 
@@ -84,21 +83,21 @@
             randomNum = randomObjeto.Next(1, 8) 'otra forma con random para que me de una numero entre 1 y 7
             Select Case randomNum 'cambia la imagen segun el numero dado 
                 Case 1
-                    picBoxRuleta.Image = My.Resources.RuletaArte
+                    picBoxRuleta.Image = My.Resources.ruletaarte 'cambia imagen
 
                     VentanaInicioArte.Show() 'muestra ventana categoria
                     Me.Close() 'cierra esta ventana
 
 
                 Case 2
-                    picBoxRuleta.Image = My.Resources.ruletaEntretenimiento
+                    picBoxRuleta.Image = My.Resources.ruletaEntretenimiento 'cambia imagen
 
                     VentanaInicioEntretenimiento.Show() 'muestra ventana categoria
                     Me.Close()'cierra esta ventana
 
 
                 Case 3
-                    picBoxRuleta.Image = My.Resources.ruletaCorona
+                    picBoxRuleta.Image = My.Resources.ruletaCorona 'cambia imagen
 
                     If ComprobarPersonajes() Then
                         VentDuelo.Show()
@@ -109,30 +108,29 @@
                     End If
 
 
-
                 Case 4
-                    picBoxRuleta.Image = My.Resources.ruletaGeografia
+                    picBoxRuleta.Image = My.Resources.ruletaGeografia 'cambia imagen
 
                     VentanaInicioGeografia.Show() 'muestra ventana categoria
                     Me.Close()'cierra esta ventana
 
 
                 Case 5
-                    picBoxRuleta.Image = My.Resources.ruletaCiencia
+                    picBoxRuleta.Image = My.Resources.ruletaCiencia 'cambia imagen
 
                     VentanaInicionCiencia.Show() 'muestra ventana categoria
                     Me.Close()'cierra esta ventana
 
 
                 Case 6
-                    picBoxRuleta.Image = My.Resources.ruletaHistoria
+                    picBoxRuleta.Image = My.Resources.ruletaHistoria 'cambia imagen
 
                     VentanaInicioHistoria.Show() 'muestra ventana categoria
                     Me.Close()'cierra esta ventana
 
 
                 Case 7
-                    picBoxRuleta.Image = My.Resources.ruletaDeportes
+                    picBoxRuleta.Image = My.Resources.ruletaDeportes 'cambia imagen
 
                     VentanaInicioDeportes.Show() 'muestra ventana categoria
                     Me.Close() 'cierra esta ventana
@@ -149,11 +147,11 @@
 
     Public Sub Rondas(ByVal ronda)
 
-        LRonda.Text = "Ronda " & ronda & "/25"
+        LRonda.Text = "Ronda " & ronda & "/25" 'actualiza ronda actual
 
     End Sub
 
-    Private Sub FindeRonda()
+    Private Sub FindeRonda() 'define el ganador al finalizar las fondas
 
         If RondaGlobal > 25 Then
 
@@ -171,7 +169,7 @@
 
     End Sub
 
-    Private Function personajeJugador1() As Integer
+    Private Function personajeJugador1() As Integer 'contador de personajes
         Dim contador As Integer = 0
         If PersonajeArte1 = True Then
             contador += 1
@@ -194,7 +192,7 @@
         Return contador
     End Function
 
-    Private Function PersonajeJugador2() As Integer
+    Private Function PersonajeJugador2() As Integer 'contador de personajes
         Dim contador As Integer = 0
         If PersonajeArte2 = True Then
             contador += 1

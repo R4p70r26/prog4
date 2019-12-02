@@ -6,6 +6,8 @@
     End Sub
 
     Private Sub BtnDuelo_Click(sender As Object, e As EventArgs) Handles BtnDuelo.Click
+        DueloSeleccionPers.Show()
+        Me.Close()
 
     End Sub
 

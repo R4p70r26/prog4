@@ -34,18 +34,18 @@
 
     Private Sub conexion()
 
-        Dim sql = "SELECT * FROM Jugador"      'trae un pregunta al azar(TEMA 1 = ARTE)
+        Dim sql = "SELECT * FROM Jugador"      'selecciona los jugadores
         arrPregu = LeeJugadores(sql)
 
         For index = 0 To arrPregu.Tables(0).Rows.Count - 1
-            Jugador1.Items.Insert(index, (arrPregu.Tables(0).Rows(index).Item(1).ToString().Trim()))
+            Jugador1.Items.Insert(index, (arrPregu.Tables(0).Rows(index).Item(1).ToString().Trim())) 'agrega los jugadores al listbox
         Next
 
 
 
     End Sub
 
-    Private Sub Jugador1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Jugador1.SelectedIndexChanged
+    Private Sub Jugador1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Jugador1.SelectedIndexChanged 'valida que se selecciones los jugadores
         Jugador2.Enabled = True
         Jugador2.Items.Clear()
         Jugador2.Text = ""
@@ -67,7 +67,7 @@
     End Sub
 
     Private Sub Jugador2_MouseClick(sender As Object, e As MouseEventArgs) Handles Jugador2.MouseClick
-        If Jugador1.SelectedIndex = -1 Then
+        If Jugador1.SelectedIndex = -1 Then 'valida que se selecciones los jugadores
             MsgBox("Por favor seleccione el jugador 1", MsgBoxStyle.Information, "Seleccion jugador")
         End If
     End Sub
