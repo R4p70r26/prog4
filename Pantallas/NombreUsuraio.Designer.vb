@@ -33,7 +33,7 @@ Partial Class NombreUsuraio
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.DeepSkyBlue
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label1.Location = New System.Drawing.Point(136, 63)
@@ -45,10 +45,10 @@ Partial Class NombreUsuraio
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.DeepSkyBlue
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold)
         Me.Label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label2.Location = New System.Drawing.Point(127, 265)
+        Me.Label2.Location = New System.Drawing.Point(136, 268)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(245, 31)
         Me.Label2.TabIndex = 3
@@ -77,7 +77,7 @@ Partial Class NombreUsuraio
         '
         Me.Jugador2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.Jugador2.FormattingEnabled = True
-        Me.Jugador2.Location = New System.Drawing.Point(133, 344)
+        Me.Jugador2.Location = New System.Drawing.Point(141, 329)
         Me.Jugador2.Name = "Jugador2"
         Me.Jugador2.Size = New System.Drawing.Size(281, 21)
         Me.Jugador2.TabIndex = 7

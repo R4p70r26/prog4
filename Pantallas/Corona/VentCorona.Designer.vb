@@ -28,7 +28,6 @@ Partial Class VentCorona
         Me.BtnEntretenimiento1 = New System.Windows.Forms.Button()
         Me.BtnGeografia2 = New System.Windows.Forms.Button()
         Me.NombreJugador1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.BtnCiencia2 = New System.Windows.Forms.Button()
         Me.BtnHistoria1 = New System.Windows.Forms.Button()
         Me.BtnHistoria2 = New System.Windows.Forms.Button()
@@ -46,13 +45,15 @@ Partial Class VentCorona
         Me.deporteButton3 = New System.Windows.Forms.Button()
         Me.ArteButton2 = New System.Windows.Forms.Button()
         Me.EntreteimientoButton1 = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.DeepSkyBlue
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label1.Location = New System.Drawing.Point(47, 278)
@@ -64,10 +65,10 @@ Partial Class VentCorona
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Controls.Add(Me.BtnEntretenimiento1)
         Me.Panel1.Controls.Add(Me.BtnGeografia2)
         Me.Panel1.Controls.Add(Me.NombreJugador1)
-        Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.BtnCiencia2)
         Me.Panel1.Controls.Add(Me.BtnHistoria1)
         Me.Panel1.Controls.Add(Me.BtnHistoria2)
@@ -118,23 +119,13 @@ Partial Class VentCorona
         'NombreJugador1
         '
         Me.NombreJugador1.AutoSize = True
-        Me.NombreJugador1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NombreJugador1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.NombreJugador1.ForeColor = System.Drawing.Color.DarkTurquoise
         Me.NombreJugador1.Location = New System.Drawing.Point(37, 22)
         Me.NombreJugador1.Name = "NombreJugador1"
-        Me.NombreJugador1.Size = New System.Drawing.Size(108, 20)
+        Me.NombreJugador1.Size = New System.Drawing.Size(131, 25)
         Me.NombreJugador1.TabIndex = 0
         Me.NombreJugador1.Text = "Muestrajug1"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(256, 18)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(37, 24)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "VS"
         '
         'BtnCiencia2
         '
@@ -274,11 +265,11 @@ Partial Class VentCorona
         'NombreJugador2
         '
         Me.NombreJugador2.AutoSize = True
-        Me.NombreJugador2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NombreJugador2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.NombreJugador2.ForeColor = System.Drawing.Color.DarkTurquoise
-        Me.NombreJugador2.Location = New System.Drawing.Point(387, 22)
+        Me.NombreJugador2.Location = New System.Drawing.Point(364, 22)
         Me.NombreJugador2.Name = "NombreJugador2"
-        Me.NombreJugador2.Size = New System.Drawing.Size(108, 20)
+        Me.NombreJugador2.Size = New System.Drawing.Size(131, 25)
         Me.NombreJugador2.TabIndex = 2
         Me.NombreJugador2.Text = "Muestrajug2"
         '
@@ -358,6 +349,16 @@ Partial Class VentCorona
         Me.EntreteimientoButton1.TabIndex = 1
         Me.EntreteimientoButton1.UseVisualStyleBackColor = True
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = Global.PreguntadosPC.My.Resources.Resources.vs_divider
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.PictureBox1.Location = New System.Drawing.Point(248, 22)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(38, 115)
+        Me.PictureBox1.TabIndex = 20
+        Me.PictureBox1.TabStop = False
+        '
         'VentCorona
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -379,6 +380,7 @@ Partial Class VentCorona
         Me.Text = "Corona"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -394,7 +396,6 @@ Partial Class VentCorona
     Friend WithEvents BtnEntretenimiento1 As Button
     Friend WithEvents BtnGeografia2 As Button
     Friend WithEvents NombreJugador1 As Label
-    Friend WithEvents Label2 As Label
     Friend WithEvents BtnCiencia2 As Button
     Friend WithEvents BtnHistoria1 As Button
     Friend WithEvents BtnHistoria2 As Button
@@ -406,4 +407,5 @@ Partial Class VentCorona
     Friend WithEvents BtnEntretenimiento2 As Button
     Friend WithEvents NombreJugador2 As Label
     Friend WithEvents BtnDeportes1 As Button
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

@@ -25,10 +25,10 @@ Partial Class MuestraNombresJugadores
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MuestraNombresJugadores))
         Me.NombreJugador1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.NombreJugador2 = New System.Windows.Forms.Label()
         Me.btnPregunta1 = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.BtnEntretenimiento1 = New System.Windows.Forms.Button()
         Me.BtnGeografia2 = New System.Windows.Forms.Button()
         Me.BtnCiencia2 = New System.Windows.Forms.Button()
@@ -48,6 +48,7 @@ Partial Class MuestraNombresJugadores
         Me.Button1 = New System.Windows.Forms.Button()
         Me.LRonda = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picBoxRuleta, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -55,28 +56,18 @@ Partial Class MuestraNombresJugadores
         '
         Me.NombreJugador1.AutoSize = True
         Me.NombreJugador1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NombreJugador1.ForeColor = System.Drawing.Color.DarkTurquoise
+        Me.NombreJugador1.ForeColor = System.Drawing.Color.White
         Me.NombreJugador1.Location = New System.Drawing.Point(37, 22)
         Me.NombreJugador1.Name = "NombreJugador1"
         Me.NombreJugador1.Size = New System.Drawing.Size(108, 20)
         Me.NombreJugador1.TabIndex = 0
         Me.NombreJugador1.Text = "Muestrajug1"
         '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(256, 18)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(37, 24)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "VS"
-        '
         'NombreJugador2
         '
         Me.NombreJugador2.AutoSize = True
         Me.NombreJugador2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NombreJugador2.ForeColor = System.Drawing.Color.DarkTurquoise
+        Me.NombreJugador2.ForeColor = System.Drawing.Color.White
         Me.NombreJugador2.Location = New System.Drawing.Point(387, 22)
         Me.NombreJugador2.Name = "NombreJugador2"
         Me.NombreJugador2.Size = New System.Drawing.Size(108, 20)
@@ -85,7 +76,7 @@ Partial Class MuestraNombresJugadores
         '
         'btnPregunta1
         '
-        Me.btnPregunta1.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.btnPregunta1.BackColor = System.Drawing.Color.White
         Me.btnPregunta1.Enabled = False
         Me.btnPregunta1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnPregunta1.Location = New System.Drawing.Point(174, 715)
@@ -97,10 +88,10 @@ Partial Class MuestraNombresJugadores
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Transparent
+        Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Controls.Add(Me.BtnEntretenimiento1)
         Me.Panel1.Controls.Add(Me.BtnGeografia2)
         Me.Panel1.Controls.Add(Me.NombreJugador1)
-        Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.BtnCiencia2)
         Me.Panel1.Controls.Add(Me.BtnHistoria1)
         Me.Panel1.Controls.Add(Me.BtnHistoria2)
@@ -116,6 +107,16 @@ Partial Class MuestraNombresJugadores
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(536, 145)
         Me.Panel1.TabIndex = 4
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = Global.PreguntadosPC.My.Resources.Resources.vs_divider
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.PictureBox1.Location = New System.Drawing.Point(250, 27)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(38, 115)
+        Me.PictureBox1.TabIndex = 19
+        Me.PictureBox1.TabStop = False
         '
         'BtnEntretenimiento1
         '
@@ -305,7 +306,7 @@ Partial Class MuestraNombresJugadores
         '
         'btnPregunta2
         '
-        Me.btnPregunta2.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.btnPregunta2.BackColor = System.Drawing.Color.White
         Me.btnPregunta2.Enabled = False
         Me.btnPregunta2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnPregunta2.Location = New System.Drawing.Point(245, 715)
@@ -316,7 +317,7 @@ Partial Class MuestraNombresJugadores
         '
         'btnPregunta3
         '
-        Me.btnPregunta3.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.btnPregunta3.BackColor = System.Drawing.Color.White
         Me.btnPregunta3.Enabled = False
         Me.btnPregunta3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnPregunta3.Location = New System.Drawing.Point(316, 715)
@@ -339,7 +340,7 @@ Partial Class MuestraNombresJugadores
         'LRonda
         '
         Me.LRonda.AutoSize = True
-        Me.LRonda.BackColor = System.Drawing.Color.DeepSkyBlue
+        Me.LRonda.BackColor = System.Drawing.Color.Transparent
         Me.LRonda.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LRonda.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.LRonda.Location = New System.Drawing.Point(211, 9)
@@ -371,6 +372,7 @@ Partial Class MuestraNombresJugadores
         Me.Text = "Ruleta"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picBoxRuleta, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -378,7 +380,6 @@ Partial Class MuestraNombresJugadores
     End Sub
 
     Friend WithEvents NombreJugador1 As Label
-    Friend WithEvents Label2 As Label
     Friend WithEvents NombreJugador2 As Label
     Friend WithEvents btnPregunta1 As Button
     Friend WithEvents Panel1 As Panel
@@ -400,4 +401,5 @@ Partial Class MuestraNombresJugadores
     Friend WithEvents btnPregunta3 As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents LRonda As Label
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

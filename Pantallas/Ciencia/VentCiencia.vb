@@ -157,9 +157,18 @@
             pictiempofuera.Visible = True
 
             MsgBox("Tiempo agotado", MsgBoxStyle.Information, "Preguntados")
-            ComprobarRondaGlobal(Timer1)
-            Me.Close()
-            MuestraNombresJugadores.Show() 'llama a la ruleta
+
+            If esDuelo Then
+                'ComprobarRondaGlobal(Timer1)
+                Me.Close()
+                'MuestraNombresJugadores.Show() 'llama a la ruleta
+            Else
+                Me.Close()
+                MuestraNombresJugadores.Show() 'llama a la ruleta
+                ComprobarRondaGlobal(Timer1)
+
+            End If
+
 
 
         End If

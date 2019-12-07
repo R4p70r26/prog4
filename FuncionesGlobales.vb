@@ -9,6 +9,41 @@
     Public contadorJugador2 As Integer
     Public contadorPreguntaduelo As Integer = 1
 
+    Public contadorPreguntasCorona1 As Integer
+    Public NombrePersonajeCorona As String
+
+    Public esCorona As Boolean = False
+
+
+    Public Sub setNombrepersonaje(ByVal nombre As String)
+        NombrePersonajeCorona = nombre
+    End Sub
+
+    Public Function getNombrePersonaje() As String
+        Return NombrePersonajeCorona
+    End Function
+
+    Public Sub aumentoPreguntasGanadas()
+        contadorPreguntasCorona1 += 1
+    End Sub
+
+
+    Public Function respuestasbuenasc() As Integer
+        Return contadorPreguntasCorona1
+    End Function
+
+    Public Function respuestasmalasc() As Integer
+        contadorPreguntasCorona1 = 0
+        Return contadorPreguntasCorona1
+    End Function
+
+
+    Public Sub MuestraCoronaPreguntas(ByVal preg As Integer)
+        If preg = 3 Then
+            VentCorona.Show()
+        End If
+    End Sub
+
 
     Public Sub ComprobarRondaGlobal(ByRef Timer1 As Timer) 'llamar cuando se contesta de manera incorrecta
 
@@ -16,11 +51,17 @@
             Persona1EstaJugando = False
             Persona2EstaJugando = True
             Timer1.Enabled = False
+
+
+
             MsgBox("Turno del jugador " & NombreJugador2Global)
         ElseIf Persona2EstaJugando Then 'cambia el jugador activo
             Persona1EstaJugando = True
             Persona2EstaJugando = False
             Timer1.Enabled = False
+
+
+
             MsgBox("Turno del jugador " & NombreJugador1Global)
         End If
 
@@ -48,8 +89,6 @@
         End If
 
     End Function
-
-
 
 
 End Module

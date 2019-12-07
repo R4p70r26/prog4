@@ -6,12 +6,59 @@ Public Class VentanaRespuesta
             If jugadorduelo1 Then 'pregunta si es el jugador 1 en duelo
                 contadorJugador1 += 1
                 My.Forms.DueloSeleccionPers.dueloJugador1(contadorPreguntaduelo)
+                Me.Close()
+
             Else ' sino es el jugador 2 en duelo
                 contadorJugador2 += 1
                 My.Forms.DueloSeleccionPers.dueloJugador2(contadorPreguntaduelo)
+                Me.Close()
+
             End If
         Else
-            My.Forms.MuestraNombresJugadores.Show() 'sino es duelo muestra ruleta
+            If esCorona And Persona1EstaJugando Then
+                Select Case getNombrePersonaje()
+                    Case "Entretenimiento"
+                        PersonajeEntretenimiento1 = True
+                    Case "Historia"
+                        PersonajeHistoria1 = True
+                    Case "Geografia"
+                        PersonajeGeografia1 = True
+                    Case "Ciencia"
+                        PersonajeCiencia1 = True
+                    Case "Deporte"
+                        PersonajeDeportes1 = True
+                    Case "Arte"
+                        PersonajeArte1 = True
+                    Case Else
+
+                End Select
+                setNombrepersonaje("")
+            End If
+
+            If esCorona And Persona2EstaJugando Then
+                Select Case getNombrePersonaje()
+                    Case "Entretenimiento"
+                        PersonajeEntretenimiento2 = True
+                    Case "Historia"
+                        PersonajeHistoria2 = True
+                    Case "Geografia"
+                        PersonajeGeografia2 = True
+                    Case "Ciencia"
+                        PersonajeCiencia2 = True
+                    Case "Deporte"
+                        PersonajeDeportes2 = True
+                    Case "Arte"
+                        PersonajeArte2 = True
+                    Case Else
+
+                End Select
+                setNombrepersonaje("")
+            End If
+
+            aumentoPreguntasGanadas()
+
+            MuestraNombresJugadores.Show() 'sino es duelo muestra ruleta
+
             Me.Close()
         End If
 
@@ -21,4 +68,7 @@ Public Class VentanaRespuesta
     Private Sub VentanaRespuesta_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         TextoPregunta.Text = Me.Tag.ToString
     End Sub
+
 End Class
+
+

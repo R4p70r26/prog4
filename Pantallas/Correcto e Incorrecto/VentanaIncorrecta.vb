@@ -6,14 +6,22 @@
             If jugadorduelo1 Then 'pregunta si es el jugador 1 en duelo
 
                 My.Forms.DueloSeleccionPers.dueloJugador1(contadorPreguntaduelo)
+                Me.Close()
+
             Else ' sino es el jugador 2 en duelo
 
                 My.Forms.DueloSeleccionPers.dueloJugador2(contadorPreguntaduelo)
+                Me.Close()
+
             End If
         Else
+            respuestasmalasc()
             My.Forms.MuestraNombresJugadores.Show() 'sino es duelo muestra ruleta
             Me.Close()
         End If
+
+
+
 
     End Sub
 

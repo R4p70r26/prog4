@@ -7,8 +7,6 @@
 
         conexion()
 
-
-
     End Sub
 
     Private Sub JugarAhoraButton1_Click(sender As Object, e As EventArgs) Handles JugarAhoraButton1.Click

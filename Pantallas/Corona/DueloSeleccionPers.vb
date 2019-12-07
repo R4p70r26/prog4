@@ -204,6 +204,9 @@
         esDuelo = True 'activa el duelo
         dueloJugador1(contadorPreguntaduelo)
 
+        Me.Close()
+
+
     End Sub
 
     Public Sub dueloJugador1(ByRef index As Integer)

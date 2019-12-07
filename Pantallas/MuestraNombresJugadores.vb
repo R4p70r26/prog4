@@ -14,6 +14,83 @@
             NombreJugador1.Text = NombreJugador1Global
             NombreJugador2.Text = NombreJugador2Global
 
+            '248; 179; 6 color boton respuestas
+
+            If Persona1EstaJugando Then
+                NombreJugador1.Enabled = True
+                NombreJugador2.Enabled = False
+
+                Select Case respuestasbuenasc()
+                    Case 1
+                        btnPregunta1.Enabled = True
+                        btnPregunta1.BackColor = Color.Green
+                    Case 2
+                        btnPregunta1.Enabled = True
+                        btnPregunta1.BackColor = Color.Green
+                        btnPregunta2.Enabled = True
+                        btnPregunta2.BackColor = Color.Green
+                    Case 3
+                        btnPregunta1.Enabled = True
+                        btnPregunta1.BackColor = Color.Green
+                        btnPregunta2.Enabled = True
+                        btnPregunta2.BackColor = Color.Green
+                        btnPregunta3.Enabled = True
+                        btnPregunta3.BackColor = Color.Green
+
+                        MuestraCoronaPreguntas(respuestasbuenasc())
+                        Me.Close()
+
+                    Case Else
+                        btnPregunta1.Enabled = False
+                        btnPregunta1.BackColor = Color.White
+
+                        btnPregunta2.Enabled = False
+                        btnPregunta2.BackColor = Color.White
+
+                        btnPregunta3.Enabled = False
+                        btnPregunta3.BackColor = Color.White
+
+                End Select
+
+            Else
+                NombreJugador2.Enabled = True
+                NombreJugador1.Enabled = False
+
+                Select Case respuestasbuenasc()
+                    Case 1
+                        btnPregunta1.Enabled = True
+                        btnPregunta1.BackColor = Color.Green
+                    Case 2
+                        btnPregunta1.Enabled = True
+                        btnPregunta1.BackColor = Color.Green
+                        btnPregunta2.Enabled = True
+                        btnPregunta2.BackColor = Color.Green
+                    Case 3
+                        btnPregunta1.Enabled = True
+                        btnPregunta1.BackColor = Color.Green
+                        btnPregunta2.Enabled = True
+                        btnPregunta2.BackColor = Color.Green
+                        btnPregunta3.Enabled = True
+                        btnPregunta3.BackColor = Color.Green
+
+                        MuestraCoronaPreguntas(respuestasbuenasc())
+                        Me.Close()
+
+                    Case Else
+                        btnPregunta1.Enabled = False
+                        btnPregunta1.BackColor = Color.White
+
+                        btnPregunta2.Enabled = False
+                        btnPregunta2.BackColor = Color.White
+
+                        btnPregunta3.Enabled = False
+                        btnPregunta3.BackColor = Color.White
+
+                End Select
+
+
+            End If
+
             'establece cuales personajes ha obtenido el jugador
             'de acuerdo al estado de los personajes (true - false)
             'habilitando los que este halla ganado durante el juego
@@ -39,12 +116,8 @@
             BtnGeografia2.Enabled = PersonajeGeografia2
             BtnHistoria2.Enabled = PersonajeHistoria2
         Catch ex As Exception
-
+            Console.WriteLine(ex.Message)
         End Try
-    End Sub
-
-    Private Sub EmpezarButton1_Click(sender As Object, e As EventArgs) Handles btnPregunta1.Click
-
     End Sub
 
     Private Sub PicBoxRuleta_Click(sender As Object, e As EventArgs) Handles picBoxRuleta.Click
@@ -59,7 +132,7 @@
             Case 2
                 picBoxRuleta.Image = My.Resources.ruletaEntretenimiento
             Case 3
-                picBoxRuleta.Image = My.Resources.RuletaCorona
+                picBoxRuleta.Image = My.Resources.ruletaCorona
             Case 4
                 picBoxRuleta.Image = My.Resources.ruletaGeografia
             Case 5
@@ -142,11 +215,15 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        VentArte.Show() 'muestra ventana categoria
+        'VentArte.Show() 'muestra ventana categoria
+
+        VentCorona.Show()
+        Me.Close()
+
+
     End Sub
 
     Public Sub Rondas(ByVal ronda)
-
         LRonda.Text = "Ronda " & ronda & "/25" 'actualiza ronda actual
 
     End Sub
@@ -156,11 +233,11 @@
         If RondaGlobal > 25 Then
 
             If personajeJugador1() > PersonajeJugador2() Then
-                MsgBox(NombreJugador1Global & " Gano", MsgBoxStyle.Information, "Felicidades")
+                MsgBox(NombreJugador1Global & " Gano", vbInformation, "Felicidades")
                 VentanaPrincipal.Show()
                 Me.Close()
             Else
-                MsgBox(NombreJugador2Global & " Gano", MsgBoxStyle.Information, "Felicidades")
+                MsgBox(NombreJugador2Global & " Gano", vbInformation, "Felicidades")
                 VentanaPrincipal.Show()
                 Me.Close()
             End If
@@ -192,6 +269,7 @@
         Return contador
     End Function
 
+
     Private Function PersonajeJugador2() As Integer 'contador de personajes
         Dim contador As Integer = 0
         If PersonajeArte2 = True Then
@@ -214,5 +292,10 @@
         End If
         Return contador
     End Function
+
+
+
+
+
 
 End Class
