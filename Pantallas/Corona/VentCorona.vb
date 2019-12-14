@@ -2,44 +2,44 @@
 
     'metodos que abre la ventana del personaje seleccionado
     Private Sub EntreteimientoButton1_Click(sender As Object, e As EventArgs) Handles EntreteimientoButton1.Click
-        My.Forms.VentanaInicioEntretenimiento.Show()
-        setNombrepersonaje("Entretenimiento")
-        Me.Close()
+        My.Forms.VentanaInicioEntretenimiento.Show() 'llama ventana
+        setNombrepersonaje("Entretenimiento") 'guarda personaje seleccionado
+        Me.Close() 'cierra
 
     End Sub
 
     Private Sub HistoriaButton4_Click(sender As Object, e As EventArgs) Handles HistoriaButton4.Click
-        My.Forms.VentanaInicioHistoria.Show()
-        setNombrepersonaje("Historia")
-        Me.Close()
+        My.Forms.VentanaInicioHistoria.Show() 'llama ventana
+        setNombrepersonaje("Historia") 'guarda personaje seleccionado
+        Me.Close() 'cierra
 
     End Sub
 
     Private Sub GeografiaButton6_Click(sender As Object, e As EventArgs) Handles GeografiaButton6.Click
-        My.Forms.VentanaInicioGeografia.Show()
-        setNombrepersonaje("Geografia")
-        Me.Close()
+        My.Forms.VentanaInicioGeografia.Show() 'llama ventana
+        setNombrepersonaje("Geografia") 'guarda personaje seleccionado
+        Me.Close() 'cierra
 
     End Sub
 
     Private Sub CienciaButton5_Click(sender As Object, e As EventArgs) Handles cienciaButton5.Click
-        My.Forms.VentanaInicionCiencia.Show()
-        setNombrepersonaje("Ciencia")
-        Me.Close()
+        My.Forms.VentanaInicionCiencia.Show() 'llama ventana
+        setNombrepersonaje("Ciencia") 'guarda personaje seleccionado
+        Me.Close() 'cierra
 
     End Sub
 
     Private Sub DeporteButton3_Click(sender As Object, e As EventArgs) Handles deporteButton3.Click
-        My.Forms.VentanaInicioDeportes.Show()
-        setNombrepersonaje("Deporte")
-        Me.Close()
+        My.Forms.VentanaInicioDeportes.Show() 'llama ventana
+        setNombrepersonaje("Deporte") 'guarda personaje seleccionado
+        Me.Close() 'cierra
 
     End Sub
 
     Private Sub ArteButton2_Click(sender As Object, e As EventArgs) Handles ArteButton2.Click
-        My.Forms.VentanaInicioArte.Show()
-        setNombrepersonaje("Arte")
-        Me.Close()
+        My.Forms.VentanaInicioArte.Show() 'llama ventana
+        setNombrepersonaje("Arte") 'guarda personaje seleccionado
+        Me.Close() 'cierra
 
     End Sub
 
@@ -71,6 +71,7 @@
             BtnGeografia2.Enabled = PersonajeGeografia2
             BtnHistoria2.Enabled = PersonajeHistoria2
 
+            'habilita o desabilita los botones segun personajes ganados
             If Persona1EstaJugando Then
                 If PersonajeArte1 = False Then
                     ArteButton2.Enabled = True
@@ -107,7 +108,7 @@
                 Else
                     HistoriaButton4.Enabled = False
                 End If
-
+                'habilita o desabilita los botones segun personajes ganados
             ElseIf Persona2EstaJugando Then
                 If PersonajeArte2 = False Then
                     ArteButton2.Enabled = True
@@ -147,8 +148,8 @@
 
             End If
 
-            esCorona = True
-            respuestasmalasc()
+            esCorona = True 'variable corona pasa a verdad 
+            respuestasmalasc() 'resetea respuestas contador
 
         Catch ex As Exception
             Console.WriteLine(ex.Message)

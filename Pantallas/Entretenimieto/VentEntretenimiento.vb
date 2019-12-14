@@ -6,7 +6,7 @@
     Private Sub RespuestaCorrecta()
 
 
-        My.Computer.Audio.Play(My.Resources.Correct, AudioPlayMode.WaitToComplete)
+        My.Computer.Audio.Play(My.Resources.Correct, AudioPlayMode.WaitToComplete) 'sonido 
         My.Forms.VentanaRespuesta.Tag = TextoPregunta.Text
         My.Forms.VentanaRespuesta.Show()
 
@@ -137,7 +137,7 @@
 
     End Sub
 
-    Private Sub TiempoPregunta()
+    Private Sub TiempoPregunta() 'cambia jugador si acaba tiempo
 
         If tiempo = 0 Then
             If Persona1EstaJugando Then

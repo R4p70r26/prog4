@@ -1,7 +1,7 @@
 ﻿Module FuncionesGlobales
 
     Public tipodb = "\conexion.udl" 'default db nube
-
+    'variables globales
     Public esDuelo As Boolean = False
     Public jugadorduelo1 As Boolean = True
     Public jugadorduelo2 As Boolean = False
@@ -15,30 +15,30 @@
     Public esCorona As Boolean = False
 
 
-    Public Sub setNombrepersonaje(ByVal nombre As String)
+    Public Sub setNombrepersonaje(ByVal nombre As String) 'guarda nombre personajes
         NombrePersonajeCorona = nombre
     End Sub
 
-    Public Function getNombrePersonaje() As String
+    Public Function getNombrePersonaje() As String 'return el nombre
         Return NombrePersonajeCorona
     End Function
 
-    Public Sub aumentoPreguntasGanadas()
+    Public Sub aumentoPreguntasGanadas() 'aumento de preguntas ganadas
         contadorPreguntasCorona1 += 1
     End Sub
 
 
-    Public Function respuestasbuenasc() As Integer
+    Public Function respuestasbuenasc() As Integer 'return total respuestas buenas
         Return contadorPreguntasCorona1
     End Function
 
-    Public Function respuestasmalasc() As Integer
+    Public Function respuestasmalasc() As Integer 'resetea las preguntas y devuelve 0
         contadorPreguntasCorona1 = 0
         Return contadorPreguntasCorona1
     End Function
 
 
-    Public Sub MuestraCoronaPreguntas(ByVal preg As Integer)
+    Public Sub MuestraCoronaPreguntas(ByVal preg As Integer) 'metodo que muestra corona si hay 3 preg buenas
         If preg = 3 Then
             VentCorona.Show()
         End If
@@ -54,7 +54,7 @@
 
 
 
-            MsgBox("Turno del jugador " & NombreJugador2Global)
+            'MsgBox("Turno del jugador " & NombreJugador2Global)
         ElseIf Persona2EstaJugando Then 'cambia el jugador activo
             Persona1EstaJugando = True
             Persona2EstaJugando = False
@@ -62,13 +62,13 @@
 
 
 
-            MsgBox("Turno del jugador " & NombreJugador1Global)
+            'MsgBox("Turno del jugador " & NombreJugador1Global)
         End If
 
-        If Persona2EstaJugando Then 'aumento de rondas
+        If Persona1EstaJugando Then 'aumento de rondas
             RondaGlobal += 1
         End If
-        My.Forms.MuestraNombresJugadores.LRonda.Text = "Ronda " & RondaGlobal & "/25"
+        'My.Forms.MuestraNombresJugadores.LRonda.Text = "Ronda " & RondaGlobal & "/25"
         My.Forms.MuestraNombresJugadores.Rondas(RondaGlobal)
 
 

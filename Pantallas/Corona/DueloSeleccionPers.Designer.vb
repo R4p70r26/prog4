@@ -260,7 +260,7 @@ Partial Class DueloSeleccionPers
         'BtnInicoDuelo
         '
         Me.BtnInicoDuelo.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnInicoDuelo.Location = New System.Drawing.Point(199, 651)
+        Me.BtnInicoDuelo.Location = New System.Drawing.Point(199, 589)
         Me.BtnInicoDuelo.Name = "BtnInicoDuelo"
         Me.BtnInicoDuelo.Size = New System.Drawing.Size(166, 35)
         Me.BtnInicoDuelo.TabIndex = 6
@@ -270,6 +270,7 @@ Partial Class DueloSeleccionPers
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(94, 72)
         Me.Label1.Name = "Label1"
@@ -281,6 +282,8 @@ Partial Class DueloSeleccionPers
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = Global.PreguntadosPC.My.Resources.Resources.Fondo
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(560, 749)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.BtnInicoDuelo)

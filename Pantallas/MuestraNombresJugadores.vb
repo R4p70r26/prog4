@@ -8,6 +8,7 @@
     Private Sub MuestraNombresJugadores_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         FindeRonda()
+        Rondas(RondaGlobal)
 
         Try
             'Muestra en las etiquetas el nombre de los jugadores ingresados en el formulario anterior
@@ -20,7 +21,7 @@
                 NombreJugador1.Enabled = True
                 NombreJugador2.Enabled = False
 
-                Select Case respuestasbuenasc()
+                Select Case respuestasbuenasc()'calcula respu buenas y cambia color a lineas
                     Case 1
                         btnPregunta1.Enabled = True
                         btnPregunta1.BackColor = Color.Green
@@ -37,10 +38,10 @@
                         btnPregunta3.Enabled = True
                         btnPregunta3.BackColor = Color.Green
 
-                        MuestraCoronaPreguntas(respuestasbuenasc())
+                        MuestraCoronaPreguntas(respuestasbuenasc()) 'muestra corona si llega a 3
                         Me.Close()
 
-                    Case Else
+                    Case Else 'pone en blanco las botones
                         btnPregunta1.Enabled = False
                         btnPregunta1.BackColor = Color.White
 
@@ -56,7 +57,7 @@
                 NombreJugador2.Enabled = True
                 NombreJugador1.Enabled = False
 
-                Select Case respuestasbuenasc()
+                Select Case respuestasbuenasc()'calcula respu buenas y cambia color a lineas
                     Case 1
                         btnPregunta1.Enabled = True
                         btnPregunta1.BackColor = Color.Green
@@ -73,10 +74,10 @@
                         btnPregunta3.Enabled = True
                         btnPregunta3.BackColor = Color.Green
 
-                        MuestraCoronaPreguntas(respuestasbuenasc())
+                        MuestraCoronaPreguntas(respuestasbuenasc()) 'muestra corona si llega a 3
                         Me.Close()
 
-                    Case Else
+                    Case Else 'pone en blanco las botones
                         btnPregunta1.Enabled = False
                         btnPregunta1.BackColor = Color.White
 
@@ -121,6 +122,8 @@
     End Sub
 
     Private Sub PicBoxRuleta_Click(sender As Object, e As EventArgs) Handles picBoxRuleta.Click
+
+        'sonido ruleta aqui
         TVueltas.Enabled = Not (TVueltas.Enabled) 'gira la ruleta
 
     End Sub
@@ -217,8 +220,8 @@
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         'VentArte.Show() 'muestra ventana categoria
 
-        VentCorona.Show()
-        Me.Close()
+        'VentCorona.Show()
+        'Me.Close()
 
 
     End Sub

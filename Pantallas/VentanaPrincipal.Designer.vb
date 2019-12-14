@@ -29,13 +29,16 @@ Partial Class VentanaPrincipal
         '
         'JugarAhoraButton1
         '
-        Me.JugarAhoraButton1.BackgroundImage = Global.PreguntadosPC.My.Resources.Resources._0A6
+        Me.JugarAhoraButton1.BackColor = System.Drawing.Color.DeepSkyBlue
         Me.JugarAhoraButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.JugarAhoraButton1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.JugarAhoraButton1.ForeColor = System.Drawing.Color.White
         Me.JugarAhoraButton1.Location = New System.Drawing.Point(131, 505)
         Me.JugarAhoraButton1.Name = "JugarAhoraButton1"
         Me.JugarAhoraButton1.Size = New System.Drawing.Size(260, 52)
         Me.JugarAhoraButton1.TabIndex = 0
-        Me.JugarAhoraButton1.UseVisualStyleBackColor = True
+        Me.JugarAhoraButton1.Text = "Jugar ahora"
+        Me.JugarAhoraButton1.UseVisualStyleBackColor = False
         '
         'Button1
         '

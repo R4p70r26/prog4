@@ -345,9 +345,8 @@ Partial Class MuestraNombresJugadores
         Me.LRonda.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.LRonda.Location = New System.Drawing.Point(211, 9)
         Me.LRonda.Name = "LRonda"
-        Me.LRonda.Size = New System.Drawing.Size(116, 24)
+        Me.LRonda.Size = New System.Drawing.Size(0, 24)
         Me.LRonda.TabIndex = 10
-        Me.LRonda.Text = "Ronda 1/25"
         '
         'MuestraNombresJugadores
         '

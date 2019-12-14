@@ -1,6 +1,9 @@
 ﻿Public Class VentanaIncorrecta
 
     Private Sub Btn_Continuar_Click(sender As Object, e As EventArgs) Handles Btn_Continuar.Click
+
+        My.Computer.Audio.Play(My.Resources.Play, AudioPlayMode.Background)
+
         If esDuelo Then 'pregunta si es duelo
             contadorPreguntaduelo += 1 'aumenta al contador del duelo
             If jugadorduelo1 Then 'pregunta si es el jugador 1 en duelo

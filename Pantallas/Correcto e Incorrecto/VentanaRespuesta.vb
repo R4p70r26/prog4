@@ -1,6 +1,9 @@
 ﻿
 Public Class VentanaRespuesta
     Private Sub Btn_Continuar_Click(sender As Object, e As EventArgs) Handles Btn_Continuar.Click
+
+        My.Computer.Audio.Play(My.Resources.Play, AudioPlayMode.Background)
+
         If esDuelo Then 'pregunta si es duelo
             contadorPreguntaduelo += 1 'aumenta al contador del duelo
             If jugadorduelo1 Then 'pregunta si es el jugador 1 en duelo
@@ -14,10 +17,10 @@ Public Class VentanaRespuesta
                 Me.Close()
 
             End If
-        Else
-            If esCorona And Persona1EstaJugando Then
-                Select Case getNombrePersonaje()
-                    Case "Entretenimiento"
+        Else 'si no es duelo
+            If esCorona And Persona1EstaJugando Then 'si es corona y es persona 1
+                Select Case getNombrePersonaje()'obtiene el nombre personaje seleccionado
+                    Case "Entretenimiento" 'activa personajes
                         PersonajeEntretenimiento1 = True
                     Case "Historia"
                         PersonajeHistoria1 = True
@@ -34,10 +37,10 @@ Public Class VentanaRespuesta
                 End Select
                 setNombrepersonaje("")
             End If
-
+            'si es corona y es persona 1
             If esCorona And Persona2EstaJugando Then
-                Select Case getNombrePersonaje()
-                    Case "Entretenimiento"
+                Select Case getNombrePersonaje()'obtiene el nombre personaje seleccionado
+                    Case "Entretenimiento" 'activa personajes
                         PersonajeEntretenimiento2 = True
                     Case "Historia"
                         PersonajeHistoria2 = True
@@ -55,11 +58,11 @@ Public Class VentanaRespuesta
                 setNombrepersonaje("")
             End If
 
-            aumentoPreguntasGanadas()
+            aumentoPreguntasGanadas() 'metodo aumento preguntas ganadas
 
             MuestraNombresJugadores.Show() 'sino es duelo muestra ruleta
 
-            Me.Close()
+            Me.Close() 'cierra ventana
         End If
 
 

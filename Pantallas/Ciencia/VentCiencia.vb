@@ -1,24 +1,24 @@
 ﻿Public Class VentCiencia
-    Private tiempo As Integer
+    Private tiempo As Integer 'variables globales
     Private id_pregunta As Integer
     Private Tmp_Respuestas As String(,) ' creacion de variable global
 
     Private Sub RespuestaCorrecta()
 
-        My.Computer.Audio.Play(My.Resources.Correct, AudioPlayMode.WaitToComplete)
-        My.Forms.VentanaRespuesta.Tag = TextoPregunta.Text
-        My.Forms.VentanaRespuesta.Show()
+        My.Computer.Audio.Play(My.Resources.Correct, AudioPlayMode.WaitToComplete) 'repro audio 
+        My.Forms.VentanaRespuesta.Tag = TextoPregunta.Text 'guarda pregunta para mostrar 
+        My.Forms.VentanaRespuesta.Show() 'muestra ventana
 
-        Me.Close()
+        Me.Close() 'cierra ventana
     End Sub
 
     Private Sub RespuestaIncorrecta()
 
         'MessageBox.Show("Incorrecto", "", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        My.Computer.Audio.Play(My.Resources.Incorrect, AudioPlayMode.WaitToComplete)
-        My.Forms.VentanaIncorrecta.Tag = TextoPregunta.Text
-        My.Forms.VentanaIncorrecta.Show()
-        Me.Close()
+        My.Computer.Audio.Play(My.Resources.Incorrect, AudioPlayMode.WaitToComplete) 'repro audio 
+        My.Forms.VentanaIncorrecta.Tag = TextoPregunta.Text 'guarda pregunta para mostrar 
+        My.Forms.VentanaIncorrecta.Show() 'muestra ventana
+        Me.Close() 'cierra ventana
     End Sub
 
     Private Sub BtnOpcion1_Click(sender As Object, e As EventArgs) Handles BtnOpcion1.Click
@@ -146,7 +146,6 @@
             ElseIf Persona2EstaJugando Then
                 Persona1EstaJugando = True
                 Persona2EstaJugando = False
-
             End If
 
             BtnOpcion1.Enabled = False
@@ -158,18 +157,14 @@
 
             MsgBox("Tiempo agotado", MsgBoxStyle.Information, "Preguntados")
 
-            If esDuelo Then
-                'ComprobarRondaGlobal(Timer1)
+            If esDuelo Then 'comprueba si es duelo
                 Me.Close()
-                'MuestraNombresJugadores.Show() 'llama a la ruleta
             Else
                 Me.Close()
                 MuestraNombresJugadores.Show() 'llama a la ruleta
                 ComprobarRondaGlobal(Timer1)
 
             End If
-
-
 
         End If
 

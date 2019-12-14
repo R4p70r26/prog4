@@ -1,33 +1,33 @@
 ﻿Public Class VentArte
 
-    Private tiempo As Integer
-    Private id_pregunta As Integer
-    Private Tmp_Respuestas As String(,) ' creacion de variable global 
+    Private tiempo As Integer 'tiempo global
+    Private id_pregunta As Integer 'id pregunta global
+    Private Tmp_Respuestas As String(,) ' temperal creacion de variable global 
 
     Private Sub VentArte_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        conexion()
+        conexion() 'carga preguntas
         Timer1.Enabled = True 'activa el timer
-        pictiempofuera.Visible = False
+        pictiempofuera.Visible = False 'desabilita label tiempo
 
     End Sub
 
     Private Sub RespuestaCorrecta()
 
-        My.Computer.Audio.Play(My.Resources.Correct, AudioPlayMode.WaitToComplete)
-        My.Forms.VentanaRespuesta.Tag = TextoPregunta.Text
-        My.Forms.VentanaRespuesta.Show()
-        Me.Close()
+        My.Computer.Audio.Play(My.Resources.Correct, AudioPlayMode.WaitToComplete) 'sonido 
+        My.Forms.VentanaRespuesta.Tag = TextoPregunta.Text 'guarda el texto de la pregunta
+        My.Forms.VentanaRespuesta.Show() 'muestra ventana 
+        Me.Close() 'cierra ventana
 
     End Sub
 
     Private Sub RespuestaIncorrecta()
 
         'MessageBox.Show("Incorrecto", "", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        My.Computer.Audio.Play(My.Resources.Incorrect, AudioPlayMode.WaitToComplete)
-        My.Forms.VentanaIncorrecta.Tag = TextoPregunta.Text
-        My.Forms.VentanaIncorrecta.Show()
-        Me.Close()
+        My.Computer.Audio.Play(My.Resources.Incorrect, AudioPlayMode.WaitToComplete) 'sonido
+        My.Forms.VentanaIncorrecta.Tag = TextoPregunta.Text 'guarda el texto de la pregunta
+        My.Forms.VentanaIncorrecta.Show() 'muestra ventana
+        Me.Close() 'cierra ventana
     End Sub
 
     Private Sub BtnOpcion1_Click(sender As Object, e As EventArgs) Handles BtnOpcion1.Click
@@ -143,16 +143,17 @@
 
     Private Sub TiempoPregunta() 'cambio de jugador si se acaba el tiempo
 
-        If tiempo = 0 Then
-            If Persona1EstaJugando Then
+        If tiempo = 0 Then 'si tiempo es 0
+            If Persona1EstaJugando Then 'si persona 1 esta jugando cambia al persona 2
                 Persona1EstaJugando = False
                 Persona2EstaJugando = True
-            ElseIf Persona2EstaJugando Then
+            ElseIf Persona2EstaJugando Then 'si persona 2 esta jugando cambia al persona 1
                 Persona1EstaJugando = True
                 Persona2EstaJugando = False
 
             End If
 
+            'deshabilita los botones
             BtnOpcion1.Enabled = False
             BtnOpcion2.Enabled = False
             BtnOpcion3.Enabled = False
@@ -160,10 +161,10 @@
 
             pictiempofuera.Visible = True
 
-            MsgBox("Tiempo agotado", MsgBoxStyle.Information, "Preguntados")
+            MsgBox("Tiempo agotado", vbInformation, "Preguntados")
 
             ComprobarRondaGlobal(Timer1)
-            Me.Close()
+            Me.Close() 'cerrar ventana
             MuestraNombresJugadores.Show() 'llama a la ruleta
 
         End If

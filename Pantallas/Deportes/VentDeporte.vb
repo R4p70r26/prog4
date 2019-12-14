@@ -5,20 +5,19 @@
 
     Private Sub RespuestaCorrecta()
 
+        My.Computer.Audio.Play(My.Resources.Correct, AudioPlayMode.WaitToComplete) 'repro audio
+        My.Forms.VentanaRespuesta.Tag = TextoPregunta.Text 'guarda texto pregunta
+        My.Forms.VentanaRespuesta.Show() 'muestra ventana respuesta
 
-        My.Computer.Audio.Play(My.Resources.Correct, AudioPlayMode.WaitToComplete)
-        My.Forms.VentanaRespuesta.Tag = TextoPregunta.Text
-        My.Forms.VentanaRespuesta.Show()
-
-        Me.Close()
+        Me.Close() 'cierra esta ventana
     End Sub
 
     Private Sub RespuestaIncorrecta()
 
         'MessageBox.Show("Incorrecto", "", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        My.Computer.Audio.Play(My.Resources.Incorrect, AudioPlayMode.WaitToComplete)
-        My.Forms.VentanaIncorrecta.Tag = TextoPregunta.Text
-        My.Forms.VentanaIncorrecta.Show()
+        My.Computer.Audio.Play(My.Resources.Incorrect, AudioPlayMode.WaitToComplete) 'repro audio
+        My.Forms.VentanaIncorrecta.Tag = TextoPregunta.Text 'guarda texto pregunta
+        My.Forms.VentanaIncorrecta.Show() 'muestra ventana respuesta
         Me.Close()
     End Sub
 
@@ -103,7 +102,7 @@
 
         Dim arrPregu = LeeValorPregunta(sql)
 
-            id_pregunta = arrPregu(0)
+        id_pregunta = arrPregu(0)
         TextoPregunta.Text = arrPregu(1)
         tiempo = arrPregu(2)
 

@@ -15,25 +15,10 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        IntroducionPreguntas.Show()
-
-        'VentArte.Show()
-
-        'VentCorona.Show()
-        'VentCiencia.Show()
-
-
-        'DueloSeleccionPers.Show()
-
-
-        'VentDuelo.Show()
-
-
-
+        My.Computer.Audio.Play(My.Resources.Play, AudioPlayMode.Background)
+        IntroducionPreguntas.Show() 'llama ventana agregar preguntas
 
     End Sub
-
-
 
 
 End Class

@@ -65,7 +65,7 @@
         BtnEntretenimiento1.Enabled = True
 
         PersonajeEntretenimiento1temp = True
-
+        My.Computer.Audio.Play(My.Resources.Dpn, AudioPlayMode.Background)
     End Sub
 
     Private Sub BtnArte1_Click(sender As Object, e As EventArgs) Handles BtnArte1.Click
@@ -77,7 +77,7 @@
         BtnEntretenimiento1.Enabled = False
 
         PersonajeArte1temp = True
-
+        My.Computer.Audio.Play(My.Resources.Dpn, AudioPlayMode.Background)
     End Sub
 
     Private Sub BtnDeportes1_Click(sender As Object, e As EventArgs) Handles BtnDeportes1.Click
@@ -89,7 +89,7 @@
         BtnEntretenimiento1.Enabled = False
 
         PersonajeDeportes1temp = True
-
+        My.Computer.Audio.Play(My.Resources.Dpn, AudioPlayMode.Background)
     End Sub
 
     Private Sub BtnHistoria1_Click(sender As Object, e As EventArgs) Handles BtnHistoria1.Click
@@ -101,6 +101,7 @@
         BtnEntretenimiento1.Enabled = False
 
         PersonajeHistoria1temp = True
+        My.Computer.Audio.Play(My.Resources.Dpn, AudioPlayMode.Background)
     End Sub
 
     Private Sub BtnCiencia1_Click(sender As Object, e As EventArgs) Handles BtnCiencia1.Click
@@ -112,7 +113,7 @@
         BtnEntretenimiento1.Enabled = False
 
         PersonajeCiencia1temp = True
-
+        My.Computer.Audio.Play(My.Resources.Dpn, AudioPlayMode.Background)
     End Sub
 
     Private Sub BtnGeografia1_Click(sender As Object, e As EventArgs) Handles BtnGeografia1.Click
@@ -124,7 +125,7 @@
         BtnEntretenimiento1.Enabled = False
 
         PersonajeGeografia1temp = True
-
+        My.Computer.Audio.Play(My.Resources.Dpn, AudioPlayMode.Background)
     End Sub
 
     Private Sub BtnGeografia2_Click(sender As Object, e As EventArgs) Handles BtnGeografia2.Click
@@ -136,7 +137,7 @@
         BtnEntretenimiento2.Enabled = False
 
         PersonajeGeografia2temp = True
-
+        My.Computer.Audio.Play(My.Resources.Dpn, AudioPlayMode.Background)
     End Sub
 
     Private Sub BtnCiencia2_Click(sender As Object, e As EventArgs) Handles BtnCiencia2.Click
@@ -148,7 +149,7 @@
         BtnEntretenimiento2.Enabled = False
 
         PersonajeCiencia2temp = True
-
+        My.Computer.Audio.Play(My.Resources.Dpn, AudioPlayMode.Background)
     End Sub
 
     Private Sub BtnHistoria2_Click(sender As Object, e As EventArgs) Handles BtnHistoria2.Click
@@ -160,7 +161,7 @@
         BtnEntretenimiento2.Enabled = False
 
         PersonajeHistoria2temp = True
-
+        My.Computer.Audio.Play(My.Resources.Dpn, AudioPlayMode.Background)
     End Sub
 
     Private Sub BtnDeportes2_Click(sender As Object, e As EventArgs) Handles BtnDeportes2.Click
@@ -172,7 +173,7 @@
         BtnEntretenimiento2.Enabled = False
 
         PersonajeDeportes2temp = True
-
+        My.Computer.Audio.Play(My.Resources.Dpn, AudioPlayMode.Background)
     End Sub
 
     Private Sub BtnArte2_Click(sender As Object, e As EventArgs) Handles BtnArte2.Click
@@ -184,7 +185,7 @@
         BtnEntretenimiento2.Enabled = False
 
         PersonajeArte2temp = True
-
+        My.Computer.Audio.Play(My.Resources.Dpn, AudioPlayMode.Background)
     End Sub
 
     Private Sub BtnEntretenimiento2_Click(sender As Object, e As EventArgs) Handles BtnEntretenimiento2.Click
@@ -196,7 +197,7 @@
         BtnEntretenimiento2.Enabled = True
 
         PersonajeEntretenimiento2temp = True
-
+        My.Computer.Audio.Play(My.Resources.Dpn, AudioPlayMode.Background)
     End Sub
 
     Private Sub BtnInicoDuelo_Click(sender As Object, e As EventArgs) Handles BtnInicoDuelo.Click
@@ -206,12 +207,11 @@
 
         Me.Close()
 
-
     End Sub
 
     Public Sub dueloJugador1(ByRef index As Integer)
 
-        'abre las preguntas 
+        'abre las preguntas del duelo
         Select Case index
             Case 1
                 VentCiencia.Show()
@@ -239,7 +239,7 @@
     End Sub
 
     Public Sub dueloJugador2(ByRef index As Integer)
-        'abre las preguntas 
+        'abre las preguntas del duelo
         Select Case index
             Case 1
                 MsgBox("Turno del jugador " + NombreJugador2Global, vbInformation)
@@ -256,19 +256,18 @@
                 VentArte.Show()
             Case Else
                 jugadorduelo1 = False 'duelo de jugador 1 acaba
-                jugadorduelo2 = False 'duelo de jugador 2 inicia
+                jugadorduelo2 = False 'duelo de jugador 2 acaba
                 esDuelo = False 'termina el duelo
                 contadorPreguntaduelo = 1 'reset al contador de las preguntas
 
                 ganadorDuelo()
         End Select
 
-
-
     End Sub
 
     Private Sub ganadorDuelo()
         If contadorJugador1 < contadorJugador2 Then 'comprueba quien gano mas preguntas
+            My.Computer.Audio.Play(My.Resources.Duel_Victory, AudioPlayMode.WaitToComplete)
             MsgBox("El jugador " + NombreJugador1Global + " ha ganado el duelo", vbInformation)
 
             'activa el personaje seleccionado 
@@ -298,6 +297,7 @@
             End If
 
         Else
+            My.Computer.Audio.Play(My.Resources.Duel_Victory, AudioPlayMode.WaitToComplete)
             MsgBox("El jugador " + NombreJugador2Global + " ha ganado el duelo", MsgBoxStyle.Information)
 
             'activa el personaje seleccionado 
@@ -327,6 +327,9 @@
             End If
 
         End If
+
+
+
     End Sub
 
 End Class
