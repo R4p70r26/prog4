@@ -441,6 +441,7 @@
     <Content Include="Resources\correcto.jpg" />
     <None Include="Resources\WhatsApp Image 2019-11-26 at 17.34.51.jpeg" />
     <None Include="Resources\inici.jpeg" />
+    <None Include="Resources\ruleta_girar.wav" />
     <Content Include="Tareas.txt" />
     <None Include="Resources\0A6.png" />
   </ItemGroup>

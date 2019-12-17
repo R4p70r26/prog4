@@ -6,7 +6,7 @@
         My.Computer.Audio.Play(My.Resources.Play, AudioPlayMode.Background)
 
         SeleccionBD.Show() 'llama a la ventana seleccionBD
-        Me.Close()
+        'Me.Close()
 
     End Sub
 

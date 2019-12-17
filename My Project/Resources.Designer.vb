@@ -733,6 +733,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property ruleta_girar() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("ruleta_girar", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
         Friend ReadOnly Property ruletaarte() As System.Drawing.Bitmap

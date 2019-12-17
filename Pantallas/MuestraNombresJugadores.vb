@@ -123,7 +123,9 @@
 
     Private Sub PicBoxRuleta_Click(sender As Object, e As EventArgs) Handles picBoxRuleta.Click
 
-        'sonido ruleta aqui
+        My.Computer.Audio.Play(My.Resources.Turn_Rule, AudioPlayMode.WaitToComplete)
+        My.Computer.Audio.Play(My.Resources.ruleta_girar, AudioPlayMode.Background)
+
         TVueltas.Enabled = Not (TVueltas.Enabled) 'gira la ruleta
 
     End Sub
@@ -217,14 +219,7 @@
         End If
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        'VentArte.Show() 'muestra ventana categoria
 
-        'VentCorona.Show()
-        'Me.Close()
-
-
-    End Sub
 
     Public Sub Rondas(ByVal ronda)
         LRonda.Text = "Ronda " & ronda & "/25" 'actualiza ronda actual

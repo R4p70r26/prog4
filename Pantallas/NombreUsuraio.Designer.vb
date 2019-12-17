@@ -88,7 +88,7 @@ Partial Class NombreUsuraio
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.PreguntadosPC.My.Resources.Resources.WhatsApp_Image_2019_11_26_at_17_34_51
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(560, 733)
+        Me.ClientSize = New System.Drawing.Size(560, 749)
         Me.Controls.Add(Me.Jugador2)
         Me.Controls.Add(Me.Jugador1)
         Me.Controls.Add(Me.JugarAhoraButton1)
