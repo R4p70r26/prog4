@@ -87,6 +87,8 @@ Partial Class VentanaRespuesta
         Me.Controls.Add(Me.cienciapersonajePictureBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "VentanaRespuesta"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Respuesta correcta"

@@ -13,16 +13,34 @@
         Try
 
             'Validamos si los campos de texto estan vacios
-            If Jugador1.Text = "" Or Jugador2.Text = "" Then
-                MessageBox.Show("Debe Ingresar el nombre de los jugadores", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)  'muestra una ventana de alerta
-            Else
+            'If Jugador1.Text = "" And Jugador2.Text = "" Then
+            'MessageBox.Show("Debe Ingresar el nombre de los jugadores", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)  'muestra una ventana de alerta
+            'Else
+
+            If Jugador1.Text <> "" And Jugador2.Text <> "" Then
+
                 'Reproduce el audio al dar click en el boton EMPEZAR - no continua con la siguiente linea hasta reproducirlo por completo ( AudioPlayMode.WaitToComplete )
                 NombreJugador1Global = Jugador1.Text 'asigna nombres globales
                 NombreJugador2Global = Jugador2.Text
                 My.Computer.Audio.Play(My.Resources.Random_Oponent, AudioPlayMode.WaitToComplete)
                 My.Forms.MuestraNombresJugadores.Show()
                 Me.Close()
+
+            ElseIf txtJug1.Text <> "" And txtJug2.Text <> "" Then
+
+                'Reproduce el audio al dar click en el boton EMPEZAR - no continua con la siguiente linea hasta reproducirlo por completo ( AudioPlayMode.WaitToComplete )
+                NombreJugador1Global = txtJug1.Text 'asigna nombres globales
+                NombreJugador2Global = txtJug2.Text
+                My.Computer.Audio.Play(My.Resources.Random_Oponent, AudioPlayMode.WaitToComplete)
+                My.Forms.MuestraNombresJugadores.Show()
+                Me.Close()
+
+            Else
+                MessageBox.Show("Debe Ingresar el nombre de los jugadores", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)  'muestra una ventana de alerta
+
             End If
+
+            'End If
 
         Catch ex As Exception
             Console.WriteLine(ex.Message)
@@ -32,14 +50,16 @@
 
     Private Sub conexion()
 
-        Dim sql = "SELECT * FROM Jugador"      'selecciona los jugadores
-        arrPregu = LeeJugadores(sql) 'almacena jugadores array
+        Try
+            Dim sql = "SELECT * FROM Jugador"      'selecciona los jugadores
+            arrPregu = LeeJugadores(sql) 'almacena jugadores array
 
-        For index = 0 To arrPregu.Tables(0).Rows.Count - 1
-            Jugador1.Items.Insert(index, (arrPregu.Tables(0).Rows(index).Item(1).ToString().Trim())) 'agrega los jugadores al listbox
-        Next
-
-
+            For index = 0 To arrPregu.Tables(0).Rows.Count - 1
+                Jugador1.Items.Insert(index, (arrPregu.Tables(0).Rows(index).Item(1).ToString().Trim())) 'agrega los jugadores al listbox
+            Next
+        Catch ex As Exception
+            MsgBox("Error al conectar a DB", vbCritical, "Error")
+        End Try
 
     End Sub
 
@@ -56,11 +76,6 @@
             End If
 
         Next
-
-
-    End Sub
-
-    Private Sub Jugador2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Jugador2.SelectedIndexChanged
 
     End Sub
 

@@ -28,6 +28,10 @@ Partial Class NombreUsuraio
         Me.JugarAhoraButton1 = New System.Windows.Forms.Button()
         Me.Jugador1 = New System.Windows.Forms.ComboBox()
         Me.Jugador2 = New System.Windows.Forms.ComboBox()
+        Me.txtJug1 = New System.Windows.Forms.TextBox()
+        Me.txtJug2 = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label1
@@ -36,11 +40,11 @@ Partial Class NombreUsuraio
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label1.Location = New System.Drawing.Point(136, 63)
+        Me.Label1.Location = New System.Drawing.Point(137, 33)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(245, 31)
+        Me.Label1.Size = New System.Drawing.Size(286, 31)
         Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Nombre jugador 1"
+        Me.Label1.Text = "Seleccione jugador 1"
         '
         'Label2
         '
@@ -48,11 +52,11 @@ Partial Class NombreUsuraio
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold)
         Me.Label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label2.Location = New System.Drawing.Point(136, 268)
+        Me.Label2.Location = New System.Drawing.Point(137, 115)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(245, 31)
+        Me.Label2.Size = New System.Drawing.Size(286, 31)
         Me.Label2.TabIndex = 3
-        Me.Label2.Text = "Nombre jugador 2"
+        Me.Label2.Text = "Seleccione jugador 2"
         '
         'JugarAhoraButton1
         '
@@ -68,7 +72,7 @@ Partial Class NombreUsuraio
         '
         Me.Jugador1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.Jugador1.FormattingEnabled = True
-        Me.Jugador1.Location = New System.Drawing.Point(142, 132)
+        Me.Jugador1.Location = New System.Drawing.Point(143, 67)
         Me.Jugador1.Name = "Jugador1"
         Me.Jugador1.Size = New System.Drawing.Size(280, 21)
         Me.Jugador1.TabIndex = 7
@@ -77,10 +81,50 @@ Partial Class NombreUsuraio
         '
         Me.Jugador2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.Jugador2.FormattingEnabled = True
-        Me.Jugador2.Location = New System.Drawing.Point(141, 329)
+        Me.Jugador2.Location = New System.Drawing.Point(143, 149)
         Me.Jugador2.Name = "Jugador2"
         Me.Jugador2.Size = New System.Drawing.Size(281, 21)
         Me.Jugador2.TabIndex = 7
+        '
+        'txtJug1
+        '
+        Me.txtJug1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtJug1.Location = New System.Drawing.Point(143, 384)
+        Me.txtJug1.Name = "txtJug1"
+        Me.txtJug1.Size = New System.Drawing.Size(244, 30)
+        Me.txtJug1.TabIndex = 8
+        '
+        'txtJug2
+        '
+        Me.txtJug2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtJug2.Location = New System.Drawing.Point(143, 475)
+        Me.txtJug2.Name = "txtJug2"
+        Me.txtJug2.Size = New System.Drawing.Size(244, 30)
+        Me.txtJug2.TabIndex = 9
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label3.Location = New System.Drawing.Point(137, 350)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(250, 31)
+        Me.Label3.TabIndex = 10
+        Me.Label3.Text = "Digite el jugador 1"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label4.Location = New System.Drawing.Point(137, 441)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(250, 31)
+        Me.Label4.TabIndex = 11
+        Me.Label4.Text = "Digite el jugador 2"
         '
         'NombreUsuraio
         '
@@ -89,6 +133,10 @@ Partial Class NombreUsuraio
         Me.BackgroundImage = Global.PreguntadosPC.My.Resources.Resources.WhatsApp_Image_2019_11_26_at_17_34_51
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(560, 749)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.txtJug2)
+        Me.Controls.Add(Me.txtJug1)
         Me.Controls.Add(Me.Jugador2)
         Me.Controls.Add(Me.Jugador1)
         Me.Controls.Add(Me.JugarAhoraButton1)
@@ -110,4 +158,8 @@ Partial Class NombreUsuraio
     Friend WithEvents JugarAhoraButton1 As Button
     Friend WithEvents Jugador1 As ComboBox
     Friend WithEvents Jugador2 As ComboBox
+    Friend WithEvents txtJug1 As TextBox
+    Friend WithEvents txtJug2 As TextBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label4 As Label
 End Class
